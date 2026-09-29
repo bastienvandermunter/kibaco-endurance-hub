@@ -13,7 +13,7 @@
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-hand: "Caveat", cursive;
-  --font-accent: "Permanent Marker", cursive;
+  --font-accent: "Instrument Serif", serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
