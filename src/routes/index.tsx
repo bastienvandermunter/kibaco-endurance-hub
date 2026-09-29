@@ -103,6 +103,7 @@ function Index() {
                 to="/kinesitherapie"
                 icon={<HeartPulse className="h-6 w-6" />}
                 title="Kinésithérapie"
+                badge="Bientôt disponible"
                 description="Bilan, traitement et revalidation pour soulager la douleur, réparer et revenir plus fort."
                 points={["Bilan initial complet", "Thérapie manuelle et revalidation", "Prévention des récidives"]}
                 price={`${SITE.kinePrice} / ${SITE.kinePriceUnit}`}

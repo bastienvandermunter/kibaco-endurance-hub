@@ -25,7 +25,7 @@ export const Route = createFileRoute("/kinesitherapie")({
       {
         property: "og:description",
         content:
-          "Bilan, thérapie manuelle, revalidation du sportif et prévention des blessures. 40 € la séance, rendez-vous en ligne.",
+          "Bilan, thérapie manuelle, revalidation du sportif et prévention des blessures. 40 € la séance — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
