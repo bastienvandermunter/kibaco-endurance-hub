@@ -44,7 +44,7 @@ function Index() {
               <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
                 De la réhabilitation à la performance
               </h1>
-              <p className="mt-4 font-accent text-2xl leading-tight text-primary">
+              <p className="mt-4 font-accent italic text-2xl leading-tight text-primary">
                 Un accompagnement précis et humain !
               </p>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -77,7 +77,7 @@ function Index() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <p className="mt-3 text-center font-accent text-xl text-primary/80">
+              <p className="mt-3 text-center font-accent italic text-xl text-primary/80">
                 Nager. Pédaler. Courir. Grandir.
               </p>
             </div>
