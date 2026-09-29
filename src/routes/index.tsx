@@ -78,7 +78,7 @@ function Index() {
                 />
               </div>
               <p className="mt-3 text-center font-hand text-2xl text-primary/80">
-                Nager. Pedaler. Courir. Grandir.
+                Nager. Pédaler. Courir. Grandir.
               </p>
             </div>
           </div>

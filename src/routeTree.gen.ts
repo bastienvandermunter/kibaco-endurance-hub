@@ -10,33 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApprocheRouteImport } from './routes/approche'
+import { Route as CoachingRouteImport } from './routes/coaching'
+import { Route as KinesitherapieRouteImport } from './routes/kinesitherapie'
+import { Route as TemoignagesRouteImport } from './routes/temoignages'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApprocheRoute = ApprocheRouteImport.update({
+  id: '/approche',
+  path: '/approche',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingRoute = CoachingRouteImport.update({
+  id: '/coaching',
+  path: '/coaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KinesitherapieRoute = KinesitherapieRouteImport.update({
+  id: '/kinesitherapie',
+  path: '/kinesitherapie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TemoignagesRoute = TemoignagesRouteImport.update({
+  id: '/temoignages',
+  path: '/temoignages',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/approche': typeof ApprocheRoute
+  '/coaching': typeof CoachingRoute
+  '/kinesitherapie': typeof KinesitherapieRoute
+  '/temoignages': typeof TemoignagesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/approche': typeof ApprocheRoute
+  '/coaching': typeof CoachingRoute
+  '/kinesitherapie': typeof KinesitherapieRoute
+  '/temoignages': typeof TemoignagesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/approche': typeof ApprocheRoute
+  '/coaching': typeof CoachingRoute
+  '/kinesitherapie': typeof KinesitherapieRoute
+  '/temoignages': typeof TemoignagesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/approche' | '/coaching' | '/kinesitherapie' | '/temoignages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/approche' | '/coaching' | '/kinesitherapie' | '/temoignages'
+  id:
+    | '__root__'
+    | '/'
+    | '/approche'
+    | '/coaching'
+    | '/kinesitherapie'
+    | '/temoignages'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApprocheRoute: typeof ApprocheRoute
+  CoachingRoute: typeof CoachingRoute
+  KinesitherapieRoute: typeof KinesitherapieRoute
+  TemoignagesRoute: typeof TemoignagesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +95,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/approche': {
+      id: '/approche'
+      path: '/approche'
+      fullPath: '/approche'
+      preLoaderRoute: typeof ApprocheRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching': {
+      id: '/coaching'
+      path: '/coaching'
+      fullPath: '/coaching'
+      preLoaderRoute: typeof CoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kinesitherapie': {
+      id: '/kinesitherapie'
+      path: '/kinesitherapie'
+      fullPath: '/kinesitherapie'
+      preLoaderRoute: typeof KinesitherapieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/temoignages': {
+      id: '/temoignages'
+      path: '/temoignages'
+      fullPath: '/temoignages'
+      preLoaderRoute: typeof TemoignagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApprocheRoute: ApprocheRoute,
+  CoachingRoute: CoachingRoute,
+  KinesitherapieRoute: KinesitherapieRoute,
+  TemoignagesRoute: TemoignagesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
