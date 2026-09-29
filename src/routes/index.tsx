@@ -179,6 +179,7 @@ function OptionCard({
   description,
   points,
   price,
+  badge,
 }: {
   to: string;
   icon: React.ReactNode;
@@ -186,12 +187,18 @@ function OptionCard({
   description: string;
   points: string[];
   price: string;
+  badge?: string;
 }) {
   return (
     <Link
       to={to}
-      className="group flex flex-col rounded-4xl border border-border bg-card p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-warm"
+      className="group relative flex flex-col rounded-4xl border border-border bg-card p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-warm"
     >
+      {badge && (
+        <span className="absolute right-5 top-5 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+          {badge}
+        </span>
+      )}
       <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-secondary text-primary">
         {icon}
       </div>
