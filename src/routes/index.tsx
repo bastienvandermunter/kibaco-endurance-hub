@@ -39,7 +39,7 @@ function Index() {
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-2">
             <div>
               <p className="inline-flex rounded-full border border-primary/40 bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-secondary-foreground">
-                Braine-l’Alleud · Triathlon · Course à pied · Trail
+                KINÉSITHÉRAPIE · TRIATHLON · COURSE À PIED · TRAIL
               </p>
               <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
                 De la réhabilitation à la performance
