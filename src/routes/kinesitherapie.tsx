@@ -6,11 +6,10 @@ import {
   ShieldCheck,
   RotateCcw,
   Lightbulb,
-  ExternalLink,
-  CalendarCheck,
+  Clock,
 } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
-import { SITE, LINKS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/kinesitherapie")({
   component: KinesitherapiePage,
@@ -20,13 +19,13 @@ export const Route = createFileRoute("/kinesitherapie")({
       {
         name: "description",
         content:
-          "Kinésithérapie du sport à Braine-l’Alleud : bilan, thérapie manuelle, revalidation et prévention. Tarif : 40 € la séance. Prise de rendez-vous en ligne via Doctor Anytime.",
+          "Kinésithérapie du sport à Braine-l’Alleud : bilan, thérapie manuelle, revalidation et prévention. Tarif : 40 € la séance. Ouverture prochaine — la prise de rendez-vous ouvre bientôt.",
       },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Bilan, thérapie manuelle, revalidation du sportif et prévention des blessures. 40 € la séance, rendez-vous en ligne.",
+          "Bilan, thérapie manuelle, revalidation du sportif et prévention des blessures. 40 € la séance — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
@@ -80,6 +79,13 @@ function KinesitherapiePage() {
           intro="Une prise en charge du sportif et de l’actif : soulager la douleur, réparer, puis vous rendre plus solide qu’avant la blessure."
         />
 
+        <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-primary">
+            <Clock className="h-4 w-4" />
+            Bientôt disponible — la prise de rendez-vous ouvre prochainement
+          </div>
+        </section>
+
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="text-center font-display text-3xl font-semibold text-foreground">
             Les points clés de la prise en charge
@@ -112,21 +118,19 @@ function KinesitherapiePage() {
             </div>
             <div>
               <h2 className="font-display text-3xl font-semibold text-foreground">
-                Prenez rendez-vous en ligne
+                Les rendez-vous ouvrent bientôt
               </h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                Les rendez-vous de kinésithérapie se réservent via Doctor Anytime : choisissez le créneau
-                qui vous convient en quelques clics.
+                {SITE.kineComingSoon
+                  ? "Le volet kinésithérapie est en préparation : la prise de rendez-vous en ligne via Doctor Anytime sera ouverte prochainement. En attendant, découvrez l’approche ci-dessus ou contactez-moi pour toute question."
+                  : "Les rendez-vous de kinésithérapie se réservent via Doctor Anytime : choisissez le créneau qui vous convient en quelques clics."}
               </p>
               <a
-                href={LINKS.doctorAnytime}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-warm transition-opacity hover:opacity-90"
+                href={`mailto:${SITE.email}`}
+                className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
               >
-                <CalendarCheck className="h-4 w-4" />
-                Accéder à Doctor Anytime
-                <ExternalLink className="h-4 w-4" />
+                <Clock className="h-4 w-4" />
+                Me tenir informé de l’ouverture
               </a>
             </div>
           </div>
