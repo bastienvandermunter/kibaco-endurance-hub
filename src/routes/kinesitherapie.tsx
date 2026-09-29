@@ -6,11 +6,10 @@ import {
   ShieldCheck,
   RotateCcw,
   Lightbulb,
-  ExternalLink,
-  CalendarCheck,
+  Clock,
 } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
-import { SITE, LINKS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/kinesitherapie")({
   component: KinesitherapiePage,
