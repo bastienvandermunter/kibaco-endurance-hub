@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Target, HandHeart, Route } from "lucide-react";
+import { ArrowRight, Target, HandHeart, Route as RouteIcon } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero, ArcTop } from "@/components/site-layout";
 import { SITE } from "@/lib/site";
 import coverAsset from "@/assets/kibaco-cover.png.asset.json";
@@ -90,7 +90,7 @@ function ApprochePage() {
                 text="Vous êtes bien plus qu’une blessure ou un chrono. J’écoute votre vécu, vos contraintes et votre envie — c’est le point de départ de tout."
               />
               <ValueCard
-                icon={<Route className="h-6 w-6" />}
+                icon={<RouteIcon className="h-6 w-6" />}
                 title="Continu"
                 text="Le lien entre le cabinet et l’entraînement : je sais vous faire revenir du blessé au performeur, avec une progression sécurisée à chaque étape."
               />
