@@ -46,7 +46,7 @@ function ApprochePage() {
             </h2>
             <div className="mt-5 space-y-4 leading-relaxed text-muted-foreground">
               <p>
-                Diplômé en kinésithérapie à l’HE2B (Auderghem) et éducateur en triathlon breveté par
+                Diplômé en kinésithérapie à l’HE2B (Auderghem) en 2026 et éducateur en triathlon breveté par
                 l’Adeps, je pratique le triathlon depuis 2010. J’ai bâti Kibaco autour d’une vision
                 holistique de la prise en charge : la rééducation et l’entraînement ne sont pas deux
                 mondes séparés, mais les deux extrémités d’un même chemin.
@@ -57,9 +57,9 @@ function ApprochePage() {
                 d’une écoute et d’ajustements. C’est ce pont que je propose de construire avec vous.
               </p>
               <p>
-                Depuis 2010, je m’entraîne et je coach des personnes de toutes catégories d’âge. Chaque
-                accompagnement commence par une écoute — votre histoire, votre corps, vos contraintes —
-                et ma méthode vise à coller au plus près de vos objectifs.
+                Depuis 2010, je pratique le triathlon et, depuis 2020, j’accompagne des personnes de tous âges et de tous niveaux dans leurs projets sportifs, avec des objectifs allant d’un 5 km à un Ironman.
+                <br /><br /><br /><br />
+                Chaque accompagnement débute par une écoute attentive : votre histoire, vos besoins, votre condition physique et vos contraintes. Mon approche repose sur un suivi personnalisé, construit pour s’adapter au plus près de vos objectifs et évoluer avec vous.
               </p>
             </div>
              <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
