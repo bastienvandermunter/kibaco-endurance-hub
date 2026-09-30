@@ -50,8 +50,8 @@ const POINTS = [
   },
   {
     icon: MessagesSquare,
-    title: "Suivi et ajustements réguliers",
-    text: "On fait le point chaque semaine : sensations, fatigue, imprévus — et le plan s’ajuste en conséquence.",
+    title: "Suivi sur l’application IDO",
+    text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre feedback (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
   },
   {
     icon: Trophy,
@@ -106,7 +106,7 @@ function CoachingPage() {
                 {SITE.coachingPrice}
                 <span className="ml-2 text-xl font-medium text-muted-foreground">/ {SITE.coachingPriceUnit}</span>
               </p>
-               <p className="mt-4 inline-flex items-start gap-2.5 rounded-md bg-secondary px-4 py-3 text-sm font-medium text-secondary-foreground">
+               <p className="mt-3 inline-flex items-start gap-2.5 rounded-md bg-secondary px-4 py-3 text-sm font-medium text-secondary-foreground">
                 <GraduationCap className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 {SITE.coachingPriceStudent}
               </p>
