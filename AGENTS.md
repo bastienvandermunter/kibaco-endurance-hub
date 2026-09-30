@@ -13,3 +13,4 @@
 
 - Les cinq pages partagent les couleurs et la typographie sémantiques de `src/styles.css` et le cadre de `site-layout.tsx`, pour garantir une identité cohérente.
 - Le portrait fourni est servi via un pointeur Lovable Assets, pour éviter d’ajouter le fichier binaire au dépôt.
+- Les avis Google sont lus côté serveur via la connexion Google Business Profile et mis en cache 15 minutes, afin de protéger les identifiants et d’éviter des appels à chaque affichage.
