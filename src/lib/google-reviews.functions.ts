@@ -16,7 +16,7 @@ let cached: { value: ReviewResult; until: number } | undefined;
 export const getGoogleReviews = createServerFn({ method: "GET" }).handler(async (): Promise<ReviewResult> => {
   if (cached && Date.now() < cached.until) return cached.value;
 
-  const apiKey = process.env["GOOGLE_BUSINESS_PROFILE_API_KEY"];
+  const apiKey = process.env["GOOGLE_BUSINESS_PROFILE_API_KEY_1"];
   const lovableKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey || !lovableKey) return { reviews: [], status: "missing" };
 
