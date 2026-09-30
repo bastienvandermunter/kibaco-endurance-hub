@@ -34,20 +34,20 @@ function Index() {
       <SiteHeader />
       <main className="flex-1">
         <section className="bg-background">
-          <div className="mx-auto grid max-w-6xl items-center gap-9 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-16">
-            <div className="order-2 lg:order-1">
+          <div className="mx-auto grid max-w-6xl items-center gap-7 px-4 py-8 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-16">
+            <div>
               <p className="inline-flex rounded-md bg-secondary px-3 py-2 text-xs font-bold uppercase text-secondary-foreground">
                 KINÉSITHÉRAPIE · TRIATHLON · COURSE À PIED · TRAIL
               </p>
-              <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl">
+              <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-foreground sm:mt-6 sm:text-5xl">
                 Kibaco. Du soin à la <span className="text-primary">performance.</span>
               </h1>
               <p className="mt-4 font-hand text-2xl text-primary">Un accompagnement précis et humain !</p>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:mt-5 sm:text-lg">
                 Je suis {SITE.owner}, kinésithérapeute et coach en sport d’endurance. Ensemble, nous construisons
                 un chemin adapté à votre corps, à votre quotidien et à vos objectifs.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
                 <Link to="/coaching" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90">
                   Découvrir le coaching <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -56,11 +56,11 @@ function Index() {
                 </Link>
               </div>
             </div>
-            <div className="relative order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
-              <div className="aspect-[4/4.2] overflow-hidden rounded-md bg-secondary shadow-card">
-                <img src={portraitAsset.url} alt="Portrait de Bastien Vandermunter" className="h-full w-full object-cover object-top" />
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+              <div className="aspect-[16/9] overflow-hidden rounded-md bg-secondary shadow-card lg:aspect-[4/4.2]">
+                <img src={portraitAsset.url} alt="Portrait de Bastien Vandermunter" className="h-full w-full object-cover object-[center_32%] lg:object-top" />
               </div>
-              <div className="absolute -bottom-5 left-4 rounded-md border border-border bg-card px-5 py-3 shadow-card sm:-left-5">
+              <div className="absolute -bottom-5 left-4 hidden rounded-md border border-border bg-card px-5 py-3 shadow-card lg:block">
                 <p className="font-display text-sm font-bold text-foreground">Bastien Vandermunter</p>
                 <p className="mt-1 text-xs text-muted-foreground">Kinésithérapeute & coach en endurance</p>
               </div>
