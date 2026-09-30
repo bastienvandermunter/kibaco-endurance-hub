@@ -12,13 +12,13 @@ export const Route = createFileRoute("/approche")({
       {
         name: "description",
         content:
-          "Ma vision : une prise en charge précise, humaine et continue, du soin en kinésithérapie jusqu’à la performance en triathlon, course à pied et trail.",
+          "Bastien Vandermunter : diplômé en kinésithérapie de l’HE2B (Auderghem), éducateur en triathlon breveté Adeps. Une vision holistique de la prise en charge, du soin à la performance.",
       },
       { property: "og:title", content: "L’Approche — Bastien Vandermunter, Kibaco" },
       {
         property: "og:description",
         content:
-          "Précis, humain, du soin à la performance : découvrez ma vision de l’accompagnement des sportifs.",
+          "Kinésithérapeute diplômé de l’HE2B et éducateur en triathlon Adeps : une méthode holistique qui colle à vos objectifs.",
       },
       { property: "og:url", content: "/approche" },
       { property: "og:type", content: "article" },
@@ -35,8 +35,8 @@ function ApprochePage() {
       <main className="flex-1">
         <PageHero
           eyebrow="L’Approche"
-          title="Je m’appelle Bastien, et voici ma vision du sport et du soin"
-          intro="Kinésithérapeute de formation et coach en sport d’endurance par passion, je crois qu’un corps bien soigné peut aller loin — et qu’un sportif bien accompagné se blesse moins."
+          title="Je m’appelle Bastien, et voici ma vision du soin et de l’entraînement"
+          intro="Kinésithérapeute diplômé de l’HE2B (Auderghem) et éducateur en triathlon breveté Adeps, je crois qu’un corps bien soigné peut aller loin — et qu’une personne bien accompagnée atteint ses objectifs."
         />
 
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
@@ -46,20 +46,20 @@ function ApprochePage() {
             </h2>
             <div className="mt-5 space-y-4 leading-relaxed text-muted-foreground">
               <p>
-                Diplômé d’un master en kinésithérapie et coach en sport d’endurance, j’ai bâti Kibaco
-                autour d’une conviction simple : la rééducation et l’entraînement ne sont pas deux mondes
-                séparés, mais les deux extrémités d’un même chemin.
+                Diplômé en kinésithérapie à l’HE2B (Auderghem) et éducateur en triathlon breveté par
+                l’Adeps, je pratique le triathlon depuis 2010. J’ai bâti Kibaco autour d’une vision
+                holistique de la prise en charge : la rééducation et l’entraînement ne sont pas deux
+                mondes séparés, mais les deux extrémités d’un même chemin.
               </p>
               <p>
-                Une personne blessée a besoin de plus qu’un traitement : elle a besoin d’un plan pour revenir.
-                Un sportif en pleine forme a besoin de plus qu’un programme : il a besoin d’une écoute,
-                d’ajustements et d’un regard de clinicien. C’est exactement ce pont que je propose de
-                construire avec vous.
+                Une personne blessée a besoin de plus qu’un traitement : elle a besoin d’un plan pour
+                revenir. Une personne en pleine forme a besoin de plus qu’un programme : elle a besoin
+                d’une écoute et d’ajustements. C’est ce pont que je propose de construire avec vous.
               </p>
               <p>
-                Je travaille avec des coureurs, des traileurs et des triathlètes de tous niveaux — du
-                premier 5 km à l’Ironman. Chaque accompagnement commence par une écoute : votre histoire,
-                votre corps, vos contraintes et vos objectifs.
+                Depuis 2010, je m’entraîne et je coach des personnes de toutes catégories d’âge. Chaque
+                accompagnement commence par une écoute — votre histoire, votre corps, vos contraintes —
+                et ma méthode vise à coller au plus près de vos objectifs.
               </p>
             </div>
              <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
