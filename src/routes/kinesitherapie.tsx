@@ -123,7 +123,7 @@ function KinesitherapiePage() {
                 {SITE.kinePrices.map((t) => (
                   <div key={t.label} className="flex items-baseline justify-between gap-4 border-b border-border pb-4 last:border-b-0 last:pb-0">
                     <span className="text-sm font-medium text-muted-foreground">{t.label}</span>
-                    <span className="font-display text-2xl font-semibold text-foreground">{t.price}</span>
+                    <span className="font-display text-lg font-semibold text-foreground">{t.price}</span>
                   </div>
                 ))}
               </div>
