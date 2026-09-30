@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Décisions du projet
+
+- Les cinq pages partagent les couleurs et la typographie sémantiques de `src/styles.css` et le cadre de `site-layout.tsx`, pour garantir une identité cohérente.
+- Le portrait fourni est servi via un pointeur Lovable Assets, pour éviter d’ajouter le fichier binaire au dépôt.
