@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Target, HandHeart, Route as RouteIcon } from "lucide-react";
-import { SiteHeader, SiteFooter, PageHero, ArcTop } from "@/components/site-layout";
+import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE } from "@/lib/site";
-import coverAsset from "@/assets/kibaco-cover.png.asset.json";
+import portraitAsset from "@/assets/bastien-portrait.png.asset.json";
 
 export const Route = createFileRoute("/approche")({
   component: ApprochePage,
@@ -62,18 +62,18 @@ function ApprochePage() {
                 votre corps, vos contraintes et vos objectifs.
               </p>
             </div>
-            <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
+             <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
           </div>
-          <div className="overflow-hidden rounded-4xl border border-border shadow-warm">
+           <div className="mx-auto aspect-[4/4.5] w-full max-w-md overflow-hidden rounded-md bg-secondary">
             <img
-              src={coverAsset.url}
-              alt="Kibaco — kinésithérapie et coaching en sport d’endurance"
-              className="h-full w-full object-cover"
+               src={portraitAsset.url}
+               alt="Bastien Vandermunter, kinésithérapeute et coach en endurance"
+               className="h-full w-full object-cover object-top"
             />
           </div>
         </section>
 
-        <section className="border-y border-border/60 bg-secondary/40">
+         <section className="border-y border-border bg-card">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <h2 className="text-center font-display text-3xl font-semibold text-foreground">
               Ce qui guide chaque accompagnement
@@ -119,7 +119,6 @@ function ApprochePage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <ArcTop className="mx-auto mt-12 h-20 w-20 text-primary/40" />
         </section>
       </main>
       <SiteFooter />
@@ -129,8 +128,8 @@ function ApprochePage() {
 
 function ValueCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
   return (
-    <div className="rounded-4xl border border-border bg-card p-7 shadow-card">
-      <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-secondary text-primary">
+     <div className="rounded-md border border-border bg-background p-7">
+       <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
         {icon}
       </div>
       <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{title}</h3>
