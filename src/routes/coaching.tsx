@@ -106,17 +106,17 @@ function CoachingPage() {
 
          <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
-             <div className="border-l-4 border-primary bg-card p-8">
+              <div className="border-l-4 border-primary bg-card p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarifs</p>
-              <p className="mt-3 font-display text-5xl font-semibold text-foreground">
-                {SITE.coachingPrice}
-                <span className="ml-2 text-xl font-medium text-muted-foreground">/ {SITE.coachingPriceUnit}</span>
+              <p className="mt-4 font-display text-2xl font-semibold text-foreground">
+                {SITE.coachingPrice}{" "}
+                <span className="text-base font-medium text-muted-foreground">{SITE.coachingPriceUnit}</span>
               </p>
-               <p className="mt-3 inline-flex items-start gap-2.5 rounded-md bg-secondary px-4 py-3 text-sm font-medium text-secondary-foreground">
-                <GraduationCap className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+                <GraduationCap className="h-4 w-4 shrink-0 text-primary" />
                 {SITE.coachingPriceStudent}
               </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 La tarification est mensuelle, sans engagement de longue durée — mais je recommande un
                 projet pensé sur plusieurs mois, voire plusieurs saisons : c’est le meilleur terrain pour
                 l’évolution de l’athlète, et cela colle à ma vision à long terme du coaching.
