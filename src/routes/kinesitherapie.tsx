@@ -17,16 +17,16 @@ export const Route = createFileRoute("/kinesitherapie")({
   head: () => ({
     meta: [
       { title: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
-      {
-        name: "description",
-        content:
-          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Tarif : 40 € la séance. Ouverture prochaine.",
-      },
+        {
+          name: "description",
+          content:
+            "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Bilan initial 50 €, séance de suivi 40 €. Non conventionné. Ouverture prochaine.",
+        },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). 40 € la séance — ouverture prochaine.",
+          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). Bilan initial 50 €, séance de suivi 40 € — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
@@ -117,15 +117,22 @@ function KinesitherapiePage() {
 
          <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
-             <div className="border-l-4 border-primary bg-card p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarif</p>
-              <p className="mt-3 font-display text-5xl font-semibold text-foreground">
-                {SITE.kinePrice}
-                <span className="ml-2 text-xl font-medium text-muted-foreground">/ {SITE.kinePriceUnit}</span>
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
+            <div className="border-l-4 border-primary bg-card p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarifs</p>
+              <div className="mt-5 space-y-4">
+                {SITE.kinePrices.map((t) => (
+                  <div key={t.label} className="flex items-baseline justify-between gap-4 border-b border-border pb-4 last:border-b-0 last:pb-0">
+                    <span className="text-sm font-medium text-muted-foreground">{t.label}</span>
+                    <span className="font-display text-2xl font-semibold text-foreground">{t.price}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-5 leading-relaxed text-muted-foreground">
                 Séances au cabinet, sur rendez-vous. Un tarif clair, sans surprise, pour un suivi
                 personnalisé du début à la fin de votre rééducation.
+              </p>
+              <p className="mt-3 inline-flex items-center gap-2 rounded-md bg-secondary px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-secondary-foreground">
+                Non conventionné
               </p>
             </div>
             <div>
