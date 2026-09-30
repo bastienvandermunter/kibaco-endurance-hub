@@ -9,6 +9,7 @@ import {
   ExternalLink,
   GraduationCap,
   ArrowRight,
+  TrendingUp,
 } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
