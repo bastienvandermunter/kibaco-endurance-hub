@@ -17,16 +17,16 @@ export const Route = createFileRoute("/kinesitherapie")({
   head: () => ({
     meta: [
       { title: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
-      {
-        name: "description",
-        content:
-          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Tarif : 40 € la séance. Ouverture prochaine.",
-      },
+        {
+          name: "description",
+          content:
+            "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Bilan initial 50 €, séance de suivi 40 €. Non conventionné. Ouverture prochaine.",
+        },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). 40 € la séance — ouverture prochaine.",
+          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). Bilan initial 50 €, séance de suivi 40 € — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
