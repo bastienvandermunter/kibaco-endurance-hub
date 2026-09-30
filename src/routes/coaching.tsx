@@ -65,11 +65,6 @@ const POINTS = [
     text: "Course, triathlon ou trail : une feuille de route jusqu’au jour J, avec une stratégie de course et de gestion de l’effort.",
   },
   {
-    icon: Dumbbell,
-    title: "Renforcement et prévention",
-    text: "Du renforcement ciblé intégré au plan, pensé avec l’œil du kinésithérapeute pour rester loin des blessures.",
-  },
-  {
     icon: ClipboardCheck,
     title: "Un regard de clinicien",
     text: "Moindre alerte, je sais faire le tri entre inconfort normal et signal d’alarme — et adapter avant que ça se dégrade.",
