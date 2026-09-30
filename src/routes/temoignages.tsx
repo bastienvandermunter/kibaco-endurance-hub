@@ -43,8 +43,8 @@ function TemoignagesPage() {
       <main className="flex-1">
         <PageHero
           eyebrow="Ils s’entraînent avec moi"
-          title="Vos avis sur Google"
-          intro="Retrouvez ici les témoignages publiés sur ma fiche Google."
+          title="Votre confiance, mon plus beau retour."
+          intro="Découvrez les témoignages de celles et ceux qui m’ont fait confiance pour les accompagner dans leur pratique sportive, leur rééducation et leur progression."
         />
 
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
