@@ -85,7 +85,6 @@ function Index() {
                 badge="Bientôt disponible"
                 description="Bilan, traitement et revalidation pour soulager la douleur, réparer et retrouver toutes vos capacités."
                 points={["Bilan complet à chaque séance", "Thérapie manuelle et revalidation", "Drainage lymphatique (méthode Leduc)"]}
-                price=""
               />
               <OptionCard
                 to="/coaching"
@@ -93,7 +92,6 @@ function Index() {
                 title="Coaching en endurance"
                 description="Un plan d’entraînement sur mesure pour triathlon, course à pied ou trail, avec un suivi régulier."
                 points={["Plan personnalisé et évolutif", "Suivi hebdomadaire", "Préparation de vos objectifs"]}
-                price=""
               />
             </div>
           </div>
@@ -151,7 +149,6 @@ function OptionCard({
   title,
   description,
   points,
-  price,
   badge,
 }: {
   to: string;
@@ -159,7 +156,6 @@ function OptionCard({
   title: string;
   description: string;
   points: string[];
-  price: string;
   badge?: string;
 }) {
   return (
@@ -185,8 +181,7 @@ function OptionCard({
           </li>
         ))}
       </ul>
-      <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-        <span className="font-display text-lg font-semibold text-primary">{price}</span>
+      <div className="mt-6 flex items-center justify-end border-t border-border pt-4">
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/80 transition-colors group-hover:text-primary">
           Découvrir
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
