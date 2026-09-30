@@ -19,13 +19,13 @@ export const Route = createFileRoute("/kinesitherapie")({
       {
         name: "description",
         content:
-          "Kinésithérapie du sport à Braine-l’Alleud : bilan, thérapie manuelle, revalidation et prévention. Tarif : 40 € la séance. Ouverture prochaine — la prise de rendez-vous ouvre bientôt.",
+          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation et prévention, pour tous — sportifs ou non. Tarif : 40 € la séance. Ouverture prochaine — la prise de rendez-vous ouvre bientôt.",
       },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Bilan, thérapie manuelle, revalidation du sportif et prévention des blessures. 40 € la séance — ouverture prochaine.",
+          "Bilan, thérapie manuelle, revalidation et prévention, pour chacun, à tout âge. 40 € la séance — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
@@ -39,7 +39,7 @@ const POINTS = [
   {
     icon: ClipboardList,
     title: "Bilan et diagnostic",
-    text: "Un examen complet de votre blessure, de votre posture et de votre gestuelle sportive pour comprendre la cause, pas seulement la douleur.",
+    text: "Un examen complet de votre douleur, de votre posture et de vos habitudes pour comprendre la cause, pas seulement le symptôme.",
   },
   {
     icon: Hand,
@@ -49,22 +49,22 @@ const POINTS = [
   {
     icon: Dumbbell,
     title: "Revalidation active",
-    text: "Un programme d’exercices progressifs, adapté à votre sport, pour reconstruire force, mobilité et confiance.",
+    text: "Un programme d’exercices progressifs, adapté à votre quotidien, votre travail et vos activités, pour reconstruire force, mobilité et confiance.",
   },
   {
     icon: ShieldCheck,
-    title: "Prévention des blessures",
-    text: "Identification des facteurs de risque (déséquilibres, surcharge, matériel) et plan de prévention concret pour éviter la récidive.",
+    title: "Prévention des récidives",
+    text: "Identification des facteurs de risque (déséquilibres, postures, surcharges) et un plan concret pour que le problème ne revienne pas.",
   },
   {
     icon: RotateCcw,
-    title: "Retour au sport encadré",
-    text: "Des critères clairs et un calendrier réaliste pour reprendre la course, le vélo ou la natation sans repartir dans la blessure.",
+    title: "Retour à vos activités",
+    text: "Des critères clairs et un calendrier réaliste pour reprendre le travail, le sport ou vos loisirs en confiance, sans repartir dans la blessure.",
   },
   {
     icon: Lightbulb,
     title: "Conseils et éducation",
-    text: "Vous comprenez votre blessure, vous savez quoi faire au quotidien : c’est le meilleur raccourci vers la guérison.",
+    text: "Vous comprenez votre corps et vous savez quoi faire au quotidien : c’est le meilleur raccourci vers la guérison.",
   },
 ];
 
@@ -76,7 +76,7 @@ function KinesitherapiePage() {
         <PageHero
           eyebrow="Kinésithérapie"
           title="Se soigner, se reconstruire, revenir plus fort"
-          intro="Une prise en charge du sportif et de l’actif : soulager la douleur, réparer, puis vous rendre plus solide qu’avant la blessure."
+          intro="Une prise en charge pour chacun, à tout âge et à tout rythme de vie : soulager la douleur, réparer, puis vous rendre plus solide qu’avant la blessure."
         />
 
         <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">

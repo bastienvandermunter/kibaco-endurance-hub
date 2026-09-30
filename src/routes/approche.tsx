@@ -51,7 +51,7 @@ function ApprochePage() {
                 séparés, mais les deux extrémités d’un même chemin.
               </p>
               <p>
-                Un sportif blessé a besoin de plus qu’un traitement : il a besoin d’un plan pour revenir.
+                Une personne blessée a besoin de plus qu’un traitement : elle a besoin d’un plan pour revenir.
                 Un sportif en pleine forme a besoin de plus qu’un programme : il a besoin d’une écoute,
                 d’ajustements et d’un regard de clinicien. C’est exactement ce pont que je propose de
                 construire avec vous.
