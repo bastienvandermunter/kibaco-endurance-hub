@@ -11,9 +11,9 @@ export const SITE = {
   // ⚠️ Volet kinésithérapie en standby : le contenu reste consultable,
   // mais la prise de rendez-vous est masquée avec une mention « Bientôt ».
   kineComingSoon: true,
-  kinePrice: "40 €",
+  kinePrice: "",
   kinePriceUnit: "la séance",
-  coachingPrice: "120 €",
+  coachingPrice: "",
   coachingPriceUnit: "par mois",
   coachingPriceStudent: "100 € par mois pour les étudiants",
 };
