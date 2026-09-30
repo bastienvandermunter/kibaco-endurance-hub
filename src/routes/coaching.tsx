@@ -52,7 +52,7 @@ const POINTS = [
   {
     icon: TrendingUp,
     title: "Un projet à long terme",
-    text: "Je privilégie un accompagnement construit sur la durée : un projet qui s’étale sur plusieurs saisons colle mieux à ma vision de l’évolution de l’athlète, séance après séance et année après année.",
+    text: "Je crois en un accompagnement qui s’inscrit dans la durée. Au fil des séances et des saisons, l’objectif est de construire une progression cohérente et durable, en respectant le rythme, les besoins et les objectifs de chacun.",
   },
   {
     icon: MessagesSquare,
@@ -84,7 +84,7 @@ function CoachingPage() {
         <PageHero
           eyebrow="Coaching"
           title="Un coach qui connaît votre corps, pas seulement vos chronos"
-          intro="Coach en sport d’endurance et kinésithérapeute, éducateur en triathlon breveté par l’Adeps, je prépare vos objectifs en triathlon, course à pied et trail avec des plans sur mesure et un suivi humain."
+          intro="Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des plans sur mesure et un suivi humain."
         />
 
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
