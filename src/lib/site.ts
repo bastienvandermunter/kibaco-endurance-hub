@@ -8,6 +8,7 @@ export const SITE = {
   email: "kibaco.contact@gmail.com",
   addressLine1: "Rue du Cuisinier 6",
   addressLine2: "1420 Braine-l’Alleud, Belgique",
+  iban: "BE54 7320 8968 1197",
   // ⚠️ Volet kinésithérapie en standby : le contenu reste consultable,
   // mais la prise de rendez-vous est masquée avec une mention « Bientôt ».
   kineComingSoon: true,

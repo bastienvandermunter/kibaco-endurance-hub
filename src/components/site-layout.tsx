@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, Landmark, ArrowRight } from "lucide-react";
 import { SITE, NAV_ITEMS } from "@/lib/site";
 import logoAsset from "@/assets/kibaco-logo.png.asset.json";
 
@@ -172,6 +172,14 @@ export function SiteFooter() {
                   {SITE.addressLine1}
                   <br />
                   {SITE.addressLine2}
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5 text-card/85">
+                <Landmark className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <span>
+                  {SITE.iban}
+                  <br />
+                  <span className="text-card/60">Compte bancaire professionnel</span>
                 </span>
               </li>
             </ul>
