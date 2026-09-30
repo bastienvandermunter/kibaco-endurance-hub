@@ -63,7 +63,7 @@ function TemoignagesPage() {
             {TESTIMONIALS.map((t) => (
               <figure
                 key={t.name}
-                className="flex flex-col rounded-4xl border border-border bg-card p-7 shadow-card"
+                 className="flex flex-col rounded-md border border-border bg-card p-7"
               >
                 <div className="flex gap-1 text-primary" aria-label="5 étoiles sur 5">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -88,16 +88,16 @@ function TemoignagesPage() {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link
                 to="/coaching"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-warm transition-opacity hover:opacity-90"
+                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Se faire coacher
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/kinesitherapie"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
               >
-                Prendre un rendez-vous kiné
+                 Découvrir la kinésithérapie · bientôt
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

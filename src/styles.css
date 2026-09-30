@@ -5,13 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system Kibaco — thème clair, crème et orange.
- * Couleurs du logo : orange #E87B2E, vert-sarcelle foncé, fond crème.
+ * Design system Kibaco — gris doux, olive et accent orange du logo.
  */
 
 @theme inline {
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-hand: "Caveat", cursive;
   --font-accent: "Instrument Serif", serif;
 
@@ -46,26 +45,26 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.968 0.018 85);
-  --foreground: oklch(0.32 0.04 190);
-  --card: oklch(0.995 0.008 90);
-  --card-foreground: oklch(0.32 0.04 190);
-  --popover: oklch(0.995 0.008 90);
-  --popover-foreground: oklch(0.32 0.04 190);
-  --primary: oklch(0.7 0.16 55);
-  --primary-foreground: oklch(0.99 0.01 90);
-  --secondary: oklch(0.93 0.03 75);
-  --secondary-foreground: oklch(0.36 0.06 55);
-  --muted: oklch(0.94 0.022 80);
-  --muted-foreground: oklch(0.5 0.03 190);
-  --accent: oklch(0.9 0.06 60);
-  --accent-foreground: oklch(0.36 0.06 55);
+  --radius: 0.5rem;
+  --background: oklch(0.968 0.009 130);
+  --foreground: oklch(0.34 0.035 150);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.34 0.035 150);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.34 0.035 150);
+  --primary: oklch(0.65 0.145 54);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.9 0.018 145);
+  --secondary-foreground: oklch(0.34 0.035 150);
+  --muted: oklch(0.94 0.012 140);
+  --muted-foreground: oklch(0.47 0.018 150);
+  --accent: oklch(0.86 0.04 65);
+  --accent-foreground: oklch(0.34 0.035 150);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 90);
-  --border: oklch(0.9 0.03 75);
-  --input: oklch(0.9 0.03 75);
-  --ring: oklch(0.7 0.16 55);
+  --border: oklch(0.87 0.016 145);
+  --input: oklch(0.87 0.016 145);
+  --ring: oklch(0.65 0.145 54);
 }
 
 @layer base {

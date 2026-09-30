@@ -80,7 +80,7 @@ function KinesitherapiePage() {
         />
 
         <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-primary">
+           <div className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
             <Clock className="h-4 w-4" />
             Bientôt disponible — la prise de rendez-vous ouvre prochainement
           </div>
@@ -92,8 +92,8 @@ function KinesitherapiePage() {
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {POINTS.map((p) => (
-              <div key={p.title} className="rounded-4xl border border-border bg-card p-6 shadow-card">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary">
+               <div key={p.title} className="rounded-md border border-border bg-card p-6">
+                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
                   <p.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{p.title}</h3>
@@ -103,9 +103,9 @@ function KinesitherapiePage() {
           </div>
         </section>
 
-        <section className="border-y border-border/60 bg-secondary/40">
+         <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
-            <div className="rounded-4xl border border-primary/30 bg-card p-8 shadow-warm">
+             <div className="border-l-4 border-primary bg-card p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarif</p>
               <p className="mt-3 font-display text-5xl font-semibold text-foreground">
                 {SITE.kinePrice}
@@ -127,7 +127,7 @@ function KinesitherapiePage() {
               </p>
               <a
                 href={`mailto:${SITE.email}`}
-                className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
+                 className="mt-6 inline-flex items-center gap-2 rounded-md border border-primary/40 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
               >
                 <Clock className="h-4 w-4" />
                 Me tenir informé de l’ouverture
