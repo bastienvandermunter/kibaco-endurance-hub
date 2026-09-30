@@ -68,6 +68,11 @@ const POINTS = [
     title: "Un regard de clinicien",
     text: "Moindre alerte, je sais faire le tri entre inconfort normal et signal d’alarme — et adapter avant que ça se dégrade.",
   },
+  {
+    icon: MessagesSquare,
+    title: "Réponse sur WhatsApp",
+    text: "Une question entre deux séances ? Je réponds sur WhatsApp, sans limite de messages et sous 48 h au plus tard.",
+  },
 ];
 
 function CoachingPage() {
