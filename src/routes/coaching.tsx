@@ -3,7 +3,6 @@ import {
   Map,
   MessagesSquare,
   Trophy,
-  Dumbbell,
   Gauge,
   ClipboardCheck,
   ExternalLink,
@@ -63,11 +62,6 @@ const POINTS = [
     icon: Trophy,
     title: "Préparation d’objectifs",
     text: "Course, triathlon ou trail : une feuille de route jusqu’au jour J, avec une stratégie de course et de gestion de l’effort.",
-  },
-  {
-    icon: Dumbbell,
-    title: "Renforcement et prévention",
-    text: "Du renforcement ciblé intégré au plan, pensé avec l’œil du kinésithérapeute pour rester loin des blessures.",
   },
   {
     icon: ClipboardCheck,
