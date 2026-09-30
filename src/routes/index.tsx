@@ -93,7 +93,7 @@ function Index() {
                 title="Coaching en endurance"
                 description="Un plan d’entraînement sur mesure pour triathlon, course à pied ou trail, avec un suivi régulier."
                 points={["Plan personnalisé et évolutif", "Suivi hebdomadaire", "Préparation de vos objectifs"]}
-                price={`${SITE.coachingPrice} / mois`}
+                price=""
               />
             </div>
           </div>

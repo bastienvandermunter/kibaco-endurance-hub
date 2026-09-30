@@ -16,9 +16,9 @@ export const SITE = {
     { label: "Rendez-vous de suivi", price: "40 €" },
   ],
   kineNonConventionne: true,
-  coachingPrice: "",
+  coachingPrice: "120 €",
   coachingPriceUnit: "par mois",
-  coachingPriceStudent: "100 € par mois pour les étudiants",
+  coachingPriceStudent: "100 € / mois pour les étudiants",
 };
 
 export const NAV_ITEMS = [
