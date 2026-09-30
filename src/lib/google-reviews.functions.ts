@@ -84,7 +84,7 @@ export const getGoogleReviews = createServerFn({ method: "GET" }).handler(async 
           text: review.comment,
           author: review.reviewer?.isAnonymous ? "Client Google" : review.reviewer?.displayName || "Client Google",
           rating: rating ?? 0,
-          date: review.createTime,
+          ...(review.createTime ? { date: review.createTime } : {}),
         });
       }
       page = data.nextPageToken ?? "";
