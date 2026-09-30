@@ -84,7 +84,7 @@ function Index() {
                 title="Kinésithérapie"
                 badge="Bientôt disponible"
                 description="Bilan, traitement et revalidation pour soulager la douleur, réparer et retrouver toutes vos capacités."
-                points={["Bilan initial complet", "Thérapie manuelle et revalidation", "Prévention des récidives"]}
+                points={["Bilan complet à chaque séance", "Thérapie manuelle et revalidation", "Drainage lymphatique (méthode Leduc)"]}
                 price={`${SITE.kinePrice} / ${SITE.kinePriceUnit}`}
               />
               <OptionCard

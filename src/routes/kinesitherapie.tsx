@@ -5,6 +5,7 @@ import {
   Dumbbell,
   ShieldCheck,
   RotateCcw,
+  Waves,
   Lightbulb,
   Clock,
 } from "lucide-react";
@@ -19,13 +20,13 @@ export const Route = createFileRoute("/kinesitherapie")({
       {
         name: "description",
         content:
-          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation et prévention, pour tous — sportifs ou non. Tarif : 40 € la séance. Ouverture prochaine — la prise de rendez-vous ouvre bientôt.",
+          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Tarif : 40 € la séance. Ouverture prochaine.",
       },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Bilan, thérapie manuelle, revalidation et prévention, pour chacun, à tout âge. 40 € la séance — ouverture prochaine.",
+          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). 40 € la séance — ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
@@ -38,8 +39,8 @@ export const Route = createFileRoute("/kinesitherapie")({
 const POINTS = [
   {
     icon: ClipboardList,
-    title: "Bilan et diagnostic",
-    text: "Un examen complet de votre douleur, de votre posture et de vos habitudes pour comprendre la cause, pas seulement le symptôme.",
+    title: "Bilan complet",
+    text: "Chaque séance commence par un bilan complet pour identifier la cause réelle de votre douleur et mettre en place un plan de rééducation clair et efficace.",
   },
   {
     icon: Hand,
@@ -52,9 +53,14 @@ const POINTS = [
     text: "Un programme d’exercices progressifs, adapté à votre quotidien, votre travail et vos activités, pour reconstruire force, mobilité et confiance.",
   },
   {
+    icon: Waves,
+    title: "Drainage lymphatique",
+    text: "Pratiqué selon la méthode Leduc, pour réduire œdèmes et gonflements et favoriser une bonne récupération.",
+  },
+  {
     icon: ShieldCheck,
     title: "Prévention des récidives",
-    text: "Identification des facteurs de risque (déséquilibres, postures, surcharges) et un plan concret pour que le problème ne revienne pas.",
+    text: "Identification des facteurs de risque et un plan concret pour que le problème ne revienne pas.",
   },
   {
     icon: RotateCcw,
@@ -76,8 +82,14 @@ function KinesitherapiePage() {
         <PageHero
           eyebrow="Kinésithérapie"
           title="Se soigner, se reconstruire, revenir plus fort"
-          intro="Une prise en charge pour chacun, à tout âge et à tout rythme de vie : soulager la douleur, réparer, puis vous rendre plus solide qu’avant la blessure."
+          intro="Une prise en charge orthopédique et traumatologique, précise, progressive et adaptée à votre situation, pour chacun, à tout âge et à tout rythme de vie."
         />
+
+        <section className="mx-auto max-w-6xl px-4 pt-4 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+            Orthopédie · Traumatologie · Drainage lymphatique (méthode Leduc)
+          </p>
+        </section>
 
         <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
            <div className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
