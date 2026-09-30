@@ -58,7 +58,7 @@ function ApprochePage() {
               </p>
               <p>
                 Depuis 2010, je pratique le triathlon et, depuis 2020, j’accompagne des personnes de tous âges et de tous niveaux dans leurs projets sportifs, avec des objectifs allant d’un 5 km à un Ironman.
-                <br /><br /><br /><br />
+                <br />
                 Chaque accompagnement débute par une écoute attentive : votre histoire, vos besoins, votre condition physique et vos contraintes. Mon approche repose sur un suivi personnalisé, construit pour s’adapter au plus près de vos objectifs et évoluer avec vous.
               </p>
             </div>
