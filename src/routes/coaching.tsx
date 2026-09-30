@@ -49,6 +49,11 @@ const POINTS = [
     text: "Des cycles d’entraînement qui alternent charge et récupération, avec des intensités claires pour chaque séance.",
   },
   {
+    icon: TrendingUp,
+    title: "Un projet à long terme",
+    text: "Je privilégie un accompagnement construit sur la durée : un projet qui s’étale sur plusieurs saisons colle mieux à ma vision de l’évolution de l’athlète, séance après séance et année après année.",
+  },
+  {
     icon: MessagesSquare,
     title: "Suivi sur l’application IDO",
     text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre feedback (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
@@ -111,8 +116,9 @@ function CoachingPage() {
                 {SITE.coachingPriceStudent}
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Un accompagnement mensuel sans engagement de longue durée : le suivi continue tant qu’il
-                vous sert, et s’arrête quand l’objectif est atteint.
+                La tarification est mensuelle, sans engagement de longue durée — mais je recommande un
+                projet pensé sur plusieurs mois, voire plusieurs saisons : c’est le meilleur terrain pour
+                l’évolution de l’athlète, et cela colle à ma vision à long terme du coaching.
               </p>
             </div>
             <div>
