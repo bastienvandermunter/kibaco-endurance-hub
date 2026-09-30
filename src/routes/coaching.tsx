@@ -3,7 +3,6 @@ import {
   Map,
   MessagesSquare,
   Trophy,
-  Dumbbell,
   Gauge,
   ClipboardCheck,
   ExternalLink,
