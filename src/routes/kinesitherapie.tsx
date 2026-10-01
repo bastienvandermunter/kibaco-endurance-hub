@@ -141,7 +141,7 @@ function KinesitherapiePage() {
               </h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 {SITE.kineComingSoon
-                  ? "Le volet kinésithérapie est en préparation : la prise de rendez-vous en ligne via Doctor Anytime sera ouverte prochainement. En attendant, découvrez l’approche ci-dessus ou contactez-moi pour toute question."
+                  ? "Le volet kinésithérapie est en préparation : la prise de rendez-vous sera ouverte prochainement. En attendant, découvrez l’approche ci-dessus ou contactez-moi pour toute question."
                   : "Les rendez-vous de kinésithérapie se réservent via Doctor Anytime : choisissez le créneau qui vous convient en quelques clics."}
               </p>
               <a
