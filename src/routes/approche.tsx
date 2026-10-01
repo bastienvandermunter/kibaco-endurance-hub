@@ -92,7 +92,7 @@ function ApprochePage() {
               <ValueCard
                 icon={<RouteIcon className="h-6 w-6" />}
                 title="Continu"
-                text="Le lien entre le cabinet et l’entraînement : je sais vous faire revenir du blessé au performeur, avec une progression sécurisée à chaque étape."
+                text="Le lien entre le cabinet et l’entraînement : je mets tout en œuvre pour vous accompagner du statut de blessé à celui de sportif performant, avec une progression adaptée, sécurisée et durable à chaque étape."
               />
             </div>
           </div>
