@@ -84,7 +84,7 @@ function Index() {
                 title="Kinésithérapie"
                 badge="Bientôt disponible"
                 description="Bilan, traitement et revalidation pour soulager la douleur, réparer et retrouver toutes vos capacités."
-                points={["Bilan complet à chaque séance", "Thérapie manuelle et revalidation", "Drainage lymphatique (méthode Leduc)"]}
+                points={["Bilan initial complet et séance de suivi", "Thérapie manuelle et revalidation", "Drainage lymphatique (méthode Leduc)"]}
               />
               <OptionCard
                 to="/coaching"
