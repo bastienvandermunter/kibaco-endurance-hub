@@ -35,5 +35,6 @@ export const NAV_ITEMS = [
 //  - googleForm : lien vers le Google Form de contact coaching
 export const LINKS = {
   doctorAnytime: "https://www.doctoranytime.be/",
-  googleForm: "https://docs.google.com/forms/",
+  googleForm:
+    "https://docs.google.com/forms/d/e/1FAIpQLSenxUE0yWNBtPBHQcjwH_OIxb-464aXet_IB42DD0lPv-gcIg/viewform",
 };
