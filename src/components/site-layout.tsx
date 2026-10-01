@@ -179,7 +179,7 @@ export function SiteFooter() {
                 <span>
                   {SITE.iban}
                   <br />
-                  <span className="text-card/60">Compte bancaire professionnel</span>
+                  <span className="text-card/60"></span>
                 </span>
               </li>
             </ul>
