@@ -13,7 +13,7 @@ export const SITE = {
   // mais la prise de rendez-vous est masquée avec une mention « Bientôt ».
   kineComingSoon: true,
   kinePrices: [
-    { label: "Bilan initial complet (45 min à 1 h)", price: "50 €" },
+    { label: "Bilan initial complet (45 min à 1 h)", price: "55 €" },
     { label: "Rendez-vous de suivi", price: "40 €" },
   ],
   kineNonConventionne: true,
