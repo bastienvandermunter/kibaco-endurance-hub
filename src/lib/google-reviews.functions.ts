@@ -77,11 +77,14 @@ export const getGoogleReviews = createServerFn({ method: "GET" }).handler(async 
         `/my_business/v4/${selected.account}/locations/${selected.location}/reviews?pageSize=50${page ? `&pageToken=${encodeURIComponent(page)}` : ""}`,
       );
       for (const review of data.reviews ?? []) {
-        if (!review.comment?.trim()) continue;
+        const rawComment = review.comment?.trim() ?? "";
+        if (!rawComment) continue;
+        // Retire la traduction automatique anglaise ajoutée par Google.
+        const comment = rawComment.split("(Translated by Google)")[0].trim();
         const rating = { ONE: 1, TWO: 2, THREE: 3, FOUR: 4, FIVE: 5 }[review.starRating as "ONE" | "TWO" | "THREE" | "FOUR" | "FIVE"];
         reviews.push({
           id: review.reviewId ?? `${review.createTime}-${reviews.length}`,
-          text: review.comment,
+          text: comment,
           author: review.reviewer?.isAnonymous ? "Client Google" : review.reviewer?.displayName || "Client Google",
           rating: rating ?? 0,
           ...(review.createTime ? { date: review.createTime } : {}),
