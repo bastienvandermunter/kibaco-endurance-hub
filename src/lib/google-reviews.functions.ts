@@ -54,7 +54,7 @@ export const getGoogleReviews = createServerFn({ method: "GET" }).handler(async 
         }>(
           `/business_information/v1/${account}/locations?readMask=name,title&pageSize=100${locationPage ? `&pageToken=${encodeURIComponent(locationPage)}` : ""}`,
         );
-        const match = locations.locations?.find((location) => location.title?.trim().toLowerCase() === "kibaco");
+        const match = locations.locations?.find((location) => location.title?.trim().toLowerCase().includes("kibaco"));
         if (match) {
           selected = { account, location: match.name.split("/").pop() ?? "" };
           break;
