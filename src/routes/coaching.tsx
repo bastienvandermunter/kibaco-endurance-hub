@@ -15,7 +15,6 @@ import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
 import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
 import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
-import veloRoute from "@/assets/kibaco-velo-route.jpg.asset.json";
 import trailNb from "@/assets/kibaco-trail-nb.jpg.asset.json";
 import vtt from "@/assets/kibaco-vtt.jpg.asset.json";
 
@@ -154,16 +153,8 @@ function CoachingPage() {
             </div>
           </div>
 
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <figure className="overflow-hidden rounded-md">
-              <img
-                src={veloRoute.url}
-                alt="Bastien Vandermunter en course cycliste sur route"
-                className="h-72 w-full object-cover sm:h-[520px]"
-                loading="lazy"
-              />
-            </figure>
-            <figure className="overflow-hidden rounded-md">
+          <div className="mt-4">
+            <figure className="mx-auto max-w-3xl overflow-hidden rounded-md">
               <img
                 src={vtt.url}
                 alt="Bastien Vandermunter en VTT sur un sentier"
