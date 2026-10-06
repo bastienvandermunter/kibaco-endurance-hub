@@ -203,11 +203,41 @@ function CoachingPage() {
               <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
                 La performance se construit dans la durée
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                J’ai couru au niveau européen, et c’est là que s’est forgée ma vision de
-                l’entraînement : une construction à long terme, une fréquence d’efforts
-                entretenue au quotidien et un suivi constant — avec un objectif qui ne bouge
-                jamais : <span className="font-semibold text-foreground">zéro blessure</span>.
+              <p className="mt-6 text-lg font-semibold leading-relaxed text-foreground">
+                Construire la performance. Préserver le corps. Durer.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                J’ai eu la chance de courir au niveau européen. C’est dans cet univers exigeant
+                que s’est forgée ma vision de l’entraînement : la progression ne se construit
+                pas dans l’urgence, mais dans la continuité.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Un objectif ambitieux mérite une stratégie à sa hauteur. Cela signifie construire
+                sur le long terme, entretenir une fréquence d’efforts régulière, maîtriser la
+                charge d’entraînement et surtout, observer et ajuster en permanence. Chaque
+                séance a sa place. Chaque période a son rôle. Chaque détail compte.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Mais progresser ne consiste pas simplement à repousser ses limites. Il faut être
+                capable de les repousser sans dépasser celles de son corps.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                C’est pourquoi la prévention des blessures est au cœur de mon approche.
+                Comprendre son corps, identifier les signaux faibles, adapter l’entraînement,
+                respecter la récupération et intervenir avant que le problème ne devienne une
+                blessure : pour moi, cela fait partie intégrante de la performance.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Mon objectif est simple : vous permettre de progresser, de performer et de durer.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Parce que la véritable performance ne se mesure pas uniquement à un chrono. Elle
+                se construit dans la capacité à enchaîner les semaines, les mois et les saisons
+                avec constance, confiance et un corps capable de répondre présent.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite. Nous
+                construisons les conditions pour que vous puissiez aller plus loin.
               </p>
             </div>
           </div>
