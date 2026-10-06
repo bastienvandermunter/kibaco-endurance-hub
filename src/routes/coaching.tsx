@@ -89,27 +89,6 @@ function CoachingPage() {
           intro="Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des plans sur mesure et un suivi humain."
         />
 
-        <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6">
-          <div className="grid gap-4 lg:grid-cols-5">
-            <figure className="lg:col-span-2 overflow-hidden rounded-md">
-              <img
-                src={coachNage.url}
-                alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
-                className="h-72 w-full object-cover sm:h-96 lg:h-[560px]"
-                loading="lazy"
-              />
-            </figure>
-            <figure className="lg:col-span-3 overflow-hidden rounded-md">
-              <img
-                src={coursePhoto.url}
-                alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
-                className="h-72 w-full object-cover sm:h-96 lg:h-[560px]"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </section>
-
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="text-center font-display text-3xl font-semibold text-foreground">
             Ce que comprend le coaching
@@ -127,7 +106,28 @@ function CoachingPage() {
           </div>
         </section>
 
-         <section className="border-y border-border bg-secondary/40">
+        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+          <div className="grid gap-4 lg:grid-cols-5 lg:items-center">
+            <figure className="lg:col-span-2 overflow-hidden rounded-md">
+              <img
+                src={coachNage.url}
+                alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
+                className="h-72 w-full object-cover sm:h-96 lg:h-[560px]"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="lg:col-span-3 overflow-hidden rounded-md">
+              <img
+                src={coursePhoto.url}
+                alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
+                className="h-72 w-full object-cover sm:h-96 lg:h-[440px]"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
               <div className="border-l-4 border-primary bg-card p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarifs</p>
