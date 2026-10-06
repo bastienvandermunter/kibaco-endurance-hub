@@ -171,7 +171,7 @@ function CoachingPage() {
 
         {/* Parcours d'athlète + photos */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="grid gap-12 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col gap-4">
               <div className="grid flex-1 grid-cols-2 gap-4">
                 <figure className="relative min-h-56 overflow-hidden rounded-md sm:min-h-64">
