@@ -16,7 +16,6 @@ import { SITE, LINKS } from "@/lib/site";
 import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
 import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
 import trailNb from "@/assets/kibaco-trail-nb.jpg.asset.json";
-import vtt from "@/assets/kibaco-vtt.jpg.asset.json";
 
 export const Route = createFileRoute("/coaching")({
   component: CoachingPage,
@@ -210,19 +209,6 @@ function CoachingPage() {
                 entretenue au quotidien et un suivi constant — avec un objectif qui ne bouge
                 jamais : <span className="font-semibold text-foreground">zéro blessure</span>.
               </p>
-              <div className="relative mt-10">
-                <figure className="overflow-hidden rounded-md">
-                  <img
-                    src={vtt.url}
-                    alt="Bastien Vandermunter en VTT sur un sentier"
-                    className="h-40 w-full object-cover sm:h-48"
-                    loading="lazy"
-                  />
-                </figure>
-                <div className="absolute -top-4 -right-4 rounded-md border border-border bg-card p-4 font-hand text-xl text-foreground">
-                  Du terrain au cabinet
-                </div>
-              </div>
             </div>
           </div>
         </section>
