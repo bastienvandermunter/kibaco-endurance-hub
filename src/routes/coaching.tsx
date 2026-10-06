@@ -15,6 +15,9 @@ import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
 import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
 import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
+import veloRoute from "@/assets/kibaco-velo-route.jpg.asset.json";
+import trailNb from "@/assets/kibaco-trail-nb.jpg.asset.json";
+import vtt from "@/assets/kibaco-vtt.jpg.asset.json";
 
 export const Route = createFileRoute("/coaching")({
   component: CoachingPage,
@@ -121,6 +124,50 @@ function CoachingPage() {
                 src={coursePhoto.url}
                 alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
                 className="h-72 w-full object-cover sm:h-96 lg:h-[440px]"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <div className="mt-4 grid gap-4 lg:grid-cols-5">
+            <figure className="lg:col-span-2 overflow-hidden rounded-md">
+              <img
+                src={trailNb.url}
+                alt="Bastien Vandermunter en trail, photographié en noir et blanc"
+                className="h-72 w-full object-cover sm:h-96 lg:h-[620px]"
+                loading="lazy"
+              />
+            </figure>
+            <div className="lg:col-span-3 flex items-center">
+              <div className="border-l-4 border-primary bg-card p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Mon parcours d’athlète</p>
+                <h2 className="mt-4 font-display text-2xl font-semibold text-foreground">
+                  La performance se construit dans la durée
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground">
+                  J’ai couru au niveau européen, et c’est là que s’est forgée ma vision de
+                  l’entraînement : une construction à long terme, une fréquence d’efforts
+                  entretenue au quotidien et un suivi constant — avec un objectif qui ne
+                  bouge jamais : zéro blessure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <figure className="overflow-hidden rounded-md">
+              <img
+                src={veloRoute.url}
+                alt="Bastien Vandermunter en course cycliste sur route"
+                className="h-72 w-full object-cover sm:h-[520px]"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-md">
+              <img
+                src={vtt.url}
+                alt="Bastien Vandermunter en VTT sur un sentier"
+                className="h-72 w-full object-cover sm:h-[520px]"
                 loading="lazy"
               />
             </figure>
