@@ -78,7 +78,7 @@ const POINTS = [
     title: "Réponse sur WhatsApp",
     text: "Une question entre deux séances ? Je réponds sur WhatsApp, sans limite de messages et sous 48 h au plus tard.",
   },
-];
+] as const;
 
 function CoachingPage() {
   const [planSurMesure, progression, projetLongTerme, suiviIdo, preparation, clinicien, whatsapp] = POINTS;
