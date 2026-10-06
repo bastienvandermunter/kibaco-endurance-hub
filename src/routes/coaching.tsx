@@ -11,7 +11,7 @@ import {
   TrendingUp,
   MessageCircle,
 } from "lucide-react";
-import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
+import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
 import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
 import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
@@ -85,128 +85,204 @@ function CoachingPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <PageHero
-          eyebrow="Coaching"
-          title="Un coach qui connaît votre corps, pas seulement vos chronos"
-          intro="Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des plans sur mesure et un suivi humain."
-        />
+        {/* Hero */}
+        <section className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6">
+          <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-primary">Coaching</span>
+          <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
+            Un coach qui connaît votre corps,{" "}
+            <span className="text-primary">pas seulement</span> vos chronos
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète
+            confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des
+            plans sur mesure et un suivi humain.
+          </p>
+        </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="text-center font-display text-3xl font-semibold text-foreground">
-            Ce que comprend le coaching
-          </h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {POINTS.map((p) => (
-               <div key={p.title} className="rounded-md border border-border bg-card p-6">
-                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
-                  <p.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+        {/* Bento : ce que comprend le coaching */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="mb-12 flex items-center gap-6">
+            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Ce que comprend le coaching
+            </h2>
+            <div className="h-px w-full bg-border" />
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-6">
+            {/* Plan sur mesure */}
+            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
+                <Map className="h-6 w-6" />
               </div>
-            ))}
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{POINTS[0].title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[0].text}</p>
+            </div>
+
+            {/* Progression structurée */}
+            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
+                <Gauge className="h-6 w-6" />
+              </div>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{POINTS[1].title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[1].text}</p>
+            </div>
+
+            {/* Projet à long terme */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[2].title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[2].text}</p>
+            </div>
+
+            {/* Suivi IDO */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <MessagesSquare className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[3].title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[3].text}</p>
+            </div>
+
+            {/* Préparation d'objectifs */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <Trophy className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[4].title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[4].text}</p>
+            </div>
+
+            {/* Regard de clinicien */}
+            <div className="relative overflow-hidden rounded-md bg-foreground p-8 md:col-span-4">
+              <div className="relative z-10 max-w-sm">
+                <ClipboardCheck className="h-5 w-5 text-primary" />
+                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{POINTS[5].title}</h3>
+                <p className="text-sm leading-relaxed text-background/80">{POINTS[5].text}</p>
+              </div>
+              <span className="pointer-events-none absolute -right-4 bottom-2 select-none -rotate-12 font-hand text-5xl text-primary opacity-50">
+                Kinésithérapie
+              </span>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="rounded-md bg-primary p-8 md:col-span-2">
+              <MessageCircle className="h-5 w-5 text-primary-foreground" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{POINTS[6].title}</h3>
+              <p className="text-sm leading-relaxed text-primary-foreground/90">{POINTS[6].text}</p>
+            </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-          <div className="grid gap-4 lg:grid-cols-5 lg:items-center">
-            <figure className="lg:col-span-2 overflow-hidden rounded-md">
-              <img
-                src={coachNage.url}
-                alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
-                className="h-72 w-full object-cover sm:h-96 lg:h-[560px]"
-                loading="lazy"
-              />
-            </figure>
-            <figure className="lg:col-span-3 overflow-hidden rounded-md">
-              <img
-                src={coursePhoto.url}
-                alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
-                className="h-72 w-full object-cover sm:h-96 lg:h-[440px]"
-                loading="lazy"
-              />
-            </figure>
-          </div>
+        {/* Parcours d'athlète + photos */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="grid grid-cols-2 gap-4">
+              <figure className="overflow-hidden rounded-md">
+                <img
+                  src={coachNage.url}
+                  alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
+                  className="h-56 w-full object-cover sm:h-64"
+                  loading="lazy"
+                />
+              </figure>
+              <figure className="mt-8 overflow-hidden rounded-md">
+                <img
+                  src={coursePhoto.url}
+                  alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
+                  className="h-56 w-full object-cover sm:h-64"
+                  loading="lazy"
+                />
+              </figure>
+              <figure className="relative col-span-2 overflow-hidden rounded-md">
+                <img
+                  src={trailNb.url}
+                  alt="Bastien Vandermunter en trail, photographié en noir et blanc"
+                  className="h-64 w-full object-cover sm:h-72"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/70 via-transparent to-transparent p-6">
+                  <span className="font-display text-2xl font-semibold uppercase tracking-widest text-primary-foreground">
+                    Mon parcours d’athlète
+                  </span>
+                </div>
+              </figure>
+            </div>
 
-          <div className="mt-4 grid gap-4 lg:grid-cols-5">
-            <figure className="lg:col-span-2 overflow-hidden rounded-md">
-              <img
-                src={trailNb.url}
-                alt="Bastien Vandermunter en trail, photographié en noir et blanc"
-                className="h-72 w-full object-cover sm:h-96 lg:h-[620px]"
-                loading="lazy"
-              />
-            </figure>
-            <div className="lg:col-span-3 flex items-center">
-              <div className="border-l-4 border-primary bg-card p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Mon parcours d’athlète</p>
-                <h2 className="mt-4 font-display text-2xl font-semibold text-foreground">
-                  La performance se construit dans la durée
-                </h2>
-                <p className="mt-4 leading-relaxed text-muted-foreground">
-                  J’ai couru au niveau européen, et c’est là que s’est forgée ma vision de
-                  l’entraînement : une construction à long terme, une fréquence d’efforts
-                  entretenue au quotidien et un suivi constant — avec un objectif qui ne
-                  bouge jamais : zéro blessure.
+            <div>
+              <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+                La performance se construit dans la durée
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                J’ai couru au niveau européen, et c’est là que s’est forgée ma vision de
+                l’entraînement : une construction à long terme, une fréquence d’efforts
+                entretenue au quotidien et un suivi constant — avec un objectif qui ne bouge
+                jamais : <span className="font-semibold text-foreground">zéro blessure</span>.
+              </p>
+              <div className="relative mt-10">
+                <figure className="overflow-hidden rounded-md">
+                  <img
+                    src={vtt.url}
+                    alt="Bastien Vandermunter en VTT sur un sentier"
+                    className="h-40 w-full object-cover sm:h-48"
+                    loading="lazy"
+                  />
+                </figure>
+                <div className="absolute -top-4 -right-4 rounded-md border border-border bg-card p-4 font-hand text-xl text-foreground">
+                  Du terrain au cabinet
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tarifs & contact */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="overflow-hidden rounded-md border border-border bg-card">
+            <div className="grid md:grid-cols-2">
+              <div className="border-b border-border p-10 md:border-b-0 md:border-r md:p-12">
+                <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                  Tarifs & engagement
+                </span>
+                <div className="mb-2 mt-6 flex items-baseline gap-2">
+                  <span className="font-display text-2xl font-semibold text-foreground">{SITE.coachingPrice}</span>
+                  <span className="text-base text-muted-foreground">{SITE.coachingPriceUnit}</span>
+                </div>
+                <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                  <GraduationCap className="h-4 w-4 shrink-0 text-primary" />
+                  {SITE.coachingPriceStudent}
+                </p>
+                <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+                  La tarification est mensuelle, sans engagement de longue durée — mais je
+                  recommande un projet pensé sur plusieurs mois, voire plusieurs saisons : c’est
+                  le meilleur terrain pour l’évolution de l’athlète, et cela colle à ma vision à
+                  long terme du coaching.
                 </p>
               </div>
-            </div>
-          </div>
 
-          <div className="mt-4">
-            <figure className="mx-auto max-w-3xl overflow-hidden rounded-md">
-              <img
-                src={vtt.url}
-                alt="Bastien Vandermunter en VTT sur un sentier"
-                className="h-72 w-full object-cover sm:h-[520px]"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </section>
-
-        <section className="border-y border-border bg-secondary/40">
-          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
-              <div className="border-l-4 border-primary bg-card p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarifs</p>
-              <p className="mt-4 font-display text-2xl font-semibold text-foreground">
-                {SITE.coachingPrice}{" "}
-                <span className="text-base font-medium text-muted-foreground">{SITE.coachingPriceUnit}</span>
-              </p>
-              <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
-                <GraduationCap className="h-4 w-4 shrink-0 text-primary" />
-                {SITE.coachingPriceStudent}
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                La tarification est mensuelle, sans engagement de longue durée — mais je recommande un
-                projet pensé sur plusieurs mois, voire plusieurs saisons : c’est le meilleur terrain pour
-                l’évolution de l’athlète, et cela colle à ma vision à long terme du coaching.
-              </p>
-            </div>
-            <div>
-              <h2 className="font-display text-3xl font-semibold text-foreground">
-                Parlez-moi de votre objectif
-              </h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                Remplissez le formulaire de contact : dites-moi qui vous êtes, ce que vous pratiquez et ce
-                que vous visez. Je reviens vers vous pour en discuter et construire votre plan.
-              </p>
-              <a
-                href={LINKS.googleForm}
-                target="_blank"
-                rel="noopener noreferrer"
-                 className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Me contacter via le formulaire
-                <ExternalLink className="h-4 w-4" />
-              </a>
-              <p className="mt-5 text-sm text-muted-foreground">
-                Vous hésitez entre soin et entraînement ?{" "}
-                <Link to="/kinesitherapie" className="font-semibold text-primary underline-offset-4 hover:underline">
-                  Voyez d’abord la kinésithérapie
-                  <ArrowRight className="ml-1 inline h-3.5 w-3.5" />
-                </Link>
-              </p>
+              <div className="flex flex-col justify-center bg-foreground p-10 md:p-12">
+                <h2 className="mb-4 font-display text-3xl font-semibold text-background">
+                  Parlez-moi de votre objectif
+                </h2>
+                <p className="mb-8 leading-relaxed text-background/80">
+                  Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
+                  reviens vers vous pour en discuter et construire votre plan.
+                </p>
+                <a
+                  href={LINKS.googleForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-between gap-2 rounded-md bg-primary px-6 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Me contacter via le formulaire
+                  <ExternalLink className="h-5 w-5" />
+                </a>
+                <p className="mt-6 text-sm text-background/60">
+                  Vous hésitez entre soin et entraînement ?{" "}
+                  <Link
+                    to="/kinesitherapie"
+                    className="font-semibold text-primary underline-offset-4 hover:underline"
+                  >
+                    Voyez d’abord la kinésithérapie
+                    <ArrowRight className="ml-1 inline h-3.5 w-3.5" />
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </section>
