@@ -5,4 +5,6 @@
 - [x] Harmoniser les cinq pages sans modifier les tarifs, coordonnées ou disponibilité kiné.
 - [x] Vérifier le rendu sur ordinateur et mobile.
 - [x] Afficher les avis authentiques de la fiche Google Kibaco dans « Ils s’entraînent avec moi » (aucun avis renvoyé actuellement par Google).
-- [x] Connecter le compte Google kibaco.contact@gmail.com et vérifier l’accès à sa fiche.
+- [x] Connecter le compte Google kibaco.contact@gmail.com et vérifier l’accès à sa fiche.## Tâches
+- [x] Harmoniser les couleurs de la page Coaching (rythme en damier)
+- [x] Justifier les textes de tout le site
