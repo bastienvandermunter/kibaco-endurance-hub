@@ -156,7 +156,7 @@ function CoachingPage() {
                 <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{clinicien.title}</h3>
                 <p className="text-sm leading-relaxed text-background/80">{clinicien.text}</p>
               </div>
-              <span className="pointer-events-none absolute -right-4 bottom-2 select-none -rotate-12 font-hand text-5xl text-primary opacity-50">
+              <span className="pointer-events-none absolute right-6 bottom-4 select-none -rotate-6 font-hand text-4xl text-primary opacity-60">
                 Kinésithérapie
               </span>
             </div>
