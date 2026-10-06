@@ -190,18 +190,13 @@ function CoachingPage() {
                   loading="lazy"
                 />
               </figure>
-              <figure className="relative col-span-2 overflow-hidden rounded-md">
+              <figure className="col-span-2 overflow-hidden rounded-md">
                 <img
                   src={trailNb.url}
                   alt="Bastien Vandermunter en trail, photographié en noir et blanc"
                   className="h-64 w-full object-cover sm:h-72"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/70 via-transparent to-transparent p-6">
-                  <span className="font-display text-2xl font-semibold uppercase tracking-widest text-primary-foreground">
-                    Mon parcours d’athlète
-                  </span>
-                </div>
               </figure>
             </div>
 
