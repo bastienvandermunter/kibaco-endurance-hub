@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
+import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
+import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
 
 export const Route = createFileRoute("/coaching")({
   component: CoachingPage,
