@@ -186,7 +186,7 @@ function CoachingPage() {
                   <img
                     src={coursePhoto.url}
                     alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
                     loading="lazy"
                   />
                 </figure>
