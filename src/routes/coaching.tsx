@@ -195,8 +195,8 @@ function CoachingPage() {
             </div>
 
             {/* Progression structurée */}
-            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
+            <div className="group rounded-md bg-secondary/50 p-8 md:col-span-3">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/50 text-primary transition-colors group-hover:bg-white">
                 <Gauge className="h-6 w-6" />
               </div>
               <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{progression.title}</h3>
@@ -211,7 +211,7 @@ function CoachingPage() {
             </div>
 
             {/* Suivi IDO */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+            <div className="rounded-md border border-border bg-card p-8 md:col-span-2">
               <MessagesSquare className="h-5 w-5 text-primary" />
               <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{suiviIdo.title}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">{suiviIdo.text}</p>
