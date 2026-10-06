@@ -99,76 +99,6 @@ function CoachingPage() {
           </p>
         </section>
 
-        {/* Bento : ce que comprend le coaching */}
-        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="mb-12 flex items-center gap-6">
-            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
-              Ce que comprend le coaching
-            </h2>
-            <div className="h-px w-full bg-border" />
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-6">
-            {/* Plan sur mesure */}
-            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
-                <Map className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{planSurMesure.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{planSurMesure.text}</p>
-            </div>
-
-            {/* Progression structurée */}
-            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
-                <Gauge className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{progression.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{progression.text}</p>
-            </div>
-
-            {/* Projet à long terme */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
-              <TrendingUp className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{projetLongTerme.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{projetLongTerme.text}</p>
-            </div>
-
-            {/* Suivi IDO */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
-              <MessagesSquare className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{suiviIdo.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{suiviIdo.text}</p>
-            </div>
-
-            {/* Préparation d'objectifs */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
-              <Trophy className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{preparation.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{preparation.text}</p>
-            </div>
-
-            {/* Regard de clinicien */}
-            <div className="relative overflow-hidden rounded-md bg-foreground p-8 md:col-span-4">
-              <div className="relative z-10 max-w-sm">
-                <ClipboardCheck className="h-5 w-5 text-primary" />
-                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{clinicien.title}</h3>
-                <p className="text-sm leading-relaxed text-background/80">{clinicien.text}</p>
-              </div>
-              <span className="pointer-events-none absolute right-6 bottom-4 select-none -rotate-6 font-hand text-4xl text-primary opacity-60">
-                Kinésithérapie
-              </span>
-            </div>
-
-            {/* WhatsApp */}
-            <div className="rounded-md bg-primary p-8 md:col-span-2">
-              <MessageCircle className="h-5 w-5 text-primary-foreground" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{whatsapp.title}</h3>
-              <p className="text-sm leading-relaxed text-primary-foreground/90">{whatsapp.text}</p>
-            </div>
-          </div>
-        </section>
-
         {/* Parcours d'athlète + photos */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -245,6 +175,75 @@ function CoachingPage() {
           </div>
         </section>
 
+        {/* Bento : ce que comprend le coaching */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="mb-12 flex items-center gap-6">
+            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Ce que comprend le coaching
+            </h2>
+            <div className="h-px w-full bg-border" />
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-6">
+            {/* Plan sur mesure */}
+            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
+                <Map className="h-6 w-6" />
+              </div>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{planSurMesure.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{planSurMesure.text}</p>
+            </div>
+
+            {/* Progression structurée */}
+            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
+                <Gauge className="h-6 w-6" />
+              </div>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{progression.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{progression.text}</p>
+            </div>
+
+            {/* Projet à long terme */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{projetLongTerme.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{projetLongTerme.text}</p>
+            </div>
+
+            {/* Suivi IDO */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <MessagesSquare className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{suiviIdo.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{suiviIdo.text}</p>
+            </div>
+
+            {/* Préparation d'objectifs */}
+            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
+              <Trophy className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{preparation.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{preparation.text}</p>
+            </div>
+
+            {/* Regard de clinicien */}
+            <div className="relative overflow-hidden rounded-md bg-foreground p-8 md:col-span-4">
+              <div className="relative z-10 max-w-sm">
+                <ClipboardCheck className="h-5 w-5 text-primary" />
+                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{clinicien.title}</h3>
+                <p className="text-sm leading-relaxed text-background/80">{clinicien.text}</p>
+              </div>
+              <span className="pointer-events-none absolute right-6 bottom-4 select-none -rotate-6 font-hand text-4xl text-primary opacity-60">
+                Kinésithérapie
+              </span>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="rounded-md bg-primary p-8 md:col-span-2">
+              <MessageCircle className="h-5 w-5 text-primary-foreground" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{whatsapp.title}</h3>
+              <p className="text-sm leading-relaxed text-primary-foreground/90">{whatsapp.text}</p>
+            </div>
+          </div>
+        </section>
         {/* Tarifs & contact */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="overflow-hidden rounded-md border border-border bg-card">
