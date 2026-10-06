@@ -81,6 +81,7 @@ const POINTS = [
 ];
 
 function CoachingPage() {
+  const [planSurMesure, progression, projetLongTerme, suiviIdo, preparation, clinicien, whatsapp] = POINTS;
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
