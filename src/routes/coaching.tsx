@@ -201,13 +201,13 @@ function CoachingPage() {
 
             <div>
               <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-                La performance se construit dans la durée
+                La performance se construit dans la durée !
               </h2>
               <p className="mt-6 text-lg font-semibold leading-relaxed text-foreground">
                 Construire la performance. Préserver le corps. Durer.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                J’ai eu la chance de courir au niveau européen. C’est dans cet univers exigeant
+                J’ai eu la chance d’évoluer au niveau européen en triathlon et de monter à plusieurs reprises sur les podiums, aussi bien en triathlon qu’en trail. C’est dans cet univers exigeant
                 que s’est forgée ma vision de l’entraînement : la progression ne se construit
                 pas dans l’urgence, mais dans la continuité.
               </p>
