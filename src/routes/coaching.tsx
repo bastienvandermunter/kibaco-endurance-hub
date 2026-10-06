@@ -171,29 +171,31 @@ function CoachingPage() {
 
         {/* Parcours d'athlète + photos */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="grid grid-cols-2 gap-4">
-              <figure className="overflow-hidden rounded-md">
-                <img
-                  src={coachNage.url}
-                  alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
-                  className="h-56 w-full object-cover sm:h-64"
-                  loading="lazy"
-                />
-              </figure>
-              <figure className="mt-8 overflow-hidden rounded-md">
-                <img
-                  src={coursePhoto.url}
-                  alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
-                  className="h-56 w-full object-cover sm:h-64"
-                  loading="lazy"
-                />
-              </figure>
-              <figure className="col-span-2 overflow-hidden rounded-md">
+          <div className="grid gap-12 lg:gap-16">
+            <div className="flex flex-col gap-4">
+              <div className="grid flex-1 grid-cols-2 gap-4">
+                <figure className="relative min-h-56 overflow-hidden rounded-md sm:min-h-64">
+                  <img
+                    src={coachNage.url}
+                    alt="Bastien Vandermunter en séance de coaching natation au bord du bassin"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure className="relative min-h-56 overflow-hidden rounded-md sm:min-h-64">
+                  <img
+                    src={coursePhoto.url}
+                    alt="Bastien Vandermunter en course sur la partie à pied d’un triathlon"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <figure className="relative min-h-64 flex-1 overflow-hidden rounded-md sm:min-h-72">
                 <img
                   src={trailNb.url}
                   alt="Bastien Vandermunter en trail, photographié en noir et blanc"
-                  className="h-64 w-full object-cover sm:h-72"
+                  className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
                 />
               </figure>
