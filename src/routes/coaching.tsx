@@ -115,8 +115,8 @@ function CoachingPage() {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
                 <Map className="h-6 w-6" />
               </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{POINTS[0].title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[0].text}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{planSurMesure.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{planSurMesure.text}</p>
             </div>
 
             {/* Progression structurée */}
@@ -124,37 +124,37 @@ function CoachingPage() {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
                 <Gauge className="h-6 w-6" />
               </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{POINTS[1].title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[1].text}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{progression.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{progression.text}</p>
             </div>
 
             {/* Projet à long terme */}
             <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
               <TrendingUp className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[2].title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[2].text}</p>
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{projetLongTerme.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{projetLongTerme.text}</p>
             </div>
 
             {/* Suivi IDO */}
             <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
               <MessagesSquare className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[3].title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[3].text}</p>
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{suiviIdo.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{suiviIdo.text}</p>
             </div>
 
             {/* Préparation d'objectifs */}
             <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
               <Trophy className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{POINTS[4].title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{POINTS[4].text}</p>
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{preparation.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{preparation.text}</p>
             </div>
 
             {/* Regard de clinicien */}
             <div className="relative overflow-hidden rounded-md bg-foreground p-8 md:col-span-4">
               <div className="relative z-10 max-w-sm">
                 <ClipboardCheck className="h-5 w-5 text-primary" />
-                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{POINTS[5].title}</h3>
-                <p className="text-sm leading-relaxed text-background/80">{POINTS[5].text}</p>
+                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{clinicien.title}</h3>
+                <p className="text-sm leading-relaxed text-background/80">{clinicien.text}</p>
               </div>
               <span className="pointer-events-none absolute -right-4 bottom-2 select-none -rotate-12 font-hand text-5xl text-primary opacity-50">
                 Kinésithérapie
@@ -164,8 +164,8 @@ function CoachingPage() {
             {/* WhatsApp */}
             <div className="rounded-md bg-primary p-8 md:col-span-2">
               <MessageCircle className="h-5 w-5 text-primary-foreground" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{POINTS[6].title}</h3>
-              <p className="text-sm leading-relaxed text-primary-foreground/90">{POINTS[6].text}</p>
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{whatsapp.title}</h3>
+              <p className="text-sm leading-relaxed text-primary-foreground/90">{whatsapp.text}</p>
             </div>
           </div>
         </section>
