@@ -126,6 +126,9 @@ function CoachingPage() {
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
                   />
+                  <figcaption className="absolute bottom-2 right-2 rounded-sm bg-background/75 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-foreground/80">
+                    Photo : Wildness Visual
+                  </figcaption>
                 </figure>
                 <figure className="relative min-h-56 overflow-hidden rounded-md sm:min-h-64">
                   <img
@@ -136,13 +139,18 @@ function CoachingPage() {
                   />
                 </figure>
               </div>
-              <figure className="relative min-h-64 flex-1 overflow-hidden rounded-md sm:min-h-72">
-                <img
-                  src={trailNb.url}
-                  alt="Bastien Vandermunter en trail, photographié en noir et blanc"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
+              <figure className="flex min-h-64 flex-1 flex-col gap-2 sm:min-h-72">
+                <div className="relative flex-1 overflow-hidden rounded-md">
+                  <img
+                    src={trailNb.url}
+                    alt="Bastien Vandermunter en trail, photographié en noir et blanc"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="text-right text-[11px] font-medium tracking-wide text-muted-foreground">
+                  Photo : Geoffrey Meuli
+                </figcaption>
               </figure>
             </div>
 
