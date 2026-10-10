@@ -8,3 +8,4 @@
 - [x] Connecter le compte Google kibaco.contact@gmail.com et vérifier l’accès à sa fiche.
 - [x] Harmoniser les couleurs de la page Coaching (rythme en damier).
 - [x] Justifier les textes de tout le site.
+- [x] Remplacer le logo partout sur le site (en-tête, pied de page, icône d'onglet).
