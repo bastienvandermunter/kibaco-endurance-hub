@@ -12,7 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Logo Kibaco" className="h-11 w-11 rounded-full object-contain" />
+          <img src={logoAsset.url} alt="Logo Kibaco" className="h-12 w-12 rounded-full object-contain" />
           <span className="font-display text-xl font-bold text-foreground">
             KIBACO
           </span>
@@ -128,7 +128,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-               <img src={logoAsset.url} alt="Logo Kibaco" className="h-12 w-12 rounded-full bg-card object-contain" />
+               <img src={logoAsset.url} alt="Logo Kibaco" className="h-14 w-14 rounded-full bg-card p-2 object-contain" />
                <span className="font-display text-xl font-bold">KIBACO</span>
             </div>
             <p className="mt-3 text-sm font-medium text-card/90">{SITE.owner}</p>
