@@ -80,8 +80,8 @@ const POINTS = [
   },
   {
     icon: Users,
-    title: "Cours gratuits en présentiel",
-    text: "J’organise ponctuellement des cours en présentiel. Ils sont gratuits et déjà compris dans votre abonnement mensuel.",
+    title: "Cours gratuits en présentiel pour les membres Kibaco ! ",
+    text: "J’organise ponctuellement des séances en présentiel dédiées à la course à pied et au vélo, incluses dans votre abonnement mensuel et accessibles gratuitement aux membres actifs.\n\nCes rendez-vous sont l’occasion de mettre mon expérience du triathlon à votre service pour développer vos compétences techniques et tactiques : maîtrise du vélo, pilotage, transitions, technique de course à pied et bien d’autres aspects.\n\nL’objectif : vous permettre de gagner en aisance, d’affiner votre technique et de progresser dans votre pratique, quel que soit votre niveau !",
   },
 ] as const;
 
