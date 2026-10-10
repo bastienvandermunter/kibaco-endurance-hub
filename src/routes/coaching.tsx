@@ -10,6 +10,7 @@ import {
   ArrowRight,
   TrendingUp,
   MessageCircle,
+  Users,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
@@ -77,10 +78,24 @@ const POINTS = [
     title: "Réponse sur WhatsApp",
     text: "Une question entre deux séances ? Je réponds sur WhatsApp, sans limite de messages et sous 48 h au plus tard.",
   },
+  {
+    icon: Users,
+    title: "Cours gratuits en présentiel",
+    text: "J’organise ponctuellement des cours en présentiel. Ils sont gratuits et déjà compris dans votre abonnement mensuel.",
+  },
 ] as const;
 
 function CoachingPage() {
-  const [planSurMesure, progression, projetLongTerme, suiviIdo, preparation, clinicien, whatsapp] = POINTS;
+  const [
+    planSurMesure,
+    progression,
+    projetLongTerme,
+    suiviIdo,
+    preparation,
+    clinicien,
+    whatsapp,
+    coursPresentiel,
+  ] = POINTS;
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
@@ -241,6 +256,13 @@ function CoachingPage() {
               <MessageCircle className="h-5 w-5 text-primary-foreground" />
               <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{whatsapp.title}</h3>
               <p className="text-sm leading-relaxed text-primary-foreground/90">{whatsapp.text}</p>
+            </div>
+
+            {/* Cours en présentiel */}
+            <div className="rounded-md border border-border bg-card p-8 md:col-span-6">
+              <Users className="h-5 w-5 text-primary" />
+              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{coursPresentiel.title}</h3>
+              <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{coursPresentiel.text}</p>
             </div>
           </div>
         </section>
