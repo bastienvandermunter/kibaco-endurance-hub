@@ -9,3 +9,4 @@
 - [x] Harmoniser les couleurs de la page Coaching (rythme en damier).
 - [x] Justifier les textes de tout le site.
 - [x] Remplacer le logo partout sur le site (en-tête, pied de page, icône d'onglet).
+- [ ] Relire l’orthographe de tout le site (cinq pages, en-tête, pied de page, textes descriptifs).
