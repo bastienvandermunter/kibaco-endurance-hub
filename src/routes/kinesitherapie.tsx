@@ -20,13 +20,13 @@ export const Route = createFileRoute("/kinesitherapie")({
         {
           name: "description",
           content:
-            "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Bilan initial 50 €, séance de suivi 40 €. Non conventionné. Ouverture prochaine.",
+            "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Non conventionné. Ouverture prochaine.",
         },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
         content:
-          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). Bilan initial 50 €, séance de suivi 40 € — ouverture prochaine.",
+          "Prise en charge orthopédique et traumatologique : bilan, thérapie manuelle, revalidation et drainage lymphatique (méthode Leduc). Ouverture prochaine.",
       },
       { property: "og:url", content: "/kinesitherapie" },
       { property: "og:type", content: "website" },
@@ -123,7 +123,12 @@ function KinesitherapiePage() {
                 {SITE.kinePrices.map((t) => (
                   <div key={t.label} className="flex items-baseline justify-between gap-4 border-b border-border pb-4 last:border-b-0 last:pb-0">
                     <span className="text-sm font-medium text-muted-foreground">{t.label}</span>
-                    <span className="font-display text-lg font-semibold text-foreground">{t.price}</span>
+                    <span
+                      aria-hidden="true"
+                      className="select-none font-display text-lg font-semibold text-foreground blur-[6px]"
+                    >
+                      {t.price}
+                    </span>
                   </div>
                 ))}
               </div>
