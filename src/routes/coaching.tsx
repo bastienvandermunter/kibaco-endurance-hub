@@ -26,7 +26,7 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement sur mesure, suivi hebdomadaire et préparation de vos objectifs. 120 €/mois, 100 €/mois pour les étudiants.",
+          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement sur mesure, suivi régulier et préparation de vos objectifs. 120 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
