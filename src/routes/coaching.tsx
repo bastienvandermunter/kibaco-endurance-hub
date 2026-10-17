@@ -86,16 +86,6 @@ const POINTS = [
 ] as const;
 
 function CoachingPage() {
-  const [
-    planSurMesure,
-    progression,
-    projetLongTerme,
-    suiviIdo,
-    preparation,
-    clinicien,
-    whatsapp,
-    coursPresentiel,
-  ] = POINTS;
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
@@ -198,80 +188,41 @@ function CoachingPage() {
           </div>
         </section>
 
-        {/* Bento : ce que comprend le coaching */}
+        {/* Ce que comprend le coaching */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="mb-12 flex items-center gap-6">
+          <div className="mb-6 flex items-center gap-6">
             <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
               Ce que comprend le coaching
             </h2>
             <div className="h-px w-full bg-border" />
           </div>
+          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
+            Neuf points concrets, du premier plan d’entraînement jusqu’au jour de course.
+          </p>
 
-          <div className="grid gap-4 md:grid-cols-6">
-            {/* Plan sur mesure */}
-            <div className="group rounded-md border border-border bg-card p-8 md:col-span-3">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary transition-colors group-hover:bg-primary/10">
-                <Map className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{planSurMesure.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{planSurMesure.text}</p>
-            </div>
-
-            {/* Progression structurée */}
-            <div className="group rounded-md bg-secondary/50 p-8 md:col-span-3">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/50 text-primary transition-colors group-hover:bg-white">
-                <Gauge className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{progression.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{progression.text}</p>
-            </div>
-
-            {/* Projet à long terme */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
-              <TrendingUp className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{projetLongTerme.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{projetLongTerme.text}</p>
-            </div>
-
-            {/* Suivi IDO */}
-            <div className="rounded-md border border-border bg-card p-8 md:col-span-2">
-              <MessagesSquare className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{suiviIdo.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{suiviIdo.text}</p>
-            </div>
-
-            {/* Préparation d'objectifs */}
-            <div className="rounded-md bg-secondary/50 p-8 md:col-span-2">
-              <Trophy className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{preparation.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{preparation.text}</p>
-            </div>
-
-            {/* Regard de clinicien */}
-            <div className="relative overflow-hidden rounded-md bg-foreground p-8 md:col-span-4">
-              <div className="relative z-10 max-w-sm">
-                <ClipboardCheck className="h-5 w-5 text-primary" />
-                <h3 className="mb-2 mt-4 font-display text-2xl font-semibold text-background">{clinicien.title}</h3>
-                <p className="text-sm leading-relaxed text-background/80">{clinicien.text}</p>
-              </div>
-              <span className="pointer-events-none absolute right-6 bottom-4 select-none -rotate-6 font-hand text-4xl text-primary opacity-60">
-                Kinésithérapie
-              </span>
-            </div>
-
-            {/* WhatsApp */}
-            <div className="rounded-md bg-primary p-8 md:col-span-2">
-              <MessageCircle className="h-5 w-5 text-primary-foreground" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-primary-foreground">{whatsapp.title}</h3>
-              <p className="text-sm leading-relaxed text-primary-foreground/90">{whatsapp.text}</p>
-            </div>
-
-            {/* Cours en présentiel */}
-            <div className="rounded-md border border-border bg-card p-8 md:col-span-6">
-              <Users className="h-5 w-5 text-primary" />
-              <h3 className="mb-2 mt-4 font-display text-lg font-semibold text-foreground">{coursPresentiel.title}</h3>
-              <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{coursPresentiel.text}</p>
-            </div>
+          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {POINTS.map((point, index) => {
+              const Icon = point.icon;
+              return (
+                <div
+                  key={point.title}
+                  className="flex flex-col bg-card p-7 transition-colors hover:bg-secondary/40 sm:p-8"
+                >
+                  <div className="mb-6 flex items-center justify-between gap-4">
+                    <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <Icon className="h-5 w-5 shrink-0 text-primary" />
+                  </div>
+                  <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
+                    {point.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-left text-muted-foreground">
+                    {point.text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </section>
         {/* Tarifs & contact */}
@@ -291,10 +242,10 @@ function CoachingPage() {
                   {SITE.coachingPriceStudent}
                 </p>
                 <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                  La tarification est mensuelle, sans engagement de longue durée — mais je
-                  recommande un projet pensé sur plusieurs mois, voire plusieurs saisons : c’est
-                  le meilleur terrain pour l’évolution de l’athlète, et cela colle à ma vision à
-                  long terme du coaching.
+                  La tarification est mensuelle, avec un engagement minimum de trois mois :
+                  c’est le temps nécessaire pour construire quelque chose de solide et laisser la
+                  progression s’installer. Au-delà, un projet pensé sur plusieurs saisons reste le
+                  meilleur terrain pour l’évolution de l’athlète.
                 </p>
               </div>
 
