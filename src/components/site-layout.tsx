@@ -128,7 +128,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-               <img src={logoAsset.url} alt="Logo Kibaco" className="h-14 w-14 rounded-full bg-card p-2 object-contain" />
+               <img src={logoAsset.url} alt="Logo Kibaco" className="h-14 w-14 rounded-full bg-card p-1 object-contain" />
                <span className="font-display text-xl font-bold">KIBACO</span>
             </div>
             <p className="mt-3 text-sm font-medium text-card/90">{SITE.owner}</p>
