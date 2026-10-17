@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
-import coachNage from "@/assets/kibaco-coach-nage.jpg.asset.json";
+import coachNage from "@/assets/kibaco-coach-nage-v2.jpg.asset.json";
 import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
 import trailNb from "@/assets/kibaco-trail-nb.jpg.asset.json";
 
