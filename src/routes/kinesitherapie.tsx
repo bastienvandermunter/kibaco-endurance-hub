@@ -98,20 +98,40 @@ function KinesitherapiePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="text-center font-display text-3xl font-semibold text-foreground">
-            Les points clés de la prise en charge
-          </h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {POINTS.map((p) => (
-               <div key={p.title} className="rounded-md border border-border bg-card p-6">
-                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
-                  <p.icon className="h-6 w-6" />
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="mb-6 flex items-center gap-6">
+            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Les points clés de la prise en charge
+            </h2>
+            <div className="h-px w-full bg-border" />
+          </div>
+          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
+            Sept points concrets, du premier bilan jusqu’au retour à vos activités.
+          </p>
+
+          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {POINTS.map((point, index) => {
+              const Icon = point.icon;
+              return (
+                <div
+                  key={point.title}
+                  className="flex flex-col bg-card p-7 transition-colors hover:bg-secondary/40 sm:p-8"
+                >
+                  <div className="mb-6 flex items-center justify-between gap-4">
+                    <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <Icon className="h-5 w-5 shrink-0 text-primary" />
+                  </div>
+                  <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
+                    {point.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-left text-muted-foreground">
+                    {point.text}
+                  </p>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
