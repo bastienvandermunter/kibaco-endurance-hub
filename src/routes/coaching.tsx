@@ -12,6 +12,7 @@ import {
   Users,
   Activity,
   Lightbulb,
+  Handshake,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
@@ -27,13 +28,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 120 €/mois, 100 €/mois pour les étudiants.",
+          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 130 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 120 €/mois, 100 €/mois pour les étudiants.",
+          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 130 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -90,6 +91,12 @@ const POINTS = [
     text: "Des conseils concrets sur l’hydratation, la nutrition, la technique et le matériel, pour que chaque détail serve votre progression.",
   },
 ] as const;
+
+const FORMULE = {
+  icon: Handshake,
+  title: "Un seul abonnement, la même qualité d’accompagnement pour tous.",
+  text: "Parce que je suis convaincu que chaque athlète mérite un suivi de qualité, quels que soient son niveau, son expérience ou ses objectifs, j’ai fait le choix de proposer une formule unique. Pas de niveaux de service ni d’options supplémentaires : chacun bénéficie de la même attention, du même engagement et d’un accompagnement entièrement personnalisé.",
+} as const;
 
 function CoachingPage() {
   return (
@@ -203,7 +210,7 @@ function CoachingPage() {
             <div className="h-px w-full bg-border" />
           </div>
           <p className="mb-10 max-w-2xl text-left text-muted-foreground">
-            Neuf points concrets, du premier plan d’entraînement jusqu’au jour de course.
+            Dix points concrets, du premier plan d’entraînement jusqu’au jour de course.
           </p>
 
           <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -229,6 +236,24 @@ function CoachingPage() {
                 </div>
               );
             })}
+
+            {/* Formule unique */}
+            <div className="bg-secondary/50 p-7 sm:col-span-2 sm:p-8 lg:col-span-3">
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
+                  10
+                </span>
+                <Handshake className="h-5 w-5 shrink-0 text-primary" />
+              </div>
+              <div className="grid gap-5 lg:grid-cols-[1fr_1.5fr] lg:items-start lg:gap-12">
+                <h3 className="font-display text-xl font-semibold leading-snug text-foreground">
+                  {FORMULE.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-left text-muted-foreground lg:text-base">
+                  {FORMULE.text}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         {/* Tarifs & contact */}
