@@ -61,7 +61,7 @@ const POINTS = [
   {
     icon: MessagesSquare,
     title: "Suivi sur l’application IDO",
-    text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre feedback (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
+    text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre retour (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
   },
   {
     icon: Trophy,

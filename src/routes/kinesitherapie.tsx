@@ -39,7 +39,7 @@ export const Route = createFileRoute("/kinesitherapie")({
 const POINTS = [
   {
     icon: ClipboardList,
-    title: "Bilan complet",
+    title: "Bilan initial complet",
     text: "Chaque séance commence par un bilan complet pour identifier la cause réelle de votre douleur et mettre en place un plan de rééducation clair et efficace.",
   },
   {
