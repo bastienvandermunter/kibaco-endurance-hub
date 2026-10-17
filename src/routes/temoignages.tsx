@@ -44,7 +44,7 @@ function TemoignagesPage() {
         <PageHero
           eyebrow="Ils s’entraînent avec moi"
           title="Votre confiance, mon plus beau retour."
-          intro="Découvrez les témoignages de celles et ceux qui m’ont fait confiance pour les accompagner dans leur pratique sportive, leur rééducation et leur progression."
+          intro="Découvrez les témoignages de celles et ceux que j’ai accompagnés dans leur pratique sportive, leur rééducation et leur progression."
         />
 
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
