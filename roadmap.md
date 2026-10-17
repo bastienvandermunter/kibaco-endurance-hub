@@ -11,3 +11,4 @@
 - [x] Remplacer le logo partout sur le site (en-tête, pied de page, icône d'onglet).
 - [x] Relire l’orthographe de tout le site (cinq pages, en-tête, pied de page, textes descriptifs).
 - [x] Restructurer « Ce que comprend le coaching » en neuf points numérotés, plus clairs et réguliers.
+- [x] Ajouter le point « Un seul abonnement, la même qualité d’accompagnement pour tous ».
