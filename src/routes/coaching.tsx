@@ -83,7 +83,7 @@ const POINTS = [
   {
     icon: Activity,
     title: "Détermination des zones de travail",
-    text: "Vos zones d’intensité sont définies à partir de votre profil et de vos séances : vous savez exactement à quelle allure pousser, et pourquoi, sur chaque effort.",
+    text: "Vos zones d’intensité sont définies avec précision grâce à des tests spécifiques, adaptés à votre profil et à votre discipline. Associés à l’analyse de vos séances et à votre ressenti, ces tests permettent d’ajuster vos intensités d’entraînement pour que chaque effort soit adapté, maîtrisé et réalisé avec un objectif précis.",
   },
   {
     icon: Lightbulb,
