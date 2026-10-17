@@ -53,7 +53,7 @@ const POINTS = [
   {
     icon: Gauge,
     title: "Progression structurée et adaptée",
-    text: "Des cycles qui alternent charge et récupération. Votre ressenti et l’écoute que j’en ai après chaque séance déterminent la suite : on avance à un rythme qui vous correspond.",
+    text: "Des cycles qui alternent charge et récupération. Votre ressenti guide mes décisions. Chaque séance, chaque échange et chaque adaptation permettent de construire une progression qui respecte votre corps et votre rythme.",
   },
   {
     icon: TrendingUp,
