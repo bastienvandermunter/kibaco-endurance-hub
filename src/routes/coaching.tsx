@@ -28,13 +28,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 120 €/mois, 100 €/mois pour les étudiants.",
+          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 130 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 120 €/mois, 100 €/mois pour les étudiants.",
+          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 130 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
