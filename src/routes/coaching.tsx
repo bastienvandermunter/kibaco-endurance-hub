@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Map,
   MessagesSquare,
-  Trophy,
   Gauge,
   ClipboardCheck,
   ExternalLink,
@@ -11,6 +10,8 @@ import {
   TrendingUp,
   MessageCircle,
   Users,
+  Activity,
+  Lightbulb,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
@@ -26,13 +27,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement sur mesure, suivi régulier et préparation de vos objectifs. 120 €/mois, 100 €/mois pour les étudiants.",
+          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 120 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Plans d’entraînement sur mesure et suivi régulier pour triathlon, course à pied et trail. 120 €/mois — 100 €/mois pour les étudiants.",
+          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 120 €/mois, 100 €/mois pour les étudiants.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -45,28 +46,23 @@ export const Route = createFileRoute("/coaching")({
 const POINTS = [
   {
     icon: Map,
-    title: "Plan d’entraînement sur mesure",
+    title: "Plan d’entraînement individualisé",
     text: "Un programme construit autour de votre niveau, de votre emploi du temps et de votre objectif — triathlon, course à pied ou trail.",
   },
   {
     icon: Gauge,
-    title: "Progression structurée",
-    text: "Des cycles d’entraînement qui alternent charge et récupération, avec des intensités claires pour chaque séance.",
+    title: "Progression structurée et adaptée",
+    text: "Des cycles qui alternent charge et récupération. Votre ressenti et l’écoute que j’en ai après chaque séance déterminent la suite : on avance à un rythme qui vous correspond.",
   },
   {
     icon: TrendingUp,
     title: "Un projet à long terme",
-    text: "Je crois en un accompagnement qui s’inscrit dans la durée. Au fil des séances et des saisons, l’objectif est de construire une progression cohérente et durable, en respectant le rythme, les besoins et les objectifs de chacun.",
+    text: "Trois mois d’engagement au minimum pour construire quelque chose de solide. Au fil des séances et des saisons, l’objectif est une progression cohérente et durable, en respectant le rythme, les besoins et les objectifs de chacun.",
   },
   {
     icon: MessagesSquare,
     title: "Suivi sur l’application IDO",
     text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre retour (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
-  },
-  {
-    icon: Trophy,
-    title: "Préparation d’objectifs",
-    text: "Course, triathlon ou trail : une feuille de route jusqu’au jour J, avec une stratégie de course et de gestion de l’effort.",
   },
   {
     icon: ClipboardCheck,
@@ -75,13 +71,23 @@ const POINTS = [
   },
   {
     icon: MessageCircle,
-    title: "Réponse sur WhatsApp",
+    title: "Contact WhatsApp illimité",
     text: "Une question entre deux séances ? Je réponds sur WhatsApp, sans limite de messages et sous 48 h au plus tard.",
   },
   {
     icon: Users,
-    title: "Cours gratuits en présentiel pour les membres Kibaco ! ",
-    text: "J’organise ponctuellement des séances en présentiel dédiées à la course à pied et au vélo, incluses dans votre abonnement mensuel et accessibles gratuitement aux membres actifs.\n\nCes rendez-vous sont l’occasion de mettre mon expérience du triathlon à votre service pour développer vos compétences techniques et tactiques : maîtrise du vélo, pilotage, transitions, technique de course à pied et bien d’autres aspects.\n\nL’objectif : vous permettre de gagner en aisance, d’affiner votre technique et de progresser dans votre pratique, quel que soit votre niveau !",
+    title: "Entraînements collectifs en présentiel",
+    text: "J’organise ponctuellement des séances en présentiel dédiées à la course à pied et au vélo, incluses dans votre abonnement mensuel et accessibles gratuitement aux membres actifs. L’occasion de travailler la technique et la tactique : maîtrise du vélo, pilotage, transitions, technique de course à pied — quel que soit votre niveau.",
+  },
+  {
+    icon: Activity,
+    title: "Détermination des zones de travail",
+    text: "Vos zones d’intensité sont définies à partir de votre profil et de vos séances : vous savez exactement à quelle allure pousser, et pourquoi, sur chaque effort.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Hydratation, nutrition, technicité, matériel",
+    text: "Des conseils concrets sur l’hydratation, la nutrition, la technique et le matériel, pour que chaque détail serve votre progression.",
   },
 ] as const;
 
