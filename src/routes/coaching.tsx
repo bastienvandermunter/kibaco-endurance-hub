@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { SITE, LINKS } from "@/lib/site";
-import coachNage from "@/assets/kibaco-coach-nage-v3.jpg.asset.json";
-import coursePhoto from "@/assets/kibaco-course.jpg.asset.json";
-import trailNb from "@/assets/kibaco-trail-nb.jpg.asset.json";
+const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
+const coursePhoto = { url: "/images/kibaco-course.jpg" };
+const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
 
 export const Route = createFileRoute("/coaching")({
   component: CoachingPage,

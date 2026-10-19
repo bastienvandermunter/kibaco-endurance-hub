@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, Phone, Mail, MapPin, Landmark, ArrowRight } from "lucide-react";
 import { SITE, NAV_ITEMS } from "@/lib/site";
-import logoAsset from "@/assets/kibaco-logo.png.asset.json";
+const logoAsset = { url: "/images/kibaco-logo.png" };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);

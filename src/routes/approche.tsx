@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Target, HandHeart, Route as RouteIcon } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { SITE } from "@/lib/site";
-import portraitAsset from "@/assets/bastien-portrait.png.asset.json";
+const portraitAsset = { url: "/images/bastien-portrait.png" };
 
 export const Route = createFileRoute("/approche")({
   component: ApprochePage,
