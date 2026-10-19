@@ -13,4 +13,4 @@
 - [x] Restructurer « Ce que comprend le coaching » en neuf points numérotés, plus clairs et réguliers.
 - [x] Ajouter le point « Un seul abonnement, la même qualité d’accompagnement pour tous ».
 - [x] Passer le tarif du coaching à 130 €/mois (page Coaching, textes de référencement, mémoire du projet).
-- [ ] Vérifier à nouveau l’orthographe et la syntaxe des cinq pages et des textes communs, sans modifier le fond.
+- [x] Vérifier à nouveau l’orthographe et la syntaxe des cinq pages et des textes communs, sans modifier le fond.
