@@ -60,7 +60,7 @@ const POINTS = [
   {
     icon: ShieldCheck,
     title: "Prévention des récidives",
-    text: "Identification des facteurs de risque et un plan concret pour que le problème ne revienne pas.",
+    text: "Identification des facteurs de risque et mise en place d’un plan concret pour que le problème ne revienne pas.",
   },
   {
     icon: RotateCcw,
