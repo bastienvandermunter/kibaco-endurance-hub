@@ -68,7 +68,7 @@ const POINTS = [
   {
     icon: ClipboardCheck,
     title: "Un regard de clinicien",
-    text: "Moindre alerte, je sais faire le tri entre inconfort normal et signal d’alarme — et adapter avant que ça se dégrade.",
+    text: "À la moindre alerte, je sais faire le tri entre inconfort normal et signal d’alarme — et adapter l’entraînement avant que la situation ne se dégrade.",
   },
   {
     icon: MessageCircle,

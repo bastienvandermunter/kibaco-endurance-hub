@@ -101,7 +101,7 @@ function ApprochePage() {
         <section className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
           <h2 className="font-display text-3xl font-semibold text-foreground">Et concrètement ?</h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Deux portes d’entrée selon là où vous en êtes aujourd’hui.
+            Deux portes d’entrée selon votre situation actuelle.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
