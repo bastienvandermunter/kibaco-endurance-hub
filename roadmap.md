@@ -14,3 +14,5 @@
 - [x] Ajouter le point « Un seul abonnement, la même qualité d’accompagnement pour tous ».
 - [x] Passer le tarif du coaching à 130 €/mois (page Coaching, textes de référencement, mémoire du projet).
 - [x] Vérifier à nouveau l’orthographe et la syntaxe des cinq pages et des textes communs, sans modifier le fond.
+- [x] Remplacer le lien Google Form par le formulaire Tally sur la page Coaching.
+- [x] Retirer l’aperçu intégré du formulaire Tally au profit d’un lien qui l’ouvre dans un nouvel onglet.
