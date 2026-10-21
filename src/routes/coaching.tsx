@@ -4,7 +4,6 @@ import {
   MessagesSquare,
   Gauge,
   ClipboardCheck,
-  ExternalLink,
   GraduationCap,
   ArrowRight,
   TrendingUp,
