@@ -14,7 +14,7 @@ import {
   Handshake,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { SITE, LINKS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
