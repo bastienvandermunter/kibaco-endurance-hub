@@ -4,7 +4,6 @@ import {
   MessagesSquare,
   Gauge,
   ClipboardCheck,
-  ExternalLink,
   GraduationCap,
   ArrowRight,
   TrendingUp,
@@ -15,7 +14,7 @@ import {
   Handshake,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { SITE, LINKS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
@@ -288,15 +287,14 @@ function CoachingPage() {
                   Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
                   reviens vers vous pour en discuter et construire votre plan.
                 </p>
-                <a
-                  href={LINKS.googleForm}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between gap-2 rounded-md bg-primary px-6 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  Me contacter via le formulaire
-                  <ExternalLink className="h-5 w-5" />
-                </a>
+                <div className="overflow-hidden rounded-md bg-card">
+                  <iframe
+                    src="https://tally.so/embed/KpYLB7?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    title="Formulaire de contact coaching Kibaco"
+                    loading="lazy"
+                    className="block h-[560px] w-full border-0"
+                  />
+                </div>
                 <p className="mt-6 text-sm text-background/60">
                   Vous hésitez entre soin et entraînement ?{" "}
                   <Link
