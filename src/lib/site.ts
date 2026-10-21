@@ -32,6 +32,8 @@ export const NAV_ITEMS = [
 
 // ⚠️ Liens provisoires — à remplacer par les vraies URLs :
 //  - doctorAnytime : lien vers le profil de prise de rendez-vous Doctor Anytime
+//  - tallyForm : formulaire de contact géré depuis Tally (modifiable sans toucher au site)
 export const LINKS = {
   doctorAnytime: "https://www.doctoranytime.be/",
+  tallyForm: "https://tally.so/r/KpYLB7",
 };

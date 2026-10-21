@@ -12,9 +12,10 @@ import {
   Activity,
   Lightbulb,
   Handshake,
+  ExternalLink,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { SITE } from "@/lib/site";
+import { LINKS, SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
