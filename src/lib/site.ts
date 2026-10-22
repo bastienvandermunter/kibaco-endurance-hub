@@ -1,3 +1,5 @@
+import { Compass, Users, Target, type LucideIcon } from "lucide-react";
+
 export const SITE = {
   name: "Kibaco",
   owner: "Bastien Vandermunter",
@@ -17,9 +19,35 @@ export const SITE = {
     { label: "Rendez-vous de suivi", price: "40 €" },
   ],
   kineNonConventionne: true,
-  coachingPrice: "130 €",
-  coachingPriceUnit: "par mois",
-  coachingPriceStudent: "100 € / mois pour les étudiants",
+  coachingOffers: [
+    {
+      icon: Compass as LucideIcon,
+      name: "Kibaco Programme",
+      price: "50 €",
+      unit: "paiement unique",
+      text: "Un programme standardisé de 12 semaines, adapté à votre objectif et à votre niveau, pour progresser en autonomie. Aucun suivi du coach.",
+      note: "",
+      highlighted: false,
+    },
+    {
+      icon: Users as LucideIcon,
+      name: "Kibaco Accompagnement",
+      price: "90 €",
+      unit: "par mois",
+      text: "Un programme standardisé selon votre objectif et votre niveau, avec un suivi limité du coach et un accès aux séances de groupe.",
+      note: "",
+      highlighted: false,
+    },
+    {
+      icon: Target as LucideIcon,
+      name: "Kibaco Personnalisé",
+      price: "130 €",
+      unit: "par mois",
+      text: "Plan entièrement individualisé selon des cycles de travail : tests de vos zones d’entraînement, suivi rapproché, adaptations régulières, échanges et séances collectives ponctuelles.",
+      note: "Engagement minimum de 3 mois",
+      highlighted: true,
+    },
+  ],
 };
 
 export const NAV_ITEMS = [
