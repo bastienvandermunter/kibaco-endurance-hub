@@ -11,9 +11,11 @@ import {
   Activity,
   Lightbulb,
   ExternalLink,
+  Check,
+  Minus,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { LINKS, SITE } from "@/lib/site";
+import { COACHING_COMPARISON, LINKS, SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
