@@ -21,4 +21,4 @@
 - [x] Ajouter un tableau comparatif des trois offres après les tarifs (critère par critère).
 - [x] Ajouter le critère « Suivi sur l’application IDO » au tableau (deux dernières offres).
 - [x] Ajouter les critères « Regard de clinicien en cas d’alerte » et « Conseils hydratation, nutrition, technique, matériel » au tableau (deux dernières offres).
-- [ ] Retirer les neuf points de « Ce que comprend le coaching » sur la page Coaching.
+- [x] Retirer les neuf points de « Ce que comprend le coaching » sur la page Coaching.
