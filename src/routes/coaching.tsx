@@ -293,7 +293,7 @@ function CoachingPage() {
         {/* Comparatif des offres */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="mb-6 flex items-center gap-6">
-            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
+            <h2 className="font-display text-2xl font-semibold text-foreground sm:whitespace-nowrap sm:text-3xl">
               Ce que comprend chaque abonnement
             </h2>
             <div className="h-px w-full bg-border" />
@@ -311,7 +311,7 @@ function CoachingPage() {
                 <tr>
                   <th
                     scope="col"
-                    className="bg-card px-5 py-5 text-left align-bottom font-display text-sm font-semibold tracking-wide text-foreground"
+                    className="sticky left-0 z-10 border-r border-border bg-card px-5 py-5 text-left align-bottom font-display text-sm font-semibold tracking-wide text-foreground"
                   >
                     Critère
                   </th>
@@ -340,7 +340,7 @@ function CoachingPage() {
                   <tr key={row.label} className="border-t border-border">
                     <th
                       scope="row"
-                      className="bg-card px-5 py-4 text-left font-medium leading-snug text-foreground"
+                      className="sticky left-0 z-10 border-r border-border bg-card px-5 py-4 text-left font-medium leading-snug text-foreground"
                     >
                       {row.label}
                     </th>
