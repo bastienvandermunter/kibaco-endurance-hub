@@ -96,6 +96,10 @@ export const COACHING_COMPARISON = [
     values: [false, "Toutes les 2 semaines", "Ajustements journaliers"] as CompareValue[],
   },
   {
+    label: "Suivi sur l’application IDO",
+    values: [false, true, true] as CompareValue[],
+  },
+  {
     label: "Suivi et échanges avec le coach",
     values: [false, "Ponctuel", "Quotidien"] as CompareValue[],
   },
