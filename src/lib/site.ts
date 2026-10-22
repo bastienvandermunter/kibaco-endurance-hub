@@ -25,7 +25,9 @@ export const SITE = {
       name: "Kibaco Programme",
       price: "50 €",
       unit: "paiement unique",
-      text: "Un programme standardisé de 12 semaines, adapté à votre objectif et à votre niveau, pour progresser en autonomie. Aucun suivi du coach.",
+      text:
+        "Des programmes d’entraînement structurés sur 12 semaines, conçus pour vous accompagner dans votre remise en forme ou l’optimisation de vos performances. Grâce à une progression cohérente et progressive, avancez à votre rythme avec un plan clé en main, accessible et facile à suivre.\n\n" +
+        "Ces programmes sont standardisés et non personnalisés : aucun suivi, ajustement ou échange individuel avec le coach n’est inclus. Vous progressez ainsi en toute autonomie, à votre rythme.",
       note: "",
       highlighted: false,
     },
