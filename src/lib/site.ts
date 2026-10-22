@@ -34,7 +34,7 @@ export const SITE = {
       name: "Kibaco Accompagnement",
       price: "90 €",
       unit: "par mois",
-      text: "Un programme standardisé selon votre objectif et votre niveau, avec un suivi limité du coach et un accès aux séances de groupe.",
+      text: "Un programme personnalisé en fonction de vos objectifs et de votre niveau, avec un suivi limité du coach et un accès aux séances de groupe.",
       note: "",
       highlighted: false,
     },
