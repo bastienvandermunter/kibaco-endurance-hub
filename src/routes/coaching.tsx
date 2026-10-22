@@ -4,14 +4,12 @@ import {
   MessagesSquare,
   Gauge,
   ClipboardCheck,
-  GraduationCap,
   ArrowRight,
   TrendingUp,
   MessageCircle,
   Users,
   Activity,
   Lightbulb,
-  Handshake,
   ExternalLink,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
@@ -28,13 +26,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching personnalisé en triathlon, course à pied et trail : plan d’entraînement individualisé, suivi régulier sur IDO et WhatsApp, préparation de vos objectifs. Engagement minimum 3 mois. 130 €/mois, 100 €/mois pour les étudiants.",
+          "Coaching en endurance : trois offres — programme standardisé 50 €, accompagnement 90 €/mois, plan entièrement personnalisé 130 €/mois. Triathlon, course à pied et trail, avec suivi sur IDO et WhatsApp.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Plan d’entraînement individualisé et suivi régulier pour triathlon, course à pied et trail. Engagement minimum 3 mois — 130 €/mois, 100 €/mois pour les étudiants.",
+          "Trois offres de coaching : programme 50 €, accompagnement 90 €/mois, personnalisé 130 €/mois. Triathlon, course à pied et trail.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -92,11 +90,6 @@ const POINTS = [
   },
 ] as const;
 
-const FORMULE = {
-  icon: Handshake,
-  title: "Un seul abonnement, la même qualité d’accompagnement pour tous.",
-  text: "Parce que je suis convaincu que chaque athlète mérite un suivi de qualité, quels que soient son niveau, son expérience ou ses objectifs, j’ai fait le choix de proposer une formule unique. Pas de niveaux de service ni d’options supplémentaires : chacun bénéficie de la même attention, du même engagement et d’un accompagnement entièrement personnalisé.",
-} as const;
 
 function CoachingPage() {
   return (
@@ -210,7 +203,7 @@ function CoachingPage() {
             <div className="h-px w-full bg-border" />
           </div>
           <p className="mb-10 max-w-2xl text-left text-muted-foreground">
-            Dix points concrets, du premier plan d’entraînement jusqu’au jour de course.
+            Neuf points concrets, du premier plan d’entraînement jusqu’au jour de course.
           </p>
 
           <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -237,82 +230,93 @@ function CoachingPage() {
               );
             })}
 
-            {/* Formule unique */}
-            <div className="bg-secondary/50 p-7 sm:col-span-2 sm:p-8 lg:col-span-3">
-              <div className="mb-6 flex items-center justify-between gap-4">
-                <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
-                  10
-                </span>
-                <Handshake className="h-5 w-5 shrink-0 text-primary" />
-              </div>
-              <div className="grid gap-5 lg:grid-cols-[1fr_1.5fr] lg:items-start lg:gap-12">
-                <h3 className="font-display text-xl font-semibold leading-snug text-foreground">
-                  {FORMULE.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-left text-muted-foreground lg:text-base">
-                  {FORMULE.text}
-                </p>
-              </div>
-            </div>
           </div>
         </section>
-        {/* Tarifs & contact */}
+        {/* Nos offres */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="overflow-hidden rounded-md border border-border bg-card">
-            <div className="grid md:grid-cols-2">
-              <div className="border-b border-border p-10 md:border-b-0 md:border-r md:p-12">
-                <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                  Tarifs & engagement
-                </span>
-                <div className="mb-2 mt-6 flex items-baseline gap-2">
-                  <span className="font-display text-2xl font-semibold text-foreground">{SITE.coachingPrice}</span>
-                  <span className="text-base text-muted-foreground">{SITE.coachingPriceUnit}</span>
-                </div>
-                <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                  <GraduationCap className="h-4 w-4 shrink-0 text-primary" />
-                  {SITE.coachingPriceStudent}
-                </p>
-                <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                  La tarification est mensuelle, avec un engagement minimum de trois mois :
-                  c’est le temps nécessaire pour construire quelque chose de solide et laisser la
-                  progression s’installer. Au-delà, un projet pensé sur plusieurs saisons reste le
-                  meilleur terrain pour l’évolution de l’athlète.
-                </p>
-              </div>
+          <div className="mb-6 flex items-center gap-6">
+            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Nos offres
+            </h2>
+            <div className="h-px w-full bg-border" />
+          </div>
+          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
+            Trois façons de progresser : du programme en autonomie au suivi
+            entièrement personnalisé.
+          </p>
 
-              <div className="flex flex-col justify-center bg-foreground p-10 md:p-12">
-                <h2 className="mb-4 font-display text-3xl font-semibold text-background">
-                  Parlez-moi de votre objectif
-                </h2>
-                <p className="mb-8 leading-relaxed text-background/80">
-                  Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
-                  reviens vers vous pour en discuter et construire votre plan.
-                </p>
-                <a
-                  href={LINKS.tallyForm}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border lg:grid-cols-3">
+            {SITE.coachingOffers.map((offer, index) => {
+              const Icon = offer.icon;
+              return (
+                <div
+                  key={offer.name}
+                  className={
+                    offer.highlighted
+                      ? "flex flex-col bg-secondary/50 p-7 sm:p-8"
+                      : "flex flex-col bg-card p-7 transition-colors hover:bg-secondary/40 sm:p-8"
+                  }
                 >
-                  Remplir le formulaire de contact
-                  <ExternalLink className="h-4 w-4 shrink-0" />
-                </a>
-                <p className="mt-4 text-sm text-background/60">
-                  Le formulaire s’ouvre dans un nouvel onglet.
-                </p>
+                  <div className="mb-6 flex items-center justify-between gap-4">
+                    <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <Icon className="h-5 w-5 shrink-0 text-primary" />
+                  </div>
+                  <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
+                    {offer.name}
+                  </h3>
+                  <div className="mb-4 flex items-baseline gap-2">
+                    <span className="font-display text-3xl font-semibold text-foreground">
+                      {offer.price}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{offer.unit}</span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left text-muted-foreground">
+                    {offer.text}
+                  </p>
+                  {offer.note ? (
+                    <p className="mt-4 text-sm font-semibold text-primary">{offer.note}</p>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
-                <p className="mt-6 text-sm text-background/60">
-                  Vous hésitez entre soin et entraînement ?{" "}
-                  <Link
-                    to="/kinesitherapie"
-                    className="font-semibold text-primary underline-offset-4 hover:underline"
-                  >
-                    Voyez d’abord la kinésithérapie
-                    <ArrowRight className="ml-1 inline h-3.5 w-3.5" />
-                  </Link>
-                </p>
-              </div>
-            </div>
+        {/* Contact */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="rounded-md border border-border bg-foreground p-10 sm:p-12">
+            <h2 className="mb-4 font-display text-3xl font-semibold text-background">
+              Parlez-moi de votre objectif
+            </h2>
+            <p className="mb-8 max-w-2xl leading-relaxed text-background/80">
+              Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
+              reviens vers vous pour en discuter et construire votre plan.
+            </p>
+            <a
+              href={LINKS.tallyForm}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Remplir le formulaire de contact
+              <ExternalLink className="h-4 w-4 shrink-0" />
+            </a>
+            <p className="mt-4 text-sm text-background/60">
+              Le formulaire s’ouvre dans un nouvel onglet.
+            </p>
+
+            <p className="mt-6 text-sm text-background/60">
+              Vous hésitez entre soin et entraînement ?{" "}
+              <Link
+                to="/kinesitherapie"
+                className="font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                Voyez d’abord la kinésithérapie
+                <ArrowRight className="ml-1 inline h-3.5 w-3.5" />
+              </Link>
+            </p>
           </div>
         </section>
       </main>
