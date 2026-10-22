@@ -344,33 +344,36 @@ function CoachingPage() {
                     >
                       {row.label}
                     </th>
-                    {row.values.map((value, index) => (
-                      <td
-                        key={SITE.coachingOffers[index].name}
-                        className={
-                          SITE.coachingOffers[index].highlighted
-                            ? "bg-secondary/50 px-5 py-4 text-center"
-                            : "bg-card px-5 py-4 text-center"
-                        }
-                      >
-                        {value === true ? (
-                          <span className="inline-flex items-center justify-center">
-                            <Check className="h-5 w-5 text-primary" aria-hidden="true" />
-                            <span className="sr-only">Inclus</span>
-                          </span>
-                        ) : value === false ? (
-                          <span className="inline-flex items-center justify-center">
-                            <Minus
-                              className="h-4 w-4 text-muted-foreground/40"
-                              aria-hidden="true"
-                            />
-                            <span className="sr-only">Non inclus</span>
-                          </span>
-                        ) : (
-                          <span className="font-medium text-foreground">{value}</span>
-                        )}
-                      </td>
-                    ))}
+                    {SITE.coachingOffers.map((offer, index) => {
+                      const value = row.values[index];
+                      return (
+                        <td
+                          key={offer.name}
+                          className={
+                            offer.highlighted
+                              ? "bg-secondary/50 px-5 py-4 text-center"
+                              : "bg-card px-5 py-4 text-center"
+                          }
+                        >
+                          {value === true ? (
+                            <span className="inline-flex items-center justify-center">
+                              <Check className="h-5 w-5 text-primary" aria-hidden="true" />
+                              <span className="sr-only">Inclus</span>
+                            </span>
+                          ) : value === false ? (
+                            <span className="inline-flex items-center justify-center">
+                              <Minus
+                                className="h-4 w-4 text-muted-foreground/40"
+                                aria-hidden="true"
+                              />
+                              <span className="sr-only">Non inclus</span>
+                            </span>
+                          ) : (
+                            <span className="font-medium text-foreground">{value}</span>
+                          )}
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))}
               </tbody>
