@@ -34,7 +34,10 @@ export const SITE = {
       name: "Kibaco Accompagnement",
       price: "90 €",
       unit: "par mois",
-      text: "Un programme personnalisé en fonction de vos objectifs et de votre niveau, avec un suivi limité du coach et un accès aux séances de groupe.",
+      text:
+        "Progressez à votre rythme avec un programme conçu pour vous ! 💪\n\n" +
+        "Profitez d’un plan d’entraînement 100 % personnalisé, adapté à votre niveau et à vos objectifs, et actualisé toutes les 2 semaines pour vous permettre de progresser en continu.\n\n" +
+        "Bénéficiez également d’un suivi ponctuel de votre coach et d’un accès aux séances collectives KIBACO pour rester motivé et vous dépasser !",
       note: "",
       highlighted: false,
     },

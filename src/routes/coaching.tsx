@@ -272,9 +272,13 @@ function CoachingPage() {
                     </span>
                     <span className="text-sm text-muted-foreground">{offer.unit}</span>
                   </div>
-                  <p className="text-sm leading-relaxed text-left text-muted-foreground">
-                    {offer.text}
-                  </p>
+                  <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+                    {offer.text.split("\n\n").map((para) => (
+                      <p key={para} className="text-left">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
                   {offer.note ? (
                     <p className="mt-4 text-sm font-semibold text-primary">{offer.note}</p>
                   ) : null}
