@@ -1,19 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  Map,
-  MessagesSquare,
-  Gauge,
-  ClipboardCheck,
-  ArrowRight,
-  TrendingUp,
-  MessageCircle,
-  Users,
-  Activity,
-  Lightbulb,
-  ExternalLink,
-  Check,
-  Minus,
-} from "lucide-react";
+import { ArrowRight, ExternalLink, Check, Minus } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
 import { COACHING_COMPARISON, LINKS, SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
@@ -43,55 +29,6 @@ export const Route = createFileRoute("/coaching")({
     links: [{ rel: "canonical", href: "/coaching" }],
   }),
 });
-
-const POINTS = [
-  {
-    icon: Map,
-    title: "Plan d’entraînement individualisé",
-    text: "Un programme construit autour de votre niveau, de votre emploi du temps et de votre objectif — triathlon, course à pied ou trail.",
-  },
-  {
-    icon: Gauge,
-    title: "Progression structurée et adaptée",
-    text: "Des cycles qui alternent charge et récupération. Votre ressenti guide mes décisions. Chaque séance, chaque échange et chaque adaptation permettent de construire une progression qui respecte votre corps et votre rythme.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Un projet à long terme",
-    text: "Trois mois d’engagement au minimum pour construire quelque chose de solide. Au fil des séances et des saisons, l’objectif est une progression cohérente et durable, en respectant le rythme, les besoins et les objectifs de chacun.",
-  },
-  {
-    icon: MessagesSquare,
-    title: "Suivi sur l’application IDO",
-    text: "Le suivi se déroule sur l’application IDO : après chaque séance, vous laissez votre retour (ressenti, fatigue, difficultés) et j’ajuste le plan en conséquence.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Un regard de clinicien",
-    text: "À la moindre alerte, je sais faire le tri entre inconfort normal et signal d’alarme — et adapter l’entraînement avant que la situation ne se dégrade.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Contact WhatsApp illimité",
-    text: "Une question entre deux séances ? Je réponds sur WhatsApp, sans limite de messages et sous 48 h au plus tard.",
-  },
-  {
-    icon: Users,
-    title: "Entraînements collectifs en présentiel",
-    text: "J’organise ponctuellement des séances en présentiel dédiées à la course à pied et au vélo, incluses dans votre abonnement mensuel et accessibles gratuitement aux membres actifs. L’occasion de travailler la technique et la tactique : maîtrise du vélo, pilotage, transitions, technique de course à pied — quel que soit votre niveau.",
-  },
-  {
-    icon: Activity,
-    title: "Détermination des zones de travail",
-    text: "Vos zones d’intensité sont définies avec précision grâce à des tests spécifiques, adaptés à votre profil et à votre discipline. Associés à l’analyse de vos séances et à votre ressenti, ces tests permettent d’ajuster vos intensités d’entraînement pour que chaque effort soit adapté, maîtrisé et réalisé avec un objectif précis.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Hydratation, nutrition, technicité, matériel",
-    text: "Des conseils concrets sur l’hydratation, la nutrition, la technique et le matériel, pour que chaque détail serve votre progression.",
-  },
-] as const;
-
 
 function CoachingPage() {
   return (
@@ -196,44 +133,6 @@ function CoachingPage() {
           </div>
         </section>
 
-        {/* Ce que comprend le coaching */}
-        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="mb-6 flex items-center gap-6">
-            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
-              Ce que comprend le coaching
-            </h2>
-            <div className="h-px w-full bg-border" />
-          </div>
-          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
-            Neuf points concrets, du premier plan d’entraînement jusqu’au jour de course.
-          </p>
-
-          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-            {POINTS.map((point, index) => {
-              const Icon = point.icon;
-              return (
-                <div
-                  key={point.title}
-                  className="flex flex-col bg-card p-7 transition-colors hover:bg-secondary/40 sm:p-8"
-                >
-                  <div className="mb-6 flex items-center justify-between gap-4">
-                    <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <Icon className="h-5 w-5 shrink-0 text-primary" />
-                  </div>
-                  <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
-                    {point.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-left text-muted-foreground">
-                    {point.text}
-                  </p>
-                </div>
-              );
-            })}
-
-          </div>
-        </section>
         {/* Nos offres */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="mb-6 flex items-center gap-6">

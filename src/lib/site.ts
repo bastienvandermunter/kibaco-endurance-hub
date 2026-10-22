@@ -104,8 +104,16 @@ export const COACHING_COMPARISON = [
     values: [false, "Ponctuel", "Quotidien"] as CompareValue[],
   },
   {
+    label: "Regard de clinicien en cas d’alerte",
+    values: [false, true, true] as CompareValue[],
+  },
+  {
     label: "Tests pour définir vos zones d’entraînement",
     values: [false, false, true] as CompareValue[],
+  },
+  {
+    label: "Conseils hydratation, nutrition, technique, matériel",
+    values: [false, true, true] as CompareValue[],
   },
   {
     label: "Accès aux séances collectives KIBACO",
