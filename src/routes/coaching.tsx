@@ -377,7 +377,7 @@ function CoachingPage() {
             </table>
           </div>
           <p className="mt-3 text-xs text-muted-foreground sm:hidden">
-            Faites glisser le tableau vers la droite pour voir toutes les offres.
+            Faites glisser le tableau pour voir toutes les offres.
           </p>
         </section>
 
