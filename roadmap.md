@@ -18,3 +18,4 @@
 - [x] Retirer l’aperçu intégré du formulaire Tally au profit d’un lien qui l’ouvre dans un nouvel onglet.
 - [x] Remplacer la formule unique par trois offres de coaching (Programme 50 €, Accompagnement 90 €/mois, Personnalisé 130 €/mois) et retirer le point 10.
 - [x] Préciser que le plan Personnalisé est adapté au mode de vie et aux imprévus pour une planification cohérente.
+- [x] Ajouter un tableau comparatif des trois offres après les tarifs (critère par critère).
