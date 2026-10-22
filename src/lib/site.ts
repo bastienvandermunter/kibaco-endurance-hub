@@ -43,7 +43,7 @@ export const SITE = {
       name: "Kibaco Personnalisé",
       price: "130 €",
       unit: "par mois",
-      text: "Plan entièrement individualisé selon des cycles de travail : tests de vos zones d’entraînement, suivi rapproché, adaptations régulières, échanges et séances collectives ponctuelles.",
+      text: "Plan entièrement individualisé selon des cycles de travail, adapté à votre mode de vie et à vos imprévus pour garder une planification cohérente : tests de vos zones d’entraînement, suivi rapproché, adaptations régulières, échanges et séances collectives ponctuelles.",
       note: "Engagement minimum de 3 mois",
       highlighted: true,
     },
