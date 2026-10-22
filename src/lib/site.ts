@@ -74,3 +74,43 @@ export const LINKS = {
   doctorAnytime: "https://www.doctoranytime.be/",
   tallyForm: "https://tally.so/r/KpYLB7",
 };
+
+// Comparatif des offres : true = inclus, false = non inclus,
+// une chaîne = la précision affichée dans la case.
+// Les valeurs suivent l’ordre de SITE.coachingOffers.
+export const COACHING_COMPARISON = [
+  {
+    label: "Programme structuré sur 12 semaines, plan clé en main",
+    values: [true, false, false] as CompareValue[],
+  },
+  {
+    label: "Plan personnalisé selon vos objectifs et votre niveau",
+    values: [false, true, true] as CompareValue[],
+  },
+  {
+    label: "Plan individualisé autour de votre mode de vie et de vos imprévus",
+    values: [false, false, true] as CompareValue[],
+  },
+  {
+    label: "Actualisation du plan",
+    values: [false, "Toutes les 2 semaines", "Ajustements journaliers"] as CompareValue[],
+  },
+  {
+    label: "Suivi et échanges avec le coach",
+    values: [false, "Ponctuel", "Quotidien"] as CompareValue[],
+  },
+  {
+    label: "Tests pour définir vos zones d’entraînement",
+    values: [false, false, true] as CompareValue[],
+  },
+  {
+    label: "Accès aux séances collectives KIBACO",
+    values: [false, true, true] as CompareValue[],
+  },
+  {
+    label: "Engagement minimum de 3 mois",
+    values: [false, false, true] as CompareValue[],
+  },
+];
+
+export type CompareValue = boolean | string;

@@ -11,9 +11,11 @@ import {
   Activity,
   Lightbulb,
   ExternalLink,
+  Check,
+  Minus,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { LINKS, SITE } from "@/lib/site";
+import { COACHING_COMPARISON, LINKS, SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
@@ -286,6 +288,100 @@ function CoachingPage() {
               );
             })}
           </div>
+        </section>
+
+        {/* Comparatif des offres */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="mb-6 flex items-center gap-6">
+            <h2 className="font-display text-2xl font-semibold text-foreground sm:whitespace-nowrap sm:text-3xl">
+              Ce que comprend chaque abonnement
+            </h2>
+            <div className="h-px w-full bg-border" />
+          </div>
+          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
+            Tous les critères, offre par offre, pour comparer en un coup d’œil.
+          </p>
+
+          <div className="overflow-x-auto rounded-md border border-border">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <caption className="sr-only">
+                Comparatif des trois offres de coaching Kibaco
+              </caption>
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    className="sticky left-0 z-10 border-r border-border bg-card px-5 py-5 text-left align-bottom font-display text-sm font-semibold tracking-wide text-foreground"
+                  >
+                    Critère
+                  </th>
+                  {SITE.coachingOffers.map((offer) => (
+                    <th
+                      key={offer.name}
+                      scope="col"
+                      className={
+                        offer.highlighted
+                          ? "bg-secondary/50 px-5 py-5 text-center align-bottom"
+                          : "bg-card px-5 py-5 text-center align-bottom"
+                      }
+                    >
+                      <span className="block font-display text-base font-semibold text-foreground">
+                        {offer.name}
+                      </span>
+                      <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                        {offer.price} {offer.unit}
+                      </span>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {COACHING_COMPARISON.map((row) => (
+                  <tr key={row.label} className="border-t border-border">
+                    <th
+                      scope="row"
+                      className="sticky left-0 z-10 border-r border-border bg-card px-5 py-4 text-left font-medium leading-snug text-foreground"
+                    >
+                      {row.label}
+                    </th>
+                    {SITE.coachingOffers.map((offer, index) => {
+                      const value = row.values[index];
+                      return (
+                        <td
+                          key={offer.name}
+                          className={
+                            offer.highlighted
+                              ? "bg-secondary/50 px-5 py-4 text-center"
+                              : "bg-card px-5 py-4 text-center"
+                          }
+                        >
+                          {value === true ? (
+                            <span className="inline-flex items-center justify-center">
+                              <Check className="h-5 w-5 text-primary" aria-hidden="true" />
+                              <span className="sr-only">Inclus</span>
+                            </span>
+                          ) : value === false ? (
+                            <span className="inline-flex items-center justify-center">
+                              <Minus
+                                className="h-4 w-4 text-muted-foreground/40"
+                                aria-hidden="true"
+                              />
+                              <span className="sr-only">Non inclus</span>
+                            </span>
+                          ) : (
+                            <span className="font-medium text-foreground">{value}</span>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground sm:hidden">
+            Faites glisser le tableau pour voir toutes les offres.
+          </p>
         </section>
 
         {/* Contact */}
