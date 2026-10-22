@@ -19,3 +19,4 @@
 - [x] Remplacer la formule unique par trois offres de coaching (Programme 50 €, Accompagnement 90 €/mois, Personnalisé 130 €/mois) et retirer le point 10.
 - [x] Préciser que le plan Personnalisé est adapté au mode de vie et aux imprévus pour une planification cohérente.
 - [x] Ajouter un tableau comparatif des trois offres après les tarifs (critère par critère).
+- [x] Ajouter le critère « Suivi sur l’application IDO » au tableau (deux dernières offres).
