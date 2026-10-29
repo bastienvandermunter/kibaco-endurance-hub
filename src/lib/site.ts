@@ -38,7 +38,7 @@ export const SITE = {
       unit: "par mois",
       text:
         "Progressez à votre rythme avec un programme conçu pour vous ! 💪\n\n" +
-        "Profitez d’un plan d’entraînement 100 % personnalisé, adapté à votre niveau et à vos objectifs, et actualisé chaque mois pour vous permettre de progresser en continu.\n\n" +
+        "Profitez d’un plan d’entraînement 100 % personnalisé, adapté à votre niveau et à vos objectifs, et actualisé chaque mois pour vous permettre de progresser en continu. Vos zones d’entraînement sont déterminées à partir de votre vitesse critique, pour des intensités justes et adaptées à chaque effort.\n\n" +
         "Bénéficiez également d’un suivi ponctuel de votre coach et d’un accès aux séances collectives KIBACO pour rester motivé et vous dépasser !",
       note: "",
       highlighted: false,
