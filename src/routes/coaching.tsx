@@ -14,13 +14,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching en endurance : trois offres — programme standardisé 50 €, accompagnement 90 €/mois, plan entièrement personnalisé 130 €/mois. Triathlon, course à pied et trail, avec suivi sur IDO et WhatsApp.",
+          "Coaching en endurance : trois offres — programme sur devis selon la nature des objectifs, accompagnement 90 €/mois, plan entièrement personnalisé 130 €/mois. Triathlon, course à pied et trail, avec suivi sur IDO et WhatsApp.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Trois offres de coaching : programme 50 €, accompagnement 90 €/mois, personnalisé 130 €/mois. Triathlon, course à pied et trail.",
+          "Trois offres de coaching : programme sur devis selon la nature des objectifs, accompagnement 90 €/mois, personnalisé 130 €/mois. Triathlon, course à pied et trail.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -167,8 +167,8 @@ function CoachingPage() {
                   <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
                     {offer.name}
                   </h3>
-                  <div className="mb-4 flex items-baseline gap-2">
-                    <span className="font-display text-3xl font-semibold text-foreground">
+                  <div className="mb-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                    <span className="whitespace-nowrap font-display text-3xl font-semibold text-foreground">
                       {offer.price}
                     </span>
                     <span className="text-sm text-muted-foreground">{offer.unit}</span>
