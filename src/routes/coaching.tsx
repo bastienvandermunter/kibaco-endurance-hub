@@ -167,8 +167,8 @@ function CoachingPage() {
                   <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
                     {offer.name}
                   </h3>
-                  <div className="mb-4 flex items-baseline gap-2">
-                    <span className="font-display text-3xl font-semibold text-foreground">
+                  <div className="mb-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                    <span className="whitespace-nowrap font-display text-3xl font-semibold text-foreground">
                       {offer.price}
                     </span>
                     <span className="text-sm text-muted-foreground">{offer.unit}</span>
