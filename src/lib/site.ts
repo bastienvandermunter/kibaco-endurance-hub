@@ -23,11 +23,11 @@ export const SITE = {
     {
       icon: Compass as LucideIcon,
       name: "Kibaco Programme",
-      price: "50 €",
-      unit: "paiement unique",
+      price: "Sur devis",
+      unit: "selon la nature des objectifs",
       text:
         "Des programmes d’entraînement structurés sur 12 semaines, conçus pour vous accompagner dans votre remise en forme ou l’optimisation de vos performances. Grâce à une progression cohérente et progressive, avancez à votre rythme avec un plan clé en main, accessible et facile à suivre.\n\n" +
-        "Ces programmes sont standardisés et non personnalisés : aucun suivi, ajustement ou échange individuel avec le coach n’est inclus. Vous progressez ainsi en toute autonomie, à votre rythme.",
+        "Ces programmes sont standardisés et non personnalisés : aucun suivi, ajustement ou échange individuel avec le coach n’est inclus. Vous progressez ainsi en toute autonomie, à votre rythme. Le tarif est établi sur devis, selon la nature des objectifs visés.",
       note: "",
       highlighted: false,
     },
