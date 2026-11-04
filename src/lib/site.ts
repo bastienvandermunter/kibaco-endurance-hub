@@ -1,4 +1,4 @@
-import { Compass, Users, Target, type LucideIcon } from "lucide-react";
+import { Target, type LucideIcon } from "lucide-react";
 
 export const SITE = {
   name: "Kibaco",
@@ -19,44 +19,18 @@ export const SITE = {
     { label: "Rendez-vous de suivi", price: "40 €" },
   ],
   kineNonConventionne: true,
-  coachingOffers: [
-    {
-      icon: Compass as LucideIcon,
-      name: "Kibaco Programme",
-      price: "Sur devis",
-      unit: "selon la nature des objectifs",
-      text:
-        "Des programmes d’entraînement structurés sur 12 semaines, conçus pour vous accompagner dans votre remise en forme ou l’optimisation de vos performances. Grâce à une progression cohérente et progressive, avancez à votre rythme avec un plan clé en main, accessible et facile à suivre.\n\n" +
-        "Ces programmes sont standardisés et non personnalisés : aucun suivi, ajustement ou échange individuel avec le coach n’est inclus. Vous progressez ainsi en toute autonomie, à votre rythme. Le tarif est établi sur devis, selon la nature des objectifs visés.",
-      note: "",
-      highlighted: false,
-    },
-    {
-      icon: Users as LucideIcon,
-      name: "Kibaco Accompagnement",
-      price: "90 €",
-      unit: "par mois",
-      text:
-        "Progressez à votre rythme avec un programme conçu pour vous ! 💪\n\n" +
-        "Profitez d’un plan d’entraînement 100 % personnalisé, adapté à votre niveau et à vos objectifs, et actualisé chaque mois pour vous permettre de progresser en continu. Vos zones d’entraînement sont déterminées à partir de votre vitesse critique, pour des intensités justes et adaptées à chaque effort.\n\n" +
-        "Bénéficiez également d’un suivi ponctuel de votre coach et d’un accès aux séances collectives KIBACO pour rester motivé et vous dépasser !",
-      note: "",
-      highlighted: false,
-    },
-    {
-      icon: Target as LucideIcon,
-      name: "Kibaco Personnalisé",
-      price: "130 €",
-      unit: "par mois",
-      text:
-        "Profitez d’un programme d’entraînement 100 % individualisé, construit autour de vos objectifs, de votre niveau et de votre mode de vie.\n\n" +
-        "Grâce à un suivi quotidien et des ajustements journaliers, votre plan évolue en fonction de vos sensations, de votre progression et de vos imprévus.\n\n" +
-        "Bénéficiez également d’une détermination de vos zones d’entraînement à partir de votre vitesse critique, d’échanges réguliers avec votre coach et d’un accès aux séances collectives KIBACO.\n\n" +
-        "Un accompagnement complet, structuré en cycles de travail, pour progresser durablement et sereinement.",
-      note: "Engagement minimum de 3 mois",
-      highlighted: true,
-    },
-  ],
+  coachingOffer: {
+    icon: Target as LucideIcon,
+    name: "Kibaco Personnalisé",
+    monthlyPrice: 110,
+    quarterlyPrice: 330,
+    commitmentMonths: 3,
+    text:
+      "Profitez d’un programme d’entraînement 100 % individualisé, construit autour de vos objectifs, de votre niveau et de votre mode de vie.\n\n" +
+      "Grâce à un suivi quotidien et des ajustements journaliers, votre plan évolue en fonction de vos sensations, de votre progression et de vos imprévus.\n\n" +
+      "Bénéficiez également d’une détermination de vos zones d’entraînement à partir de votre vitesse critique, d’échanges réguliers avec votre coach et d’un accès aux séances collectives KIBACO.\n\n" +
+      "Un accompagnement complet, structuré en cycles de travail, pour progresser durablement et sereinement.",
+  },
 };
 
 export const NAV_ITEMS = [
@@ -75,54 +49,16 @@ export const LINKS = {
   tallyForm: "https://tally.so/r/KpYLB7",
 };
 
-// Comparatif des offres : true = inclus, false = non inclus,
-// une chaîne = la précision affichée dans la case.
-// Les valeurs suivent l’ordre de SITE.coachingOffers.
-export const COACHING_COMPARISON = [
-  {
-    label: "Programme structuré sur 12 semaines, plan clé en main",
-    values: [true, false, false] as CompareValue[],
-  },
-  {
-    label: "Plan personnalisé selon vos objectifs et votre niveau",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Plan individualisé autour de votre mode de vie et de vos imprévus",
-    values: [false, false, true] as CompareValue[],
-  },
-  {
-    label: "Actualisation du plan",
-    values: [false, "Mensuelle", "Ajustements journaliers"] as CompareValue[],
-  },
-  {
-    label: "Suivi sur l’application IDO",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Suivi et échanges avec le coach",
-    values: [false, "Ponctuel", "Quotidien"] as CompareValue[],
-  },
-  {
-    label: "Regard de clinicien en cas d’alerte",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Détermination de vos zones d’entraînement à partir de la vitesse critique",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Conseils hydratation, nutrition, technique, matériel",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Accès aux séances collectives KIBACO",
-    values: [false, true, true] as CompareValue[],
-  },
-  {
-    label: "Engagement minimum de 3 mois",
-    values: [false, false, true] as CompareValue[],
-  },
+// Tous les avantages de la formule unique, conservés depuis l’offre Personnalisé.
+export const COACHING_FEATURES = [
+  { id: "personalized-plan", label: "Plan 100 % individualisé selon vos objectifs et votre niveau" },
+  { id: "life-adjustments", label: "Plan adapté à votre mode de vie et à vos imprévus pour garder une planification cohérente" },
+  { id: "training-cycles", label: "Progression structurée en cycles de travail" },
+  { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations et votre progression" },
+  { id: "ido", label: "Suivi sur l’application IDO" },
+  { id: "coach-contact", label: "Échanges réguliers avec votre coach" },
+  { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
+  { id: "critical-speed", label: "Détermination de vos zones d’entraînement à partir de votre vitesse critique" },
+  { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
+  { id: "group-sessions", label: "Accès aux séances collectives KIBACO" },
 ];
-
-export type CompareValue = boolean | string;
