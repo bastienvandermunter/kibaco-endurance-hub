@@ -85,7 +85,7 @@ export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
     items: [
       { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations" },
       { id: "coach-contact", label: "Contact avec votre coach via WhatsApp, 7j/7" },
-      { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine sur WhatsApp" },
+      { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine" },
       { id: "ido", label: "Suivi sur l’application IDO" },
     ],
   },
