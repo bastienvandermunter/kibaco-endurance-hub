@@ -46,34 +46,40 @@ function ApprochePage() {
             </h2>
             <div className="mt-5 space-y-4 leading-relaxed text-muted-foreground">
               <p>
-                Diplômé en kinésithérapie à l’HE2B (Auderghem) en 2026 et éducateur en triathlon breveté par
-                l’Adeps, je pratique le triathlon depuis 2010. J’ai bâti Kibaco autour d’une vision
-                holistique de la prise en charge : la rééducation et l’entraînement ne sont pas deux
-                mondes séparés, mais les deux extrémités d’un même chemin.
+                Diplômé en kinésithérapie à l’HE2B (Auderghem) en 2026 et éducateur en triathlon
+                breveté par l’Adeps, je pratique le triathlon depuis 2010. J’ai bâti Kibaco autour
+                d’une vision holistique de la prise en charge : la rééducation et l’entraînement ne
+                sont pas deux mondes séparés, mais les deux extrémités d’un même chemin.
               </p>
               <p>
-                Une personne blessée a besoin de plus qu’un traitement : elle a besoin d’un plan pour
-                revenir. Une personne en pleine forme a besoin de plus qu’un programme : elle a besoin
-                d’une écoute et d’ajustements. C’est ce pont que je propose de construire avec vous.
+                Une personne blessée a besoin de plus qu’un traitement : elle a besoin d’un plan
+                pour revenir. Une personne en pleine forme a besoin de plus qu’un programme : elle a
+                besoin d’une écoute et d’ajustements. C’est ce pont que je propose de construire
+                avec vous.
               </p>
               <p>
-                Depuis 2010, je pratique le triathlon et, depuis 2020, j’accompagne des personnes de tous âges et de tous niveaux dans leurs projets sportifs, avec des objectifs allant d’un 5 km à un Ironman.
+                Depuis 2010, je pratique le triathlon et, depuis 2020, j’accompagne des personnes de
+                tous âges et de tous niveaux dans leurs projets sportifs, avec des objectifs allant
+                d’un 5 km à un Ironman.
                 <br />
-                Chaque accompagnement débute par une écoute attentive : votre histoire, vos besoins, votre condition physique et vos contraintes. Mon approche repose sur un suivi personnalisé, construit pour s’adapter au plus près de vos objectifs et évoluer avec vous.
+                Chaque accompagnement débute par une écoute attentive : votre histoire, vos besoins,
+                votre condition physique et vos contraintes. Mon approche repose sur un suivi
+                personnalisé, construit pour s’adapter au plus près de vos objectifs et évoluer avec
+                vous.
               </p>
             </div>
-             <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
+            <p className="mt-6 font-hand text-3xl text-primary">{SITE.tagline}</p>
           </div>
-           <div className="mx-auto aspect-[4/4.5] w-full max-w-md overflow-hidden rounded-md bg-secondary">
+          <div className="mx-auto aspect-[4/4.5] w-full max-w-md overflow-hidden rounded-md bg-secondary">
             <img
-               src={portraitAsset.url}
-               alt="Bastien Vandermunter, kinésithérapeute et coach en endurance"
-               className="h-full w-full object-cover object-top"
+              src={portraitAsset.url}
+              alt="Bastien Vandermunter, kinésithérapeute et coach en endurance"
+              className="h-full w-full object-cover object-top"
             />
           </div>
         </section>
 
-         <section className="border-y border-border bg-card">
+        <section className="border-y border-border bg-card">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <h2 className="text-center font-display text-3xl font-semibold text-foreground">
               Ce qui guide chaque accompagnement
@@ -128,8 +134,8 @@ function ApprochePage() {
 
 function ValueCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
   return (
-     <div className="rounded-md border border-border bg-background p-7">
-       <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
+    <div className="rounded-md border border-border bg-background p-7">
+      <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
         {icon}
       </div>
       <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{title}</h3>

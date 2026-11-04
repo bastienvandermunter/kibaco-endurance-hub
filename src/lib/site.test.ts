@@ -39,8 +39,17 @@ describe("Formule unique de coaching Kibaco", () => {
   });
 
   for (const id of [
-    "personalized-plan", "life-adjustments", "training-cycles", "daily-adjustments",
-    "ido", "coach-contact", "weekly-analysis", "clinical-alert", "critical-speed", "practical-advice", "group-sessions",
+    "personalized-plan",
+    "life-adjustments",
+    "training-cycles",
+    "daily-adjustments",
+    "ido",
+    "coach-contact",
+    "weekly-analysis",
+    "clinical-alert",
+    "critical-speed",
+    "practical-advice",
+    "group-sessions",
   ]) {
     test(`l’avantage ${id} de l’ancienne offre Personnalisé est conservé`, () => {
       expect(COACHING_FEATURES.some((feature) => feature.id === id)).toBe(true);

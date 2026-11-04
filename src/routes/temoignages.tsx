@@ -18,8 +18,7 @@ export const Route = createFileRoute("/temoignages")({
       { property: "og:title", content: "Ils s’entraînent avec moi — Kibaco" },
       {
         property: "og:description",
-        content:
-          "Les avis Google des personnes accompagnées par Kibaco et Bastien Vandermunter.",
+        content: "Les avis Google des personnes accompagnées par Kibaco et Bastien Vandermunter.",
       },
       { property: "og:url", content: "/temoignages" },
       { property: "og:type", content: "article" },
@@ -52,27 +51,33 @@ function TemoignagesPage() {
             <p className="text-center text-muted-foreground">Chargement des avis…</p>
           ) : data?.reviews.length ? (
             <div className="grid gap-6 lg:grid-cols-3">
-            {data.reviews.map((review) => (
-              <figure
-                key={review.id}
-                className="flex flex-col rounded-md border border-border bg-card p-7"
-              >
-                <div className="flex gap-1 text-primary" aria-label={`${review.rating} étoiles sur 5`}>
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 flex-1 leading-relaxed text-foreground/90">
-                  « {review.text} »
-                </blockquote>
-                <figcaption className="mt-5 border-t border-border pt-4">
-                  <p className="font-display font-semibold text-foreground">{review.author}</p>
-                  <p className="text-sm text-muted-foreground">
-                    Avis Google{review.date ? ` · ${new Intl.DateTimeFormat("fr-BE", { year: "numeric", month: "long", timeZone: "UTC" }).format(new Date(review.date))}` : ""}
-                  </p>
-                </figcaption>
-              </figure>
-            ))}
+              {data.reviews.map((review) => (
+                <figure
+                  key={review.id}
+                  className="flex flex-col rounded-md border border-border bg-card p-7"
+                >
+                  <div
+                    className="flex gap-1 text-primary"
+                    aria-label={`${review.rating} étoiles sur 5`}
+                  >
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="mt-4 flex-1 leading-relaxed text-foreground/90">
+                    « {review.text} »
+                  </blockquote>
+                  <figcaption className="mt-5 border-t border-border pt-4">
+                    <p className="font-display font-semibold text-foreground">{review.author}</p>
+                    <p className="text-sm text-muted-foreground">
+                      Avis Google
+                      {review.date
+                        ? ` · ${new Intl.DateTimeFormat("fr-BE", { year: "numeric", month: "long", timeZone: "UTC" }).format(new Date(review.date))}`
+                        : ""}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           ) : (
             <p className="text-center text-muted-foreground">
@@ -91,16 +96,16 @@ function TemoignagesPage() {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link
                 to="/coaching"
-                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Se faire coacher
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/kinesitherapie"
-                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
               >
-                 Découvrir la kinésithérapie · bientôt
+                Découvrir la kinésithérapie · bientôt
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
