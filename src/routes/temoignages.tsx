@@ -3,7 +3,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { Star, ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
-import { getGoogleReviews } from "@/lib/google-reviews.functions";
+import { getGoogleReviews, type ReviewResult } from "@/lib/google-reviews.functions";
+import { LINKS } from "@/lib/site";
 
 export const Route = createFileRoute("/temoignages")({
   component: TemoignagesPage,
@@ -33,7 +34,16 @@ function TemoignagesPage() {
   const fetchReviews = useServerFn(getGoogleReviews);
   const { data, isPending } = useQuery({
     queryKey: ["google-reviews"],
-    queryFn: () => fetchReviews(),
+    // Délai maximal de chargement : au-delà, on affiche le message de secours
+    // avec le lien vers la fiche Google plutôt qu'un chargement sans fin.
+    queryFn: () =>
+      Promise.race([
+        fetchReviews(),
+        new Promise<ReviewResult>((resolve) =>
+          setTimeout(() => resolve({ reviews: [], status: "error" }), 10_000),
+        ),
+      ]),
+    retry: 1,
     staleTime: 15 * 60_000,
   });
 
@@ -75,13 +85,24 @@ function TemoignagesPage() {
             ))}
             </div>
           ) : (
-            <p className="text-center text-muted-foreground">
-              {data?.status === "missing"
-                ? "La fiche Google de Kibaco n’est pas encore accessible depuis le compte connecté. Les avis apparaîtront ici dès qu’elle le sera."
-                : data?.status === "ready"
+            <div className="text-center">
+              <p className="text-muted-foreground">
+                {data?.status === "ready"
                   ? "Aucun avis publié pour le moment."
-                  : "Les avis Google ne sont pas disponibles pour le moment."}
-            </p>
+                  : "Les avis ne peuvent pas être chargés pour le moment."}
+              </p>
+              {data?.status !== "ready" && (
+                <a
+                  href={LINKS.googleReviews}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                >
+                  Voir les avis sur la fiche Google de Kibaco
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              )}
+            </div>
           )}
 
           <div className="mt-14 text-center">

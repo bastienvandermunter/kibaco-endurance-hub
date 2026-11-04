@@ -63,6 +63,8 @@ export const NAV_ITEMS = [
 export const LINKS = {
   doctorAnytime: "https://www.doctoranytime.be/",
   tallyForm: "https://tally.so/r/KpYLB7",
+  // Fiche Google publique de Kibaco : lien de secours affiché si le chargement automatique des avis échoue.
+  googleReviews: "https://maps.google.com/maps?cid=5813954169687705850",
 };
 
 export type CoachingFeature = { id: string; label: string };
