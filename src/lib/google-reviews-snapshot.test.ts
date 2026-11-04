@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "bun:test";
 import { GOOGLE_REVIEWS_SNAPSHOT, pickReviews } from "./google-reviews-snapshot";
 
 describe("pickReviews", () => {
