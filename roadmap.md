@@ -34,6 +34,6 @@
 - [x] Retirer la ligne « Options et suppléments » de la carte tarif et ajouter l’idée « s’entraîner en triathlon avec un quotidien bien rempli n’est pas évident, autant bien s’accompagner » dans les textes du coaching.
 - [x] Supprimer la répétition de « De la réhabilitation à la performance » après l’introduction de la page L’Approche.
 - [x] Changer le titre de section de la page L’Approche en « Du cabinet au terrain ».
-- [ ] Comprendre pourquoi les avis Google ne s’affichent pas sur le site en ligne et les faire apparaître.
+- [x] Comprendre pourquoi les avis Google ne s’affichent pas sur le site en ligne et les faire apparaître (copie des 3 vrais avis affichée quand l'accès Google manque sur Vercel).
 - [x] Diagnostiquer et corriger l'affichage des avis Google sur Vercel (brief Bastien : garder le système automatique, délai de chargement max, lien vers les vrais avis en secours).
 - [ ] Publier le site pour que les avis Google soient visibles en ligne (en attente du feu vert de Bastien ; kibaco.kine.coaching.be demande une formule payante).
