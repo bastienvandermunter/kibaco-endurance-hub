@@ -1,7 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, ExternalLink } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { COACHING_DAILY_LIFE, COACHING_FEATURE_GROUPS, COACHING_PRICE_NOTE, LINKS, SITE } from "@/lib/site";
+import {
+  COACHING_FEATURE_GROUPS,
+  COACHING_PAYMENT_NOTE,
+  COACHING_POSITIONING,
+  COACHING_PRICE_NOTE,
+  LINKS,
+  SITE,
+} from "@/lib/site";
 
 const coachEchauffement = { url: "/images/kibaco-coach-echauffement.jpg" };
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
@@ -41,18 +48,18 @@ const KEY_FACTS = [
 const PILLARS = [
   {
     number: "01",
-    title: "Construire sur la durée",
-    text: "Une fréquence d’efforts régulière, une charge maîtrisée et des ajustements permanents : chaque séance a sa place, chaque période a son rôle, chaque détail compte.",
+    title: "Construire une progression cohérente",
+    text: "La progression ne repose pas sur une séance exceptionnelle, mais sur la régularité et la cohérence de l’entraînement. Chaque cycle s’inscrit dans une construction à long terme, adaptée à votre niveau et à vos objectifs.",
   },
   {
     number: "02",
     title: "Préserver le corps",
-    text: "Repousser ses limites sans dépasser celles de son corps. Mon expérience de kinésithérapeute fait la différence : je repère les signaux faibles, je respecte la récupération et j’interviens avant que la douleur ne s’installe.",
+    text: "Mon expertise en kinésithérapie me permet de porter une attention particulière aux signaux d’alerte, à la gestion de la charge et à la récupération. L’objectif : limiter les risques de blessure et favoriser la continuité de votre entraînement.",
   },
   {
     number: "03",
-    title: "Durer",
-    text: "Enchaîner les semaines, les mois et les saisons avec constance, confiance et un corps capable de répondre présent.",
+    title: "S’adapter pour progresser",
+    text: "Travail, famille, fatigue et imprévus font partie de votre quotidien. Votre planification doit pouvoir évoluer avec vous, sans perdre de vue vos objectifs. L’entraînement s’adapte à votre vie, et non l’inverse.",
   },
 ];
 
@@ -64,7 +71,7 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching en endurance Kibaco : formule unique à 330 €/trimestre (110 €/mois). Suivi quotidien, IDO, WhatsApp 7j/7, zones d’entraînement et prévention des blessures.",
+          "Coaching en triathlon, course à pied et trail : formule unique à 330 €/trimestre (110 €/mois). Plan sur mesure, suivi quotidien, IDO, WhatsApp 7j/7 et regard de kinésithérapeute.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
@@ -98,11 +105,12 @@ function CoachingPage() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète
-                confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec
-                des plans sur mesure et un suivi humain. S’entraîner en triathlon quand on a
-                un quotidien bien rempli n’a rien d’évident : autant bien s’accompagner. Mon
-                expérience du cabinet me sert chaque jour : prévenir la blessure plutôt que
-                de la soigner.
+                confirmé, je vous accompagne dans vos objectifs en triathlon, course à pied et
+                trail grâce à une planification sur mesure et un suivi humain.
+              </p>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                Un accompagnement qui s’adapte à votre niveau, vos ambitions et votre
+                quotidien, pour construire une progression durable.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -218,8 +226,7 @@ function CoachingPage() {
               <p className="mt-5 leading-relaxed text-muted-foreground">
                 J’ai évolué au niveau européen en triathlon et je suis monté à plusieurs
                 reprises sur les podiums, en triathlon comme en trail. J’en ai tiré une
-                conviction : la progression ne se construit pas dans l’urgence, mais dans la
-                continuité. Un objectif ambitieux mérite une stratégie à sa hauteur.
+                conviction : un objectif ambitieux mérite une stratégie à sa hauteur.
               </p>
 
               <ol className="mt-8">
@@ -259,12 +266,13 @@ function CoachingPage() {
             </h2>
             <div className="hidden h-px flex-1 bg-border sm:block" />
           </div>
-          <p className="max-w-3xl leading-relaxed text-muted-foreground">{COACHING_DAILY_LIFE}</p>
-          <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
-            Quels que soient votre niveau, votre expérience ou vos objectifs : pas de niveaux
-            de service ni d’options supplémentaires. Chacun bénéficie du même engagement et
-            d’un accompagnement entièrement personnalisé.
-          </p>
+          <div className="max-w-3xl space-y-4">
+            {COACHING_POSITIONING.map((paragraph) => (
+              <p key={paragraph} className="leading-relaxed text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
+          </div>
 
           <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
             {/* Carte tarif */}
@@ -282,7 +290,10 @@ function CoachingPage() {
                 <span className="ml-2 text-lg font-semibold text-foreground">/trimestre</span>
               </p>
               <p className="mt-2 text-left text-sm text-muted-foreground">{COACHING_PRICE_NOTE}</p>
-              <dl className="mt-7 divide-y divide-border border-y border-border">
+              <p className="mt-4 text-left text-sm font-semibold leading-snug text-foreground hyphens-none">
+                {COACHING_PAYMENT_NOTE}
+              </p>
+              <dl className="mt-6 divide-y divide-border border-y border-border">
                 <div className="flex items-baseline justify-between gap-4 py-3.5">
                   <dt className="text-sm text-muted-foreground">Engagement minimum</dt>
                   <dd className="text-right font-semibold text-foreground">
@@ -329,14 +340,14 @@ function CoachingPage() {
                           {group.title}
                         </h4>
                       </div>
-                      <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+                      <ul className="mt-4 grid gap-y-3">
                         {group.items.map((item) => (
                           <li key={item.id} className="flex items-start gap-2.5">
                             <Check
                               className="mt-0.5 h-4 w-4 shrink-0 text-primary"
                               aria-hidden="true"
                             />
-                            <span className="text-[15px] leading-snug text-foreground">
+                            <span className="text-[15px] leading-relaxed text-foreground">
                               {item.label}
                             </span>
                           </li>
@@ -377,8 +388,9 @@ function CoachingPage() {
               Parlez-moi de votre objectif
             </h2>
             <p className="mb-8 max-w-2xl leading-relaxed text-background/80">
-              Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
-              reviens vers vous pour en discuter et construire votre plan.
+              Pour commencer, dites-moi qui vous êtes, ce que vous pratiquez et ce que vous
+              visez. Je reviens vers vous pour en discuter, puis nous construisons ensemble
+              votre plan.
             </p>
             <a
               href={LINKS.tallyForm}
