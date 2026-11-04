@@ -1,4 +1,5 @@
-import { describe, expect, it } from "vitest";
+/// <reference types="bun" />
+import { describe, expect, it } from "bun:test";
 import { resolveGoogleBusinessApiKey } from "./google-reviews.functions";
 
 // Règle métier : la lecture des avis doit fonctionner à l'identique dans Lovable
