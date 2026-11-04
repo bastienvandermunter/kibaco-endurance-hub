@@ -28,3 +28,5 @@
 - [x] Rendre la page Coaching plus claire : infos importantes mises en avant, textes synthétisés sans perte d'information, même identité visuelle.
 - [x] Intégrer la nouvelle photo envoyée par Bastien (échauffement au bord du bassin) dans la page Coaching.
 - [x] Activer Vercel Web Analytics : @vercel/analytics installé et <Analytics /> intégré dans __root.tsx, sans toucher au design (pages vues vérifiées dans la console).
+- [x] Mettre 330 €/trimestre en avant sur la page Coaching, avec « Ce qui correspond à 110 €/mois » en petit en dessous.
+- [x] Faire intervenir l’expérience de kinésithérapeute dans les textes du coaching comme un atout de prévention des blessures.
