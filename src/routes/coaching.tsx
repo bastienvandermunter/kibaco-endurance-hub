@@ -225,7 +225,7 @@ function CoachingPage() {
                     key={pillar.number}
                     className="grid grid-cols-[auto_1fr] gap-x-5 border-t border-border py-5"
                   >
-                    <span className="pt-1 font-display text-sm font-semibold text-primary">
+                    <span className="w-7 pt-1 font-display text-sm font-semibold text-primary">
                       {pillar.number}
                     </span>
                     <div>
