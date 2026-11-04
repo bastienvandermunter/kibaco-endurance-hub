@@ -1,5 +1,7 @@
 # Refonte Kibaco
 
+- [ ] Remplacer les trois offres par une formule à 110 €/mois payable 330 €/trimestre, avec tous les avantages du Personnalisé et vérifier l’affichage.
+
 - [x] Appliquer la direction professionnelle choisie aux couleurs, caractères et navigation.
 - [x] Intégrer le portrait de Bastien sur l’accueil et la page Approche.
 - [x] Harmoniser les cinq pages sans modifier les tarifs, coordonnées ou disponibilité kiné.
