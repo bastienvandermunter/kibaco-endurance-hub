@@ -40,6 +40,10 @@ export const SITE = {
 // Le montant affiché en grand est le prix trimestriel ; l’équivalence mensuelle est rappelée en petit.
 export const COACHING_PRICE_NOTE = `Ce qui correspond à ${SITE.coachingOffer.monthlyPrice} €/mois`;
 
+// L’idée de départ de l’accompagnement : le triathlon se glisse dans un quotidien déjà plein.
+export const COACHING_DAILY_LIFE =
+  "Faire tenir le triathlon dans un quotidien bien rempli n’a rien d’évident : c’est justement la raison pour laquelle un bon accompagnement change tout. Votre plan se construit autour de votre vie, de vos contraintes et de vos imprévus — pas l’inverse.";
+
 export const NAV_ITEMS = [
   { to: "/", label: "Accueil" },
   { to: "/approche", label: "L’Approche" },

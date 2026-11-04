@@ -30,3 +30,4 @@
 - [x] Activer Vercel Web Analytics : @vercel/analytics installé et <Analytics /> intégré dans __root.tsx, sans toucher au design (pages vues vérifiées dans la console).
 - [x] Mettre 330 €/trimestre en avant sur la page Coaching, avec « Ce qui correspond à 110 €/mois » en petit en dessous.
 - [x] Faire intervenir l’expérience de kinésithérapeute dans les textes du coaching comme un atout de prévention des blessures.
+- [x] Retirer la ligne « Options et suppléments » de la carte tarif et ajouter l’idée « s’entraîner en triathlon avec un quotidien bien rempli n’est pas évident, autant bien s’accompagner » dans les textes du coaching.

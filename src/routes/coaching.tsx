@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, ExternalLink } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { COACHING_FEATURE_GROUPS, COACHING_PRICE_NOTE, LINKS, SITE } from "@/lib/site";
+import { COACHING_DAILY_LIFE, COACHING_FEATURE_GROUPS, COACHING_PRICE_NOTE, LINKS, SITE } from "@/lib/site";
 
 const coachEchauffement = { url: "/images/kibaco-coach-echauffement.jpg" };
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
@@ -99,8 +99,10 @@ function CoachingPage() {
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète
                 confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec
-                des plans sur mesure et un suivi humain. Mon expérience du cabinet me sert
-                chaque jour : prévenir la blessure plutôt que de la soigner.
+                des plans sur mesure et un suivi humain. S’entraîner en triathlon quand on a
+                un quotidien bien rempli n’a rien d’évident : autant bien s’accompagner. Mon
+                expérience du cabinet me sert chaque jour : prévenir la blessure plutôt que
+                de la soigner.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -257,7 +259,8 @@ function CoachingPage() {
             </h2>
             <div className="hidden h-px flex-1 bg-border sm:block" />
           </div>
-          <p className="max-w-3xl leading-relaxed text-muted-foreground">
+          <p className="max-w-3xl leading-relaxed text-muted-foreground">{COACHING_DAILY_LIFE}</p>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
             Quels que soient votre niveau, votre expérience ou vos objectifs : pas de niveaux
             de service ni d’options supplémentaires. Chacun bénéficie du même engagement et
             d’un accompagnement entièrement personnalisé.
@@ -285,10 +288,6 @@ function CoachingPage() {
                   <dd className="text-right font-semibold text-foreground">
                     {offer.commitmentMonths} mois
                   </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4 py-3.5">
-                  <dt className="text-sm text-muted-foreground">Options et suppléments</dt>
-                  <dd className="text-right font-semibold text-foreground">Aucun</dd>
                 </div>
               </dl>
               <a
