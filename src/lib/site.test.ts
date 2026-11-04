@@ -1,6 +1,6 @@
 /// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
-import { COACHING_FEATURES, SITE } from "./site";
+import { COACHING_FEATURE_GROUPS, COACHING_FEATURES, SITE } from "./site";
 
 describe("Formule unique de coaching Kibaco", () => {
   test("le tarif mensuel est de 110 euros", () => {
@@ -31,11 +31,12 @@ describe("Formule unique de coaching Kibaco", () => {
     const analysis = COACHING_FEATURES.find((feature) => feature.id === "weekly-analysis");
     expect(analysis?.label).toContain("semaine après semaine");
     expect(analysis?.label).toContain("WhatsApp");
-    expect(SITE.coachingOffer.text).toContain("analysées semaine après semaine sur WhatsApp");
   });
 
-  test("l’offre unique mentionne le contact WhatsApp 7j/7", () => {
-    expect(SITE.coachingOffer.text).toContain("WhatsApp 7j/7");
+  test("les onze avantages apparaissent chacun une seule fois dans les groupes", () => {
+    const ids = COACHING_FEATURE_GROUPS.flatMap((group) => group.items.map((item) => item.id));
+    expect(ids.length).toBe(11);
+    expect(new Set(ids).size).toBe(11);
   });
 
   for (const id of [

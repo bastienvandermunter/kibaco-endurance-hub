@@ -1,10 +1,60 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ExternalLink, Check } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, ExternalLink } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { COACHING_FEATURES, LINKS, SITE } from "@/lib/site";
+import { COACHING_FEATURE_GROUPS, LINKS, SITE } from "@/lib/site";
+
+const coachEchauffement = { url: "/images/kibaco-coach-echauffement.jpg" };
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
+
+const offer = SITE.coachingOffer;
+
+// L’essentiel de l’offre, lisible d’un coup d’œil en haut de page.
+const KEY_FACTS = [
+  {
+    value: `${offer.monthlyPrice} €`,
+    unit: "/mois",
+    label: `Payable ${offer.quarterlyPrice}\u00a0€/trimestre`,
+    highlight: true,
+  },
+  {
+    value: `${offer.commitmentMonths} mois`,
+    unit: "",
+    label: "Engagement minimum pour construire votre progression",
+    highlight: false,
+  },
+  {
+    value: "7j/7",
+    unit: "",
+    label: "Contact avec votre coach sur WhatsApp",
+    highlight: false,
+  },
+  {
+    value: "100 %",
+    unit: "",
+    label: "Plan individualisé, ajusté selon vos sensations",
+    highlight: false,
+  },
+];
+
+const PILLARS = [
+  {
+    number: "01",
+    title: "Construire sur la durée",
+    text: "Une fréquence d’efforts régulière, une charge maîtrisée et des ajustements permanents : chaque séance a sa place, chaque période a son rôle, chaque détail compte.",
+  },
+  {
+    number: "02",
+    title: "Préserver le corps",
+    text: "Repousser ses limites sans dépasser celles de son corps. La prévention des blessures est au cœur de mon approche : repérer les signaux faibles, respecter la récupération et intervenir avant la blessure.",
+  },
+  {
+    number: "03",
+    title: "Durer",
+    text: "Enchaîner les semaines, les mois et les saisons avec constance, confiance et un corps capable de répondre présent.",
+  },
+];
 
 export const Route = createFileRoute("/coaching")({
   component: CoachingPage,
@@ -35,21 +85,87 @@ function CoachingPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6">
-          <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-primary">Coaching</span>
-          <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            Un coach qui connaît votre corps,{" "}
-            <span className="text-primary">pas seulement</span> vos chronos
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète
-            confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des
-            plans sur mesure et un suivi humain.
-          </p>
+        {/* Hero : promesse, photo et l’essentiel de l’offre */}
+        <section className="mx-auto max-w-6xl px-4 pb-20 pt-12 sm:px-6 lg:pt-16">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-14">
+            <div>
+              <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+                Coaching
+              </span>
+              <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
+                Un coach qui connaît votre corps,{" "}
+                <span className="text-primary">pas seulement</span> vos chronos
+              </h1>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète
+                confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec
+                des plans sur mesure et un suivi humain.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#offre"
+                  className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Découvrir l’offre
+                  <ArrowDown className="h-4 w-4" aria-hidden="true" />
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3.5 text-sm font-bold text-foreground transition-colors hover:bg-secondary"
+                >
+                  Parlez-moi de votre objectif
+                </a>
+              </div>
+            </div>
+
+            <figure className="relative aspect-[4/3] overflow-hidden rounded-md shadow-card sm:aspect-[16/10] lg:aspect-[4/5]">
+              <img
+                src={coachEchauffement.url}
+                alt="Bastien Vandermunter s’échauffe au bord du bassin avant une séance de natation"
+                className="absolute inset-0 h-full w-full object-cover object-[center_62%]"
+                fetchPriority="high"
+              />
+            </figure>
+          </div>
+
+          <ul
+            className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-border bg-border lg:grid-cols-4"
+            aria-label="L’essentiel de l’offre"
+          >
+            {KEY_FACTS.map((fact) => (
+              <li
+                key={fact.label}
+                className={fact.highlight ? "bg-foreground p-5 sm:p-6" : "bg-card p-5 sm:p-6"}
+              >
+                <p
+                  className={`text-left font-display text-2xl font-bold sm:text-3xl ${
+                    fact.highlight ? "text-background" : "text-foreground"
+                  }`}
+                >
+                  {fact.value}
+                  {fact.unit && (
+                    <span
+                      className={`ml-1 font-sans text-base font-medium ${
+                        fact.highlight ? "text-background/70" : "text-muted-foreground"
+                      }`}
+                    >
+                      {fact.unit}
+                    </span>
+                  )}
+                </p>
+                <p
+                  className={`mt-1.5 text-left text-sm leading-snug hyphens-none ${
+                    fact.highlight ? "font-semibold text-primary" : "text-muted-foreground"
+                  }`}
+                >
+                  {fact.label}
+                </p>
+              </li>
+            ))}
+          </ul>
         </section>
 
-        {/* Parcours d'athlète + photos */}
+        {/* Philosophie : la performance dans la durée */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col gap-4">
@@ -93,109 +209,170 @@ function CoachingPage() {
               <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
                 La performance se construit dans la durée !
               </h2>
-              <p className="mt-6 text-lg font-semibold leading-relaxed text-foreground">
+              <p className="mt-5 text-left text-lg font-semibold leading-relaxed text-primary hyphens-none">
                 Construire la performance. Préserver le corps. Durer.
               </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                J’ai eu la chance d’évoluer au niveau européen en triathlon et de monter à plusieurs reprises sur les podiums, aussi bien en triathlon qu’en trail. C’est dans cet univers exigeant
-                que s’est forgée ma vision de l’entraînement : la progression ne se construit
-                pas dans l’urgence, mais dans la continuité.
+              <p className="mt-5 leading-relaxed text-muted-foreground">
+                J’ai évolué au niveau européen en triathlon et je suis monté à plusieurs
+                reprises sur les podiums, en triathlon comme en trail. J’en ai tiré une
+                conviction : la progression ne se construit pas dans l’urgence, mais dans la
+                continuité. Un objectif ambitieux mérite une stratégie à sa hauteur.
               </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Un objectif ambitieux mérite une stratégie à sa hauteur. Cela signifie construire
-                sur le long terme, entretenir une fréquence d’efforts régulière, maîtriser la
-                charge d’entraînement et surtout, observer et ajuster en permanence. Chaque
-                séance a sa place. Chaque période a son rôle. Chaque détail compte.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Mais progresser ne consiste pas simplement à repousser ses limites. Il faut être
-                capable de les repousser sans dépasser celles de son corps.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                C’est pourquoi la prévention des blessures est au cœur de mon approche.
-                Comprendre son corps, identifier les signaux faibles, adapter l’entraînement,
-                respecter la récupération et intervenir avant que le problème ne devienne une
-                blessure : pour moi, cela fait partie intégrante de la performance.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Mon objectif est simple : vous permettre de progresser, de performer et de durer.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Parce que la véritable performance ne se mesure pas uniquement à un chrono. Elle
-                se construit dans la capacité à enchaîner les semaines, les mois et les saisons
-                avec constance, confiance et un corps capable de répondre présent.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite. Nous
-                construisons les conditions pour que vous puissiez aller plus loin.
-              </p>
+
+              <ol className="mt-8">
+                {PILLARS.map((pillar) => (
+                  <li
+                    key={pillar.number}
+                    className="grid grid-cols-[auto_1fr] gap-x-5 border-t border-border py-5"
+                  >
+                    <span className="w-7 pt-1 font-display text-sm font-semibold text-primary">
+                      {pillar.number}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-foreground">
+                        {pillar.title}
+                      </h3>
+                      <p className="mt-1.5 leading-relaxed text-muted-foreground">{pillar.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+
+              <blockquote className="mt-4 border-l-2 border-primary pl-5">
+                <p className="text-left font-display text-xl font-semibold leading-snug text-foreground hyphens-none">
+                  Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite.
+                  Nous construisons les conditions pour que vous puissiez aller plus loin.
+                </p>
+              </blockquote>
             </div>
           </div>
         </section>
 
-        {/* Formule unique */}
-        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+        {/* Formule unique : prix et contenu côte à côte */}
+        <section id="offre" className="mx-auto max-w-6xl scroll-mt-24 px-4 pb-24 sm:px-6">
           <div className="mb-6 flex items-center gap-6">
             <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
               Une seule offre, la même attention pour chacun
             </h2>
-            <div className="h-px flex-1 bg-border" />
+            <div className="hidden h-px flex-1 bg-border sm:block" />
           </div>
           <p className="max-w-3xl leading-relaxed text-muted-foreground">
-            Parce que chaque athlète mérite un suivi de qualité, quels que soient son niveau,
-            son expérience ou ses objectifs, j’ai choisi de proposer une formule unique.
-            Pas de niveaux de service ni d’options supplémentaires : chacun bénéficie de la
-            même attention, du même engagement et d’un accompagnement entièrement personnalisé.
+            Quels que soient votre niveau, votre expérience ou vos objectifs : pas de niveaux
+            de service ni d’options supplémentaires. Chacun bénéficie du même engagement et
+            d’un accompagnement entièrement personnalisé.
           </p>
 
-          <div className="mt-10 grid gap-8 border-y border-border py-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
-            <div>
-              <h3 className="font-display text-xl font-semibold text-foreground">
-                {SITE.coachingOffer.name}
+          <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
+            {/* Carte tarif */}
+            <div className="rounded-md border-2 border-primary bg-card p-6 shadow-warm sm:p-9 lg:sticky lg:top-24">
+              <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                Formule unique
+              </span>
+              <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">
+                {offer.name}
               </h3>
-              <p className="mt-5 text-left">
-                <span className="font-display text-4xl font-semibold text-foreground">{SITE.coachingOffer.monthlyPrice} €</span>
-                <span className="ml-2 text-muted-foreground">/mois</span>
+              <p className="mt-6 text-left">
+                <span className="font-display text-6xl font-bold leading-none text-foreground">
+                  {offer.monthlyPrice} €
+                </span>
+                <span className="ml-2 text-lg text-muted-foreground">/mois</span>
               </p>
-              <p className="mt-3 text-left font-semibold text-primary">
-                Paiement trimestriel : {SITE.coachingOffer.quarterlyPrice} €/trimestre
-              </p>
-              <p className="mt-2 text-left text-sm text-muted-foreground">
-                Engagement minimum de {SITE.coachingOffer.commitmentMonths} mois
+              <dl className="mt-7 divide-y divide-border border-y border-border">
+                <div className="flex items-baseline justify-between gap-4 py-3.5">
+                  <dt className="text-sm text-muted-foreground">Paiement trimestriel</dt>
+                  <dd className="text-right font-semibold text-primary">
+                    {offer.quarterlyPrice} €/trimestre
+                  </dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-4 py-3.5">
+                  <dt className="text-sm text-muted-foreground">Engagement minimum</dt>
+                  <dd className="text-right font-semibold text-foreground">
+                    {offer.commitmentMonths} mois
+                  </dd>
+                </div>
+              </dl>
+              <a
+                href={LINKS.tallyForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3.5 text-center sm:px-6 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Commencer mon accompagnement
+                <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </a>
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                Le formulaire s’ouvre dans un nouvel onglet.
               </p>
             </div>
-            <div className="space-y-4 leading-relaxed text-muted-foreground">
-              {SITE.coachingOffer.text.split("\n\n").map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-          <p className="mt-8 max-w-3xl text-left font-display text-2xl font-semibold leading-snug text-foreground">
-            En un mois, on se met en action.<br />
-            <span className="text-primary">En 3 mois, on construit sa progression !</span>
-          </p>
-        </section>
 
-        {/* Avantages de la formule */}
-        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-          <div className="mb-6 flex items-center gap-6">
-            <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
-              Ce que comprend votre accompagnement
-            </h2>
-            <div className="h-px flex-1 bg-border" />
+            {/* Contenu de l’offre, regroupé par thème */}
+            <div>
+              <h3 className="font-display text-xl font-semibold text-foreground sm:text-2xl">
+                Ce que comprend votre accompagnement
+              </h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">{offer.summary}</p>
+
+              <div className="mt-6 space-y-4">
+                {COACHING_FEATURE_GROUPS.map((group, index) => {
+                  const Icon = group.icon;
+                  return (
+                    <div
+                      key={group.id}
+                      className={`rounded-md border border-border p-6 ${
+                        index % 2 === 1 ? "bg-secondary" : "bg-card"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                          <Icon className="h-5 w-5" aria-hidden="true" />
+                        </span>
+                        <h4 className="font-display text-lg font-semibold text-foreground">
+                          {group.title}
+                        </h4>
+                      </div>
+                      <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+                        {group.items.map((item) => (
+                          <li key={item.id} className="flex items-start gap-2.5">
+                            <Check
+                              className="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                              aria-hidden="true"
+                            />
+                            <span className="text-[15px] leading-snug text-foreground">
+                              {item.label}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <ul className="grid gap-x-12 sm:grid-cols-2">
-            {COACHING_FEATURES.map((feature) => (
-              <li key={feature.id} className="flex items-start gap-3 border-b border-border py-5">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                <span className="leading-relaxed text-foreground">{feature.label}</span>
-              </li>
-            ))}
-          </ul>
+
+          {/* 1 mois / 3 mois */}
+          <div className="mt-10 grid overflow-hidden rounded-md border border-border sm:grid-cols-2">
+            <div className="bg-card p-7 sm:p-8">
+              <span className="block text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">
+                1 mois
+              </span>
+              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-foreground hyphens-none">
+                En un mois, on se met en action.
+              </p>
+            </div>
+            <div className="border-t border-border bg-secondary p-7 sm:border-l sm:border-t-0 sm:p-8">
+              <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                {offer.commitmentMonths} mois · engagement minimum
+              </span>
+              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-primary hyphens-none">
+                En 3 mois, on construit sa progression !
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Contact */}
-        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+        <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-4 pb-24 sm:px-6">
           <div className="rounded-md border border-border bg-foreground p-10 sm:p-12">
             <h2 className="mb-4 font-display text-3xl font-semibold text-background">
               Parlez-moi de votre objectif

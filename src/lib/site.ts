@@ -1,4 +1,10 @@
-import { Target, type LucideIcon } from "lucide-react";
+import {
+  ClipboardList,
+  MessageCircle,
+  Stethoscope,
+  Target,
+  type LucideIcon,
+} from "lucide-react";
 
 export const SITE = {
   name: "Kibaco",
@@ -25,11 +31,9 @@ export const SITE = {
     monthlyPrice: 110,
     quarterlyPrice: 330,
     commitmentMonths: 3,
-    text:
-      "Profitez d’un programme d’entraînement 100 % individualisé, construit autour de vos objectifs, de votre niveau et de votre mode de vie.\n\n" +
-      "Grâce à un suivi quotidien et des ajustements journaliers, votre plan évolue en fonction de vos sensations, de votre progression et de vos imprévus. Vos séances sont analysées semaine après semaine sur WhatsApp.\n\n" +
-      "Bénéficiez également d’une détermination de vos zones d’entraînement à partir de votre vitesse critique, d’un contact avec votre coach via WhatsApp 7j/7 et d’un accès aux séances collectives KIBACO.\n\n" +
-      "Un accompagnement complet, structuré en cycles de travail, pour progresser durablement et sereinement.",
+    // Résumé court : le détail de chaque avantage vit dans COACHING_FEATURE_GROUPS.
+    summary:
+      "Un programme 100 % individualisé, structuré en cycles de travail et construit autour de vos objectifs, de votre niveau et de votre mode de vie. Votre plan évolue chaque jour selon vos sensations, votre progression et vos imprévus, pour progresser durablement et sereinement.",
   },
 };
 
@@ -49,17 +53,51 @@ export const LINKS = {
   tallyForm: "https://tally.so/r/KpYLB7",
 };
 
-// Tous les avantages de la formule unique, conservés depuis l’offre Personnalisé.
-export const COACHING_FEATURES = [
-  { id: "personalized-plan", label: "Plan 100 % individualisé selon vos objectifs et votre niveau" },
-  { id: "life-adjustments", label: "Plan adapté à votre mode de vie et à vos imprévus pour garder une planification cohérente" },
-  { id: "training-cycles", label: "Progression structurée en cycles de travail" },
-  { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations et votre progression" },
-  { id: "ido", label: "Suivi sur l’application IDO" },
-  { id: "coach-contact", label: "Contact avec votre coach via WhatsApp, 7j/7" },
-  { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine sur WhatsApp" },
-  { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
-  { id: "critical-speed", label: "Détermination de vos zones d’entraînement à partir de votre vitesse critique" },
-  { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
-  { id: "group-sessions", label: "Accès aux séances collectives KIBACO" },
+export type CoachingFeature = { id: string; label: string };
+export type CoachingFeatureGroup = {
+  id: string;
+  title: string;
+  icon: LucideIcon;
+  items: CoachingFeature[];
+};
+
+// Tous les avantages de la formule unique, conservés depuis l’offre Personnalisé,
+// regroupés par thème pour une lecture rapide sur la page Coaching.
+export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
+  {
+    id: "plan",
+    title: "Un plan sur mesure",
+    icon: ClipboardList,
+    items: [
+      { id: "personalized-plan", label: "Plan 100 % individualisé selon vos objectifs et votre niveau" },
+      { id: "life-adjustments", label: "Adapté à votre mode de vie et à vos imprévus, pour une planification cohérente" },
+      { id: "training-cycles", label: "Progression structurée en cycles de travail" },
+      { id: "critical-speed", label: "Zones d’entraînement déterminées à partir de votre vitesse critique" },
+    ],
+  },
+  {
+    id: "follow-up",
+    title: "Un suivi au quotidien",
+    icon: MessageCircle,
+    items: [
+      { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations" },
+      { id: "coach-contact", label: "Contact avec votre coach via WhatsApp, 7j/7" },
+      { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine sur WhatsApp" },
+      { id: "ido", label: "Suivi sur l’application IDO" },
+    ],
+  },
+  {
+    id: "beyond",
+    title: "Au-delà de l’entraînement",
+    icon: Stethoscope,
+    items: [
+      { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
+      { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
+      { id: "group-sessions", label: "Accès aux séances collectives KIBACO" },
+    ],
+  },
 ];
+
+export const COACHING_FEATURES: CoachingFeature[] = COACHING_FEATURE_GROUPS.flatMap(
+  (group) => group.items,
+);
