@@ -15,7 +15,7 @@ const KEY_FACTS = [
   {
     value: `${offer.monthlyPrice} €`,
     unit: "/mois",
-    label: `Payable ${offer.quarterlyPrice} €/trimestre`,
+    label: `Payable ${offer.quarterlyPrice}\u00a0€/trimestre`,
     highlight: true,
   },
   {
@@ -154,7 +154,7 @@ function CoachingPage() {
                   )}
                 </p>
                 <p
-                  className={`mt-1.5 text-left text-sm leading-snug ${
+                  className={`mt-1.5 text-left text-sm leading-snug hyphens-none ${
                     fact.highlight ? "font-semibold text-primary" : "text-muted-foreground"
                   }`}
                 >
@@ -209,7 +209,7 @@ function CoachingPage() {
               <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
                 La performance se construit dans la durée !
               </h2>
-              <p className="mt-5 text-left text-lg font-semibold leading-relaxed text-primary">
+              <p className="mt-5 text-left text-lg font-semibold leading-relaxed text-primary hyphens-none">
                 Construire la performance. Préserver le corps. Durer.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
@@ -239,7 +239,7 @@ function CoachingPage() {
               </ol>
 
               <blockquote className="mt-4 border-l-2 border-primary pl-5">
-                <p className="text-left font-display text-xl font-semibold leading-snug text-foreground">
+                <p className="text-left font-display text-xl font-semibold leading-snug text-foreground hyphens-none">
                   Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite.
                   Nous construisons les conditions pour que vous puissiez aller plus loin.
                 </p>
@@ -264,7 +264,7 @@ function CoachingPage() {
 
           <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
             {/* Carte tarif */}
-            <div className="rounded-md border-2 border-primary bg-card p-7 shadow-warm sm:p-9 lg:sticky lg:top-24">
+            <div className="rounded-md border-2 border-primary bg-card p-6 shadow-warm sm:p-9 lg:sticky lg:top-24">
               <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
                 Formule unique
               </span>
@@ -295,7 +295,7 @@ function CoachingPage() {
                 href={LINKS.tallyForm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3.5 text-center sm:px-6 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Commencer mon accompagnement
                 <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -356,7 +356,7 @@ function CoachingPage() {
               <span className="block text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">
                 1 mois
               </span>
-              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-foreground">
+              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-foreground hyphens-none">
                 En un mois, on se met en action.
               </p>
             </div>
@@ -364,7 +364,7 @@ function CoachingPage() {
               <span className="block text-xs font-bold uppercase tracking-[0.25em] text-primary">
                 {offer.commitmentMonths} mois · engagement minimum
               </span>
-              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-primary">
+              <p className="mt-2 text-left font-display text-2xl font-semibold leading-snug text-primary hyphens-none">
                 En 3 mois, on construit sa progression !
               </p>
             </div>
