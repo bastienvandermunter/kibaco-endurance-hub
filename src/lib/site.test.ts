@@ -1,6 +1,7 @@
 /// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
 import {
+  COACHING_DAILY_LIFE,
   COACHING_FEATURE_GROUPS,
   COACHING_FEATURES,
   COACHING_PRICE_NOTE,
@@ -32,10 +33,23 @@ describe("Formule unique de coaching Kibaco", () => {
     expect(contact?.label).toContain("7j/7");
   });
 
-  test("l’analyse des séances semaine après semaine sur WhatsApp est incluse", () => {
+  test("l’analyse des séances se fait semaine après semaine, sans mention de WhatsApp", () => {
     const analysis = COACHING_FEATURES.find((feature) => feature.id === "weekly-analysis");
     expect(analysis?.label).toContain("semaine après semaine");
-    expect(analysis?.label).toContain("WhatsApp");
+    expect(analysis?.label).not.toContain("WhatsApp");
+  });
+
+  test("l’accompagnement part du quotidien, difficile à organiser en triathlon", () => {
+    expect(COACHING_DAILY_LIFE).toContain("quotidien");
+    expect(COACHING_DAILY_LIFE.toLowerCase()).toContain("accompagnement");
+  });
+
+  test("la carte tarif ne mentionne plus « Options et suppléments »", async () => {
+    const page = await Bun.file(
+      new URL("../routes/coaching.tsx", import.meta.url),
+    ).text();
+    expect(page).not.toContain("Options et suppléments");
+    expect(page).toContain("Engagement minimum");
   });
 
   test("le prix en avant est trimestriel, avec l’équivalence mensuelle en petit", () => {
