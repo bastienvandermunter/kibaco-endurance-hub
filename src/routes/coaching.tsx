@@ -156,7 +156,7 @@ function CoachingPage() {
                   <span className="whitespace-nowrap">{fact.value}</span>
                   {fact.unit && (
                     <span
-                      className={`ml-1 font-sans text-base font-medium ${
+                      className={`block font-sans text-base font-medium sm:ml-1 sm:inline ${
                         fact.highlight ? "text-background/70" : "text-muted-foreground"
                       }`}
                     >
