@@ -14,7 +14,7 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching en endurance Kibaco : une formule individualisée à 110 €/mois, payable 330 €/trimestre. Suivi quotidien, IDO, zones d’entraînement à partir de la vitesse critique et séances collectives.",
+          "Coaching en endurance Kibaco : une formule individualisée à 110 €/mois, payable 330 €/trimestre. Suivi quotidien, IDO, contact WhatsApp 7j/7, zones d’entraînement à partir de la vitesse critique et séances collectives.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {

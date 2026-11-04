@@ -24,3 +24,5 @@
 - [x] Ajouter le critère « Suivi sur l’application IDO » au tableau (deux dernières offres).
 - [x] Ajouter les critères « Regard de clinicien en cas d’alerte » et « Conseils hydratation, nutrition, technique, matériel » au tableau (deux dernières offres).
 - [x] Retirer les neuf points de « Ce que comprend le coaching » sur la page Coaching.
+- [x] Préciser le contact avec le coach via WhatsApp 7j/7 et l’analyse des séances semaine après semaine sur WhatsApp.
+- [x] Activer Vercel Web Analytics : @vercel/analytics installé et <Analytics /> intégré dans __root.tsx, sans toucher au design (pages vues vérifiées dans la console).

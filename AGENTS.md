@@ -16,3 +16,4 @@
 - Les avis Google sont lus côté serveur via la connexion Google Business Profile et mis en cache 15 minutes, afin de protéger les identifiants et d’éviter des appels à chaque affichage.
 
 - Keep the single coaching offer and its included benefits in `src/lib/site.ts`, with numeric billing values covered by adjacent tests, so pricing and presentation share one source of truth.
+- Visitor analytics come from Vercel Web Analytics: `<Analytics />` from `@vercel/analytics/react` renders once in `src/routes/__root.tsx` next to `<Outlet />`, so page views are captured without any design or feature change, and no second analytics provider is added.
