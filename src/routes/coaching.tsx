@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, ExternalLink } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { COACHING_FEATURE_GROUPS, LINKS, SITE } from "@/lib/site";
+import { COACHING_FEATURE_GROUPS, COACHING_PRICE_NOTE, LINKS, SITE } from "@/lib/site";
 
 const coachEchauffement = { url: "/images/kibaco-coach-echauffement.jpg" };
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
@@ -13,9 +13,9 @@ const offer = SITE.coachingOffer;
 // L’essentiel de l’offre, lisible d’un coup d’œil en haut de page.
 const KEY_FACTS = [
   {
-    value: `${offer.monthlyPrice} €`,
-    unit: "/mois",
-    label: `Payable ${offer.quarterlyPrice}\u00a0€/trimestre`,
+    value: `${offer.quarterlyPrice} €`,
+    unit: "/trimestre",
+    label: COACHING_PRICE_NOTE,
     highlight: true,
   },
   {
@@ -47,7 +47,7 @@ const PILLARS = [
   {
     number: "02",
     title: "Préserver le corps",
-    text: "Repousser ses limites sans dépasser celles de son corps. La prévention des blessures est au cœur de mon approche : repérer les signaux faibles, respecter la récupération et intervenir avant la blessure.",
+    text: "Repousser ses limites sans dépasser celles de son corps. Mon expérience de kinésithérapeute fait la différence : je repère les signaux faibles, je respecte la récupération et j’interviens avant que la douleur ne s’installe.",
   },
   {
     number: "03",
@@ -64,13 +64,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching en endurance Kibaco : une formule individualisée à 110 €/mois, payable 330 €/trimestre. Suivi quotidien, IDO, contact WhatsApp 7j/7, zones d’entraînement à partir de la vitesse critique et séances collectives.",
+          "Coaching en endurance Kibaco : formule unique à 330 €/trimestre (110 €/mois). Suivi quotidien, IDO, WhatsApp 7j/7, zones d’entraînement et prévention des blessures.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Une seule offre de coaching à 110 €/mois, payable 330 €/trimestre : la même attention pour chacun, un plan individualisé et un suivi quotidien.",
+          "Une seule offre de coaching à 330 €/trimestre, soit 110 €/mois : la même attention pour chacun, un plan individualisé et un suivi quotidien.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -99,7 +99,8 @@ function CoachingPage() {
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète
                 confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec
-                des plans sur mesure et un suivi humain.
+                des plans sur mesure et un suivi humain. Mon expérience du cabinet me sert
+                chaque jour : prévenir la blessure plutôt que de la soigner.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -272,23 +273,22 @@ function CoachingPage() {
                 {offer.name}
               </h3>
               <p className="mt-6 text-left">
-                <span className="font-display text-6xl font-bold leading-none text-foreground">
-                  {offer.monthlyPrice} €
+                <span className="font-display text-6xl font-bold leading-none text-primary">
+                  {offer.quarterlyPrice} €
                 </span>
-                <span className="ml-2 text-lg text-muted-foreground">/mois</span>
+                <span className="ml-2 text-lg font-semibold text-foreground">/trimestre</span>
               </p>
+              <p className="mt-2 text-left text-sm text-muted-foreground">{COACHING_PRICE_NOTE}</p>
               <dl className="mt-7 divide-y divide-border border-y border-border">
-                <div className="flex items-baseline justify-between gap-4 py-3.5">
-                  <dt className="text-sm text-muted-foreground">Paiement trimestriel</dt>
-                  <dd className="text-right font-semibold text-primary">
-                    {offer.quarterlyPrice} €/trimestre
-                  </dd>
-                </div>
                 <div className="flex items-baseline justify-between gap-4 py-3.5">
                   <dt className="text-sm text-muted-foreground">Engagement minimum</dt>
                   <dd className="text-right font-semibold text-foreground">
                     {offer.commitmentMonths} mois
                   </dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-4 py-3.5">
+                  <dt className="text-sm text-muted-foreground">Options et suppléments</dt>
+                  <dd className="text-right font-semibold text-foreground">Aucun</dd>
                 </div>
               </dl>
               <a

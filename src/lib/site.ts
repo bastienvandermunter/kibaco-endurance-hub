@@ -38,7 +38,7 @@ export const SITE = {
 };
 
 // Le montant affiché en grand est le prix trimestriel ; l’équivalence mensuelle est rappelée en petit.
-export const COACHING_PRICE_NOTE = `ce qui correspond à ${SITE.coachingOffer.monthlyPrice} €/mois`;
+export const COACHING_PRICE_NOTE = `Ce qui correspond à ${SITE.coachingOffer.monthlyPrice} €/mois`;
 
 export const NAV_ITEMS = [
   { to: "/", label: "Accueil" },
