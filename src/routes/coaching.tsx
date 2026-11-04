@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ExternalLink, Check, Minus } from "lucide-react";
+import { ArrowRight, ExternalLink, Check } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-layout";
-import { COACHING_COMPARISON, LINKS, SITE } from "@/lib/site";
+import { COACHING_FEATURES, LINKS, SITE } from "@/lib/site";
 const coachNage = { url: "/images/kibaco-coach-nage-v3.jpg" };
 const coursePhoto = { url: "/images/kibaco-course.jpg" };
 const trailNb = { url: "/images/kibaco-trail-nb.jpg" };
@@ -14,13 +14,13 @@ export const Route = createFileRoute("/coaching")({
       {
         name: "description",
         content:
-          "Coaching en endurance : trois offres — programme sur devis selon la nature des objectifs, accompagnement 90 €/mois, plan entièrement personnalisé 130 €/mois. Triathlon, course à pied et trail, avec suivi sur IDO et WhatsApp.",
+          "Coaching en endurance Kibaco : une formule individualisée à 110 €/mois, payable 330 €/trimestre. Suivi quotidien, IDO, zones d’entraînement à partir de la vitesse critique et séances collectives.",
       },
       { property: "og:title", content: "Coaching en endurance — Kibaco" },
       {
         property: "og:description",
         content:
-          "Trois offres de coaching : programme sur devis selon la nature des objectifs, accompagnement 90 €/mois, personnalisé 130 €/mois. Triathlon, course à pied et trail.",
+          "Une seule offre de coaching à 110 €/mois, payable 330 €/trimestre : la même attention pour chacun, un plan individualisé et un suivi quotidien.",
       },
       { property: "og:url", content: "/coaching" },
       { property: "og:type", content: "website" },
@@ -133,154 +133,65 @@ function CoachingPage() {
           </div>
         </section>
 
-        {/* Nos offres */}
+        {/* Formule unique */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="mb-6 flex items-center gap-6">
-            <h2 className="whitespace-nowrap font-display text-2xl font-semibold text-foreground sm:text-3xl">
-              Nos offres
+            <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Une seule offre, la même attention pour chacun
             </h2>
-            <div className="h-px w-full bg-border" />
+            <div className="h-px flex-1 bg-border" />
           </div>
-          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
-            Trois façons de progresser : du programme en autonomie au suivi
-            entièrement personnalisé.
+          <p className="max-w-3xl leading-relaxed text-muted-foreground">
+            Parce que chaque athlète mérite un suivi de qualité, quels que soient son niveau,
+            son expérience ou ses objectifs, j’ai choisi de proposer une formule unique.
+            Pas de niveaux de service ni d’options supplémentaires : chacun bénéficie de la
+            même attention, du même engagement et d’un accompagnement entièrement personnalisé.
           </p>
 
-          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border lg:grid-cols-3">
-            {SITE.coachingOffers.map((offer, index) => {
-              const Icon = offer.icon;
-              return (
-                <div
-                  key={offer.name}
-                  className={
-                    offer.highlighted
-                      ? "flex flex-col bg-secondary/50 p-7 sm:p-8"
-                      : "flex flex-col bg-card p-7 transition-colors hover:bg-secondary/40 sm:p-8"
-                  }
-                >
-                  <div className="mb-6 flex items-center justify-between gap-4">
-                    <span className="font-display text-sm font-bold tracking-[0.25em] text-primary">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <Icon className="h-5 w-5 shrink-0 text-primary" />
-                  </div>
-                  <h3 className="mb-3 font-display text-lg font-semibold leading-snug text-foreground">
-                    {offer.name}
-                  </h3>
-                  <div className="mb-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                    <span className="whitespace-nowrap font-display text-3xl font-semibold text-foreground">
-                      {offer.price}
-                    </span>
-                    <span className="text-sm text-muted-foreground">{offer.unit}</span>
-                  </div>
-                  <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
-                    {offer.text.split("\n\n").map((para) => (
-                      <p key={para} className="text-left">
-                        {para}
-                      </p>
-                    ))}
-                  </div>
-                  {offer.note ? (
-                    <p className="mt-4 text-sm font-semibold text-primary">{offer.note}</p>
-                  ) : null}
-                </div>
-              );
-            })}
+          <div className="mt-10 grid gap-8 border-y border-border py-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
+            <div>
+              <h3 className="font-display text-xl font-semibold text-foreground">
+                {SITE.coachingOffer.name}
+              </h3>
+              <p className="mt-5 text-left">
+                <span className="font-display text-4xl font-semibold text-foreground">{SITE.coachingOffer.monthlyPrice} €</span>
+                <span className="ml-2 text-muted-foreground">/mois</span>
+              </p>
+              <p className="mt-3 text-left font-semibold text-primary">
+                Paiement trimestriel : {SITE.coachingOffer.quarterlyPrice} €/trimestre
+              </p>
+              <p className="mt-2 text-left text-sm text-muted-foreground">
+                Engagement minimum de {SITE.coachingOffer.commitmentMonths} mois
+              </p>
+            </div>
+            <div className="space-y-4 leading-relaxed text-muted-foreground">
+              {SITE.coachingOffer.text.split("\n\n").map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
+          <p className="mt-8 max-w-3xl text-left font-display text-2xl font-semibold leading-snug text-foreground">
+            En un mois, on se met en action.<br />
+            <span className="text-primary">En 3 mois, on construit sa progression !</span>
+          </p>
         </section>
 
-        {/* Comparatif des offres */}
+        {/* Avantages de la formule */}
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="mb-6 flex items-center gap-6">
-            <h2 className="font-display text-2xl font-semibold text-foreground sm:whitespace-nowrap sm:text-3xl">
-              Ce que comprend chaque abonnement
+            <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              Ce que comprend votre accompagnement
             </h2>
-            <div className="h-px w-full bg-border" />
+            <div className="h-px flex-1 bg-border" />
           </div>
-          <p className="mb-10 max-w-2xl text-left text-muted-foreground">
-            Tous les critères, offre par offre, pour comparer en un coup d’œil.
-          </p>
-
-          <div className="overflow-x-auto rounded-md border border-border">
-            <table className="w-full min-w-[720px] border-collapse text-sm">
-              <caption className="sr-only">
-                Comparatif des trois offres de coaching Kibaco
-              </caption>
-              <thead>
-                <tr>
-                  <th
-                    scope="col"
-                    className="sticky left-0 z-10 border-r border-border bg-card px-5 py-5 text-left align-bottom font-display text-sm font-semibold tracking-wide text-foreground"
-                  >
-                    Critère
-                  </th>
-                  {SITE.coachingOffers.map((offer) => (
-                    <th
-                      key={offer.name}
-                      scope="col"
-                      className={
-                        offer.highlighted
-                          ? "bg-secondary/50 px-5 py-5 text-center align-bottom"
-                          : "bg-card px-5 py-5 text-center align-bottom"
-                      }
-                    >
-                      <span className="block font-display text-base font-semibold text-foreground">
-                        {offer.name}
-                      </span>
-                      <span className="mt-1 block text-xs font-normal text-muted-foreground">
-                        {offer.price} {offer.unit}
-                      </span>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {COACHING_COMPARISON.map((row) => (
-                  <tr key={row.label} className="border-t border-border">
-                    <th
-                      scope="row"
-                      className="sticky left-0 z-10 border-r border-border bg-card px-5 py-4 text-left font-medium leading-snug text-foreground"
-                    >
-                      {row.label}
-                    </th>
-                    {SITE.coachingOffers.map((offer, index) => {
-                      const value = row.values[index];
-                      return (
-                        <td
-                          key={offer.name}
-                          className={
-                            offer.highlighted
-                              ? "bg-secondary/50 px-5 py-4 text-center"
-                              : "bg-card px-5 py-4 text-center"
-                          }
-                        >
-                          {value === true ? (
-                            <span className="inline-flex items-center justify-center">
-                              <Check className="h-5 w-5 text-primary" aria-hidden="true" />
-                              <span className="sr-only">Inclus</span>
-                            </span>
-                          ) : value === false ? (
-                            <span className="inline-flex items-center justify-center">
-                              <Minus
-                                className="h-4 w-4 text-muted-foreground/40"
-                                aria-hidden="true"
-                              />
-                              <span className="sr-only">Non inclus</span>
-                            </span>
-                          ) : (
-                            <span className="font-medium text-foreground">{value}</span>
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-3 text-xs text-muted-foreground sm:hidden">
-            Faites glisser le tableau pour voir toutes les offres.
-          </p>
+          <ul className="grid gap-x-12 sm:grid-cols-2">
+            {COACHING_FEATURES.map((feature) => (
+              <li key={feature.id} className="flex items-start gap-3 border-b border-border py-5">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                <span className="leading-relaxed text-foreground">{feature.label}</span>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* Contact */}
