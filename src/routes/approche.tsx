@@ -42,7 +42,7 @@ function ApprochePage() {
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl font-semibold text-foreground">
-              Mon parcours
+              Du cabinet au terrain
             </h2>
             <p className="mt-4 border-l-2 border-primary pl-4 font-hand text-3xl leading-tight text-primary">{SITE.tagline}.</p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
