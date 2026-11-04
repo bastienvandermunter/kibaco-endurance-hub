@@ -1,12 +1,16 @@
 /// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
 import {
-  COACHING_DAILY_LIFE,
   COACHING_FEATURE_GROUPS,
   COACHING_FEATURES,
+  COACHING_PAYMENT_NOTE,
+  COACHING_POSITIONING,
   COACHING_PRICE_NOTE,
   SITE,
 } from "./site";
+
+const coachingPage = () =>
+  Bun.file(new URL("../routes/coaching.tsx", import.meta.url)).text();
 
 describe("Formule unique de coaching Kibaco", () => {
   test("le tarif mensuel est de 110 euros", () => {
@@ -39,15 +43,52 @@ describe("Formule unique de coaching Kibaco", () => {
     expect(analysis?.label).not.toContain("WhatsApp");
   });
 
-  test("l’accompagnement part du quotidien, difficile à organiser en triathlon", () => {
-    expect(COACHING_DAILY_LIFE).toContain("quotidien");
-    expect(COACHING_DAILY_LIFE.toLowerCase()).toContain("accompagnement");
+  test("le trimestre de 330 € se règle en une seule fois", () => {
+    expect(COACHING_PAYMENT_NOTE).toContain("330 €");
+    expect(COACHING_PAYMENT_NOTE).toContain("en une seule fois");
+    expect(COACHING_PAYMENT_NOTE).toContain("trois mois");
+  });
+
+  test("la formule unique ne réserve aucune prestation à une formule supérieure", () => {
+    const text = COACHING_POSITIONING.join(" ");
+    expect(text).toContain("formule unique");
+    expect(text).toContain("sans différents niveaux de suivi");
+  });
+
+  test("les séances collectives sont ponctuelles et incluses dans l’abonnement KIBACO", () => {
+    const sessions = COACHING_FEATURES.find((feature) => feature.id === "group-sessions");
+    expect(sessions?.label).toContain("ponctuellement");
+    expect(sessions?.label).toContain("abonnement KIBACO");
+  });
+
+  test("aucune mention d’abonnement mensuel sur la page Coaching", async () => {
+    const all = (await coachingPage()) + COACHING_FEATURES.map((f) => f.label).join(" ");
+    expect(all).not.toContain("abonnement mensuel");
+  });
+
+  test("les tests de zones s’adaptent à chaque discipline, sans se limiter à la vitesse critique", () => {
+    const zones = COACHING_FEATURES.find((feature) => feature.id === "intensity-zones");
+    for (const discipline of ["triathlon", "course à pied", "trail", "natation", "cyclisme"]) {
+      expect(zones?.label).toContain(discipline);
+    }
+  });
+
+  test("le suivi est quotidien, sans promettre une modification systématique chaque jour", () => {
+    const daily = COACHING_FEATURES.find((feature) => feature.id === "daily-adjustments");
+    expect(daily?.label).toContain("suivi quotidien");
+    expect(daily?.label).not.toContain("journalier");
+  });
+
+  test("aucun texte ne garantit une absence totale de blessure", async () => {
+    const all = (await coachingPage()) + COACHING_FEATURES.map((f) => f.label).join(" ");
+    for (const claim of ["la blessure est prévenue", "zéro blessure", "sans aucune blessure"]) {
+      expect(all).not.toContain(claim);
+    }
+    expect(all).toContain("limiter les risques de blessure");
   });
 
   test("la carte tarif ne mentionne plus « Options et suppléments »", async () => {
-    const page = await Bun.file(
-      new URL("../routes/coaching.tsx", import.meta.url),
-    ).text();
+    const page = await coachingPage();
     expect(page).not.toContain("Options et suppléments");
     expect(page).toContain("Engagement minimum");
   });
@@ -64,11 +105,6 @@ describe("Formule unique de coaching Kibaco", () => {
     expect(prevention?.label).toContain("kinésithérapeute");
   });
 
-  test("l’expérience de kiné pour prévenir les blessures est dans le résumé de l’offre", () => {
-    expect(SITE.coachingOffer.summary).toContain("kinésithérapeute");
-    expect(SITE.coachingOffer.summary).toContain("la blessure est prévenue");
-  });
-
   test("les douze avantages apparaissent chacun une seule fois dans les groupes", () => {
     const ids = COACHING_FEATURE_GROUPS.flatMap((group) => group.items.map((item) => item.id));
     expect(ids.length).toBe(12);
@@ -77,7 +113,7 @@ describe("Formule unique de coaching Kibaco", () => {
 
   for (const id of [
     "personalized-plan", "life-adjustments", "training-cycles", "daily-adjustments",
-    "ido", "coach-contact", "weekly-analysis", "clinical-alert", "critical-speed", "practical-advice", "group-sessions",
+    "ido", "coach-contact", "weekly-analysis", "clinical-alert", "intensity-zones", "practical-advice", "group-sessions",
   ]) {
     test(`l’avantage ${id} de l’ancienne offre Personnalisé est conservé`, () => {
       expect(COACHING_FEATURES.some((feature) => feature.id === id)).toBe(true);
