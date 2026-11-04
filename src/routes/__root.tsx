@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   Outlet,
   Link,
@@ -18,7 +19,9 @@ function NotFoundComponent() {
     <div className="flex min-h-[70vh] items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 font-display text-xl font-semibold text-foreground">Page introuvable</h2>
+        <h2 className="mt-4 font-display text-xl font-semibold text-foreground">
+          Page introuvable
+        </h2>
         <p className="mt-2 text-sm text-muted-foreground">
           Cette page n’existe pas ou a été déplacée.
         </p>
@@ -39,7 +42,9 @@ function ErrorComponent({ error, reset }: { error: unknown; reset: () => void })
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error instanceof Error ? error : new Error(String(error)), { boundary: "tanstack_root_error_component" });
+    reportLovableError(error instanceof Error ? error : new Error(String(error)), {
+      boundary: "tanstack_root_error_component",
+    });
   }, [error]);
 
   return (
@@ -143,6 +148,8 @@ function RootComponent() {
       <Outlet />
       {/* Vercel Web Analytics : injecte le script de suivi des visites et des pages vues (aucun impact visuel). */}
       <Analytics />
+      {/* Vercel Speed Insights : collecte les métriques de performance des utilisateurs. */}
+      <SpeedInsights />
     </QueryClientProvider>
   );
 }

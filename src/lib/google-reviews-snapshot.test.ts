@@ -12,6 +12,9 @@ describe("pickReviews", () => {
   });
   it("garde les avis automatiques quand la lecture réussit", () => {
     const live = [{ id: "x", text: "t", author: "a", rating: 5 }];
-    expect(pickReviews({ status: "ready", reviews: live })).toEqual({ reviews: live, source: "live" });
+    expect(pickReviews({ status: "ready", reviews: live })).toEqual({
+      reviews: live,
+      source: "live",
+    });
   });
 });
