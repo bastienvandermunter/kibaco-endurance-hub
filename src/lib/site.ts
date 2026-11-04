@@ -27,8 +27,8 @@ export const SITE = {
     commitmentMonths: 3,
     text:
       "Profitez d’un programme d’entraînement 100 % individualisé, construit autour de vos objectifs, de votre niveau et de votre mode de vie.\n\n" +
-      "Grâce à un suivi quotidien et des ajustements journaliers, votre plan évolue en fonction de vos sensations, de votre progression et de vos imprévus.\n\n" +
-      "Bénéficiez également d’une détermination de vos zones d’entraînement à partir de votre vitesse critique, d’échanges réguliers avec votre coach et d’un accès aux séances collectives KIBACO.\n\n" +
+      "Grâce à un suivi quotidien et des ajustements journaliers, votre plan évolue en fonction de vos sensations, de votre progression et de vos imprévus. Vos séances sont analysées semaine après semaine sur WhatsApp.\n\n" +
+      "Bénéficiez également d’une détermination de vos zones d’entraînement à partir de votre vitesse critique, d’un contact avec votre coach via WhatsApp 7j/7 et d’un accès aux séances collectives KIBACO.\n\n" +
       "Un accompagnement complet, structuré en cycles de travail, pour progresser durablement et sereinement.",
   },
 };
@@ -56,7 +56,8 @@ export const COACHING_FEATURES = [
   { id: "training-cycles", label: "Progression structurée en cycles de travail" },
   { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations et votre progression" },
   { id: "ido", label: "Suivi sur l’application IDO" },
-  { id: "coach-contact", label: "Échanges réguliers avec votre coach" },
+  { id: "coach-contact", label: "Contact avec votre coach via WhatsApp, 7j/7" },
+  { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine sur WhatsApp" },
   { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
   { id: "critical-speed", label: "Détermination de vos zones d’entraînement à partir de votre vitesse critique" },
   { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
