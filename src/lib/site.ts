@@ -51,15 +51,28 @@ export const LINKS = {
 
 // Tous les avantages de la formule unique, conservés depuis l’offre Personnalisé.
 export const COACHING_FEATURES = [
-  { id: "personalized-plan", label: "Plan 100 % individualisé selon vos objectifs et votre niveau" },
-  { id: "life-adjustments", label: "Plan adapté à votre mode de vie et à vos imprévus pour garder une planification cohérente" },
+  {
+    id: "personalized-plan",
+    label: "Plan 100 % individualisé selon vos objectifs et votre niveau",
+  },
+  {
+    id: "life-adjustments",
+    label:
+      "Plan adapté à votre mode de vie et à vos imprévus pour garder une planification cohérente",
+  },
   { id: "training-cycles", label: "Progression structurée en cycles de travail" },
-  { id: "daily-adjustments", label: "Suivi quotidien et ajustements journaliers selon vos sensations et votre progression" },
+  {
+    id: "daily-adjustments",
+    label: "Suivi quotidien et ajustements journaliers selon vos sensations et votre progression",
+  },
   { id: "ido", label: "Suivi sur l’application IDO" },
   { id: "coach-contact", label: "Contact avec votre coach via WhatsApp, 7j/7" },
   { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine sur WhatsApp" },
   { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
-  { id: "critical-speed", label: "Détermination de vos zones d’entraînement à partir de votre vitesse critique" },
+  {
+    id: "critical-speed",
+    label: "Détermination de vos zones d’entraînement à partir de votre vitesse critique",
+  },
   { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
   { id: "group-sessions", label: "Accès aux séances collectives KIBACO" },
 ];

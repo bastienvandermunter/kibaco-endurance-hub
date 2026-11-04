@@ -17,11 +17,11 @@ export const Route = createFileRoute("/kinesitherapie")({
   head: () => ({
     meta: [
       { title: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
-        {
-          name: "description",
-          content:
-            "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Non conventionné. Ouverture prochaine.",
-        },
+      {
+        name: "description",
+        content:
+          "Kinésithérapie à Braine-l’Alleud : bilan, thérapie manuelle, revalidation, drainage lymphatique (méthode Leduc) et prévention, pour tous — sportifs ou non. Non conventionné. Ouverture prochaine.",
+      },
       { property: "og:title", content: "Kinésithérapie — Kibaco, Braine-l’Alleud" },
       {
         property: "og:description",
@@ -92,7 +92,7 @@ function KinesitherapiePage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
-           <div className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
+          <div className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
             <Clock className="h-4 w-4" />
             Bientôt disponible — la prise de rendez-vous ouvre prochainement
           </div>
@@ -135,13 +135,18 @@ function KinesitherapiePage() {
           </div>
         </section>
 
-         <section className="border-y border-border bg-secondary/40">
+        <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
             <div className="border-l-4 border-primary bg-card p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Tarifs</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+                Tarifs
+              </p>
               <div className="mt-5 space-y-4">
                 {SITE.kinePrices.map((t) => (
-                  <div key={t.label} className="flex items-baseline justify-between gap-4 border-b border-border pb-4 last:border-b-0 last:pb-0">
+                  <div
+                    key={t.label}
+                    className="flex items-baseline justify-between gap-4 border-b border-border pb-4 last:border-b-0 last:pb-0"
+                  >
                     <span className="text-sm font-medium text-muted-foreground">{t.label}</span>
                     <span
                       aria-hidden="true"
@@ -171,7 +176,7 @@ function KinesitherapiePage() {
               </p>
               <a
                 href={`mailto:${SITE.email}`}
-                 className="mt-6 inline-flex items-center gap-2 rounded-md border border-primary/40 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
+                className="mt-6 inline-flex items-center gap-2 rounded-md border border-primary/40 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
               >
                 <Clock className="h-4 w-4" />
                 Me tenir informé de l’ouverture

@@ -37,15 +37,17 @@ function CoachingPage() {
       <main className="flex-1">
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6">
-          <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-primary">Coaching</span>
+          <span className="block text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+            Coaching
+          </span>
           <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            Un coach qui connaît votre corps,{" "}
-            <span className="text-primary">pas seulement</span> vos chronos
+            Un coach qui connaît votre corps, <span className="text-primary">pas seulement</span>{" "}
+            vos chronos
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Kinésithérapeute, éducateur en triathlon breveté par l’Adeps mais aussi athlète
-            confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des
-            plans sur mesure et un suivi humain.
+            confirmé, je prépare vos objectifs en triathlon, course à pied et trail avec des plans
+            sur mesure et un suivi humain.
           </p>
         </section>
 
@@ -97,33 +99,34 @@ function CoachingPage() {
                 Construire la performance. Préserver le corps. Durer.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                J’ai eu la chance d’évoluer au niveau européen en triathlon et de monter à plusieurs reprises sur les podiums, aussi bien en triathlon qu’en trail. C’est dans cet univers exigeant
-                que s’est forgée ma vision de l’entraînement : la progression ne se construit
-                pas dans l’urgence, mais dans la continuité.
+                J’ai eu la chance d’évoluer au niveau européen en triathlon et de monter à plusieurs
+                reprises sur les podiums, aussi bien en triathlon qu’en trail. C’est dans cet
+                univers exigeant que s’est forgée ma vision de l’entraînement : la progression ne se
+                construit pas dans l’urgence, mais dans la continuité.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Un objectif ambitieux mérite une stratégie à sa hauteur. Cela signifie construire
-                sur le long terme, entretenir une fréquence d’efforts régulière, maîtriser la
-                charge d’entraînement et surtout, observer et ajuster en permanence. Chaque
-                séance a sa place. Chaque période a son rôle. Chaque détail compte.
+                sur le long terme, entretenir une fréquence d’efforts régulière, maîtriser la charge
+                d’entraînement et surtout, observer et ajuster en permanence. Chaque séance a sa
+                place. Chaque période a son rôle. Chaque détail compte.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Mais progresser ne consiste pas simplement à repousser ses limites. Il faut être
                 capable de les repousser sans dépasser celles de son corps.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                C’est pourquoi la prévention des blessures est au cœur de mon approche.
-                Comprendre son corps, identifier les signaux faibles, adapter l’entraînement,
-                respecter la récupération et intervenir avant que le problème ne devienne une
-                blessure : pour moi, cela fait partie intégrante de la performance.
+                C’est pourquoi la prévention des blessures est au cœur de mon approche. Comprendre
+                son corps, identifier les signaux faibles, adapter l’entraînement, respecter la
+                récupération et intervenir avant que le problème ne devienne une blessure : pour
+                moi, cela fait partie intégrante de la performance.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Mon objectif est simple : vous permettre de progresser, de performer et de durer.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Parce que la véritable performance ne se mesure pas uniquement à un chrono. Elle
-                se construit dans la capacité à enchaîner les semaines, les mois et les saisons
-                avec constance, confiance et un corps capable de répondre présent.
+                Parce que la véritable performance ne se mesure pas uniquement à un chrono. Elle se
+                construit dans la capacité à enchaîner les semaines, les mois et les saisons avec
+                constance, confiance et un corps capable de répondre présent.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite. Nous
@@ -142,10 +145,10 @@ function CoachingPage() {
             <div className="h-px flex-1 bg-border" />
           </div>
           <p className="max-w-3xl leading-relaxed text-muted-foreground">
-            Parce que chaque athlète mérite un suivi de qualité, quels que soient son niveau,
-            son expérience ou ses objectifs, j’ai choisi de proposer une formule unique.
-            Pas de niveaux de service ni d’options supplémentaires : chacun bénéficie de la
-            même attention, du même engagement et d’un accompagnement entièrement personnalisé.
+            Parce que chaque athlète mérite un suivi de qualité, quels que soient son niveau, son
+            expérience ou ses objectifs, j’ai choisi de proposer une formule unique. Pas de niveaux
+            de service ni d’options supplémentaires : chacun bénéficie de la même attention, du même
+            engagement et d’un accompagnement entièrement personnalisé.
           </p>
 
           <div className="mt-10 grid gap-8 border-y border-border py-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
@@ -154,7 +157,9 @@ function CoachingPage() {
                 {SITE.coachingOffer.name}
               </h3>
               <p className="mt-5 text-left">
-                <span className="font-display text-4xl font-semibold text-foreground">{SITE.coachingOffer.monthlyPrice} €</span>
+                <span className="font-display text-4xl font-semibold text-foreground">
+                  {SITE.coachingOffer.monthlyPrice} €
+                </span>
                 <span className="ml-2 text-muted-foreground">/mois</span>
               </p>
               <p className="mt-3 text-left font-semibold text-primary">
@@ -171,7 +176,8 @@ function CoachingPage() {
             </div>
           </div>
           <p className="mt-8 max-w-3xl text-left font-display text-2xl font-semibold leading-snug text-foreground">
-            En un mois, on se met en action.<br />
+            En un mois, on se met en action.
+            <br />
             <span className="text-primary">En 3 mois, on construit sa progression !</span>
           </p>
         </section>
@@ -201,8 +207,8 @@ function CoachingPage() {
               Parlez-moi de votre objectif
             </h2>
             <p className="mb-8 max-w-2xl leading-relaxed text-background/80">
-              Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je
-              reviens vers vous pour en discuter et construire votre plan.
+              Dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez. Je reviens vers
+              vous pour en discuter et construire votre plan.
             </p>
             <a
               href={LINKS.tallyForm}
