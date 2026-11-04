@@ -44,25 +44,47 @@ function ApprochePage() {
             <h2 className="font-display text-3xl font-semibold text-foreground">
               Du cabinet au terrain
             </h2>
-            <p className="mt-4 border-l-2 border-primary pl-4 font-hand text-3xl leading-tight text-primary">{SITE.tagline}.</p>
+            <p className="mt-4 border-l-2 border-primary pl-4 font-hand text-3xl leading-tight text-primary">
+              {SITE.tagline}.
+            </p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
-              <p>Sportif depuis mon plus jeune âge, je pratique le triathlon depuis 2010. Cette discipline m’a appris la rigueur, la patience et l’importance d’une progression construite sur le long terme.</p>
-              <p>Depuis 2020, j’accompagne des sportifs de tous âges et de tous niveaux dans leurs objectifs, du premier 5 km jusqu’à l’Ironman.</p>
-              <p>En parallèle, ma formation en kinésithérapie à l’HE2B, dont je suis diplômé depuis 2026, m’a apporté une compréhension approfondie du corps humain, du mouvement et des mécanismes de récupération et de rééducation.</p>
-              <p>C’est de cette double expérience qu’est né KIBACO : un projet réunissant la kinésithérapie et le coaching en endurance autour d’une même attention portée à la personne.</p>
-              <p>Que vous consultiez pour retrouver votre mobilité, soulager une douleur, reprendre vos activités ou préparer un défi sportif, mon objectif reste le même : vous proposer un accompagnement adapté à vos besoins, à votre rythme et à votre réalité quotidienne.</p>
+              <p>
+                Sportif depuis mon plus jeune âge, je pratique le triathlon depuis 2010. Cette
+                discipline m’a appris la rigueur, la patience et l’importance d’une progression
+                construite sur le long terme.
+              </p>
+              <p>
+                Depuis 2020, j’accompagne des sportifs de tous âges et de tous niveaux dans leurs
+                objectifs, du premier 5 km jusqu’à l’Ironman.
+              </p>
+              <p>
+                En parallèle, ma formation en kinésithérapie à l’HE2B, dont je suis diplômé depuis
+                2026, m’a apporté une compréhension approfondie du corps humain, du mouvement et des
+                mécanismes de récupération et de rééducation.
+              </p>
+              <p>
+                C’est de cette double expérience qu’est né KIBACO : un projet réunissant la
+                kinésithérapie et le coaching en endurance autour d’une même attention portée à la
+                personne.
+              </p>
+              <p>
+                Que vous consultiez pour retrouver votre mobilité, soulager une douleur, reprendre
+                vos activités ou préparer un défi sportif, mon objectif reste le même : vous
+                proposer un accompagnement adapté à vos besoins, à votre rythme et à votre réalité
+                quotidienne.
+              </p>
             </div>
           </div>
-           <div className="mx-auto aspect-[4/4.5] w-full max-w-md overflow-hidden rounded-md bg-secondary">
+          <div className="mx-auto aspect-[4/4.5] w-full max-w-md overflow-hidden rounded-md bg-secondary">
             <img
-               src={portraitAsset.url}
-               alt="Bastien Vandermunter, kinésithérapeute et coach en endurance"
-               className="h-full w-full object-cover object-top"
+              src={portraitAsset.url}
+              alt="Bastien Vandermunter, kinésithérapeute et coach en endurance"
+              className="h-full w-full object-cover object-top"
             />
           </div>
         </section>
 
-         <section className="border-y border-border bg-card">
+        <section className="border-y border-border bg-card">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <h2 className="text-center font-display text-3xl font-semibold text-foreground">
               Ce qui guide chaque accompagnement
@@ -90,11 +112,22 @@ function ApprochePage() {
         <section className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
           <h2 className="font-display text-3xl font-semibold text-foreground">Et concrètement ?</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Deux domaines d’expertise, une même attention portée à votre santé, votre mouvement et vos objectifs. Découvrez l’accompagnement qui correspond à vos besoins.
+            Deux domaines d’expertise, une même attention portée à votre santé, votre mouvement et
+            vos objectifs. Découvrez l’accompagnement qui correspond à vos besoins.
           </p>
           <div className="mx-auto mt-10 grid max-w-4xl gap-6 text-left md:grid-cols-2">
-            <ServiceCard to="/kinesitherapie" title="Kinésithérapie" label="Découvrir la kinésithérapie" text="Une prise en charge personnalisée pour soulager vos douleurs, retrouver vos capacités et vous accompagner dans votre rééducation, quel que soit votre niveau d’activité." />
-            <ServiceCard to="/coaching" title="Coaching" label="Découvrir le coaching" text="Un accompagnement individualisé en triathlon, course à pied et trail pour progresser durablement, avec une planification adaptée à votre quotidien." />
+            <ServiceCard
+              to="/kinesitherapie"
+              title="Kinésithérapie"
+              label="Découvrir la kinésithérapie"
+              text="Une prise en charge personnalisée pour soulager vos douleurs, retrouver vos capacités et vous accompagner dans votre rééducation, quel que soit votre niveau d’activité."
+            />
+            <ServiceCard
+              to="/coaching"
+              title="Coaching"
+              label="Découvrir le coaching"
+              text="Un accompagnement individualisé en triathlon, course à pied et trail pour progresser durablement, avec une planification adaptée à votre quotidien."
+            />
           </div>
         </section>
       </main>
@@ -105,8 +138,8 @@ function ApprochePage() {
 
 function ValueCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
   return (
-     <div className="flex h-full flex-col rounded-md border border-border bg-background p-6 sm:p-7">
-       <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
+    <div className="flex h-full flex-col rounded-md border border-border bg-background p-6 sm:p-7">
+      <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary text-primary">
         {icon}
       </div>
       <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{title}</h3>
@@ -115,12 +148,27 @@ function ValueCard({ icon, title, text }: { icon: React.ReactNode; title: string
   );
 }
 
-function ServiceCard({ to, title, text, label }: { to: "/kinesitherapie" | "/coaching"; title: string; text: string; label: string }) {
+function ServiceCard({
+  to,
+  title,
+  text,
+  label,
+}: {
+  to: "/kinesitherapie" | "/coaching";
+  title: string;
+  text: string;
+  label: string;
+}) {
   return (
     <div className="flex h-full flex-col rounded-md border border-border bg-card p-7">
       <h3 className="font-display text-2xl font-semibold text-foreground">{title}</h3>
-      <p className="mt-3 flex-1 text-left leading-relaxed text-muted-foreground hyphens-none">{text}</p>
-      <Link to={to} className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+      <p className="mt-3 flex-1 text-left leading-relaxed text-muted-foreground hyphens-none">
+        {text}
+      </p>
+      <Link
+        to={to}
+        className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+      >
         {label}
         <ArrowRight className="h-4 w-4" />
       </Link>

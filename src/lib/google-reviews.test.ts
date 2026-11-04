@@ -16,9 +16,9 @@ describe("resolveGoogleBusinessApiKey", () => {
   });
 
   it("retombe sur l'ancien nom, celui encore configuré sur Vercel", () => {
-    expect(
-      resolveGoogleBusinessApiKey({ GOOGLE_BUSINESS_PROFILE_API_KEY: "cle-initiale" }),
-    ).toBe("cle-initiale");
+    expect(resolveGoogleBusinessApiKey({ GOOGLE_BUSINESS_PROFILE_API_KEY: "cle-initiale" })).toBe(
+      "cle-initiale",
+    );
   });
 
   it("renvoie undefined quand aucune clé n'est configurée", () => {

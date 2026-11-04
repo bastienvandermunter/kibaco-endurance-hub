@@ -104,13 +104,13 @@ function CoachingPage() {
                 <span className="text-primary">pas seulement</span> vos chronos
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète
-                confirmé, je vous accompagne dans vos objectifs en triathlon, course à pied et
-                trail grâce à une planification sur mesure et un suivi humain.
+                Kinésithérapeute, éducateur en triathlon breveté par l’Adeps et athlète confirmé, je
+                vous accompagne dans vos objectifs en triathlon, course à pied et trail grâce à une
+                planification sur mesure et un suivi humain.
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Un accompagnement qui s’adapte à votre niveau, vos ambitions et votre
-                quotidien, pour construire une progression durable.
+                Un accompagnement qui s’adapte à votre niveau, vos ambitions et votre quotidien,
+                pour construire une progression durable.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -224,9 +224,9 @@ function CoachingPage() {
                 Construire la performance. Préserver le corps. Durer.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                J’ai évolué au niveau européen en triathlon et je suis monté à plusieurs
-                reprises sur les podiums, en triathlon comme en trail. J’en ai tiré une
-                conviction : un objectif ambitieux mérite une stratégie à sa hauteur.
+                J’ai évolué au niveau européen en triathlon et je suis monté à plusieurs reprises
+                sur les podiums, en triathlon comme en trail. J’en ai tiré une conviction : un
+                objectif ambitieux mérite une stratégie à sa hauteur.
               </p>
 
               <ol className="mt-8">
@@ -250,8 +250,8 @@ function CoachingPage() {
 
               <blockquote className="mt-4 border-l-2 border-primary pl-5">
                 <p className="text-left font-display text-xl font-semibold leading-snug text-foreground hyphens-none">
-                  Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite.
-                  Nous construisons les conditions pour que vous puissiez aller plus loin.
+                  Chez KIBACO, nous ne cherchons pas simplement à vous faire aller plus vite. Nous
+                  construisons les conditions pour que vous puissiez aller plus loin.
                 </p>
               </blockquote>
             </div>
@@ -388,9 +388,8 @@ function CoachingPage() {
               Parlez-moi de votre objectif
             </h2>
             <p className="mb-8 max-w-2xl leading-relaxed text-background/80">
-              Pour commencer, dites-moi qui vous êtes, ce que vous pratiquez et ce que vous
-              visez. Je reviens vers vous pour en discuter, puis nous construisons ensemble
-              votre plan.
+              Pour commencer, dites-moi qui vous êtes, ce que vous pratiquez et ce que vous visez.
+              Je reviens vers vous pour en discuter, puis nous construisons ensemble votre plan.
             </p>
             <a
               href={LINKS.tallyForm}

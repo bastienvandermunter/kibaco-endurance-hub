@@ -2,7 +2,13 @@
 // Affichée uniquement quand la lecture automatique des avis n'est pas disponible
 // (par exemple sur un hébergeur où l'accès Google n'est pas configuré).
 // À mettre à jour quand de nouveaux avis arrivent sur la fiche Google.
-export type SnapshotReview = { id: string; text: string; author: string; rating: number; date?: string };
+export type SnapshotReview = {
+  id: string;
+  text: string;
+  author: string;
+  rating: number;
+  date?: string;
+};
 
 export const GOOGLE_REVIEWS_SNAPSHOT: SnapshotReview[] = [
   {

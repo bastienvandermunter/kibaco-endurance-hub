@@ -1,10 +1,4 @@
-import {
-  ClipboardList,
-  MessageCircle,
-  Stethoscope,
-  Target,
-  type LucideIcon,
-} from "lucide-react";
+import { ClipboardList, MessageCircle, Stethoscope, Target, type LucideIcon } from "lucide-react";
 
 export const SITE = {
   name: "Kibaco",
@@ -32,7 +26,8 @@ export const SITE = {
     quarterlyPrice: 330,
     commitmentMonths: 3,
     // Phrase d’introduction des prestations : le détail vit dans COACHING_FEATURE_GROUPS.
-    summary: "Concrètement, voici ce que comprend votre abonnement KIBACO, réparti en trois volets.",
+    summary:
+      "Concrètement, voici ce que comprend votre abonnement KIBACO, réparti en trois volets.",
   },
 };
 
@@ -83,9 +78,17 @@ export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
     title: "Un plan sur mesure",
     icon: ClipboardList,
     items: [
-      { id: "personalized-plan", label: "Planification individualisée selon vos objectifs, votre niveau et vos disponibilités" },
+      {
+        id: "personalized-plan",
+        label:
+          "Planification individualisée selon vos objectifs, votre niveau et vos disponibilités",
+      },
       { id: "training-cycles", label: "Progression construite par cycles d’entraînement" },
-      { id: "life-adjustments", label: "Programme revu au fil de votre progression et de vos imprévus, pour garder une planification cohérente" },
+      {
+        id: "life-adjustments",
+        label:
+          "Programme revu au fil de votre progression et de vos imprévus, pour garder une planification cohérente",
+      },
       {
         id: "intensity-zones",
         label:
@@ -103,7 +106,10 @@ export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
         label:
           "Votre entraînement fait l’objet d’un suivi quotidien, avec des ajustements réalisés en fonction de vos sensations, de votre progression, de votre récupération et des imprévus de votre quotidien",
       },
-      { id: "ido", label: "Suivi sur l’application IDO, où vous laissez votre retour après chaque séance" },
+      {
+        id: "ido",
+        label: "Suivi sur l’application IDO, où vous laissez votre retour après chaque séance",
+      },
       { id: "weekly-analysis", label: "Analyse de vos séances semaine après semaine" },
       { id: "coach-contact", label: "Échanges directs avec votre coach via WhatsApp, 7j/7" },
     ],
@@ -113,10 +119,22 @@ export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
     title: "Au-delà de l’entraînement",
     icon: Stethoscope,
     items: [
-      { id: "injury-prevention", label: "Prévention des blessures intégrée à la planification, grâce à mon expérience de kinésithérapeute" },
+      {
+        id: "injury-prevention",
+        label:
+          "Prévention des blessures intégrée à la planification, grâce à mon expérience de kinésithérapeute",
+      },
       { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
-      { id: "practical-advice", label: "Conseils techniques, ainsi qu’en nutrition sportive, hydratation et matériel, dans le cadre de mes compétences de coach" },
-      { id: "group-sessions", label: "Séances collectives en présentiel, organisées ponctuellement et incluses dans l’abonnement KIBACO" },
+      {
+        id: "practical-advice",
+        label:
+          "Conseils techniques, ainsi qu’en nutrition sportive, hydratation et matériel, dans le cadre de mes compétences de coach",
+      },
+      {
+        id: "group-sessions",
+        label:
+          "Séances collectives en présentiel, organisées ponctuellement et incluses dans l’abonnement KIBACO",
+      },
     ],
   },
 ];

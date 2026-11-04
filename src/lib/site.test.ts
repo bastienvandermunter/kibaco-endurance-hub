@@ -9,8 +9,7 @@ import {
   SITE,
 } from "./site";
 
-const coachingPage = () =>
-  Bun.file(new URL("../routes/coaching.tsx", import.meta.url)).text();
+const coachingPage = () => Bun.file(new URL("../routes/coaching.tsx", import.meta.url)).text();
 
 describe("Formule unique de coaching Kibaco", () => {
   test("le tarif mensuel est de 110 euros", () => {
@@ -112,8 +111,17 @@ describe("Formule unique de coaching Kibaco", () => {
   });
 
   for (const id of [
-    "personalized-plan", "life-adjustments", "training-cycles", "daily-adjustments",
-    "ido", "coach-contact", "weekly-analysis", "clinical-alert", "intensity-zones", "practical-advice", "group-sessions",
+    "personalized-plan",
+    "life-adjustments",
+    "training-cycles",
+    "daily-adjustments",
+    "ido",
+    "coach-contact",
+    "weekly-analysis",
+    "clinical-alert",
+    "intensity-zones",
+    "practical-advice",
+    "group-sessions",
   ]) {
     test(`l’avantage ${id} de l’ancienne offre Personnalisé est conservé`, () => {
       expect(COACHING_FEATURES.some((feature) => feature.id === id)).toBe(true);
