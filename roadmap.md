@@ -32,3 +32,4 @@
 - [x] Faire intervenir l’expérience de kinésithérapeute dans les textes du coaching comme un atout de prévention des blessures.
 - [x] Appliquer le brief « Optimisation de la page Coaching » : intro, trois piliers, texte de l'offre unique, paiement en une fois, prestations clarifiées, répétitions retirées, vérification ordinateur et mobile.
 - [x] Retirer la ligne « Options et suppléments » de la carte tarif et ajouter l’idée « s’entraîner en triathlon avec un quotidien bien rempli n’est pas évident, autant bien s’accompagner » dans les textes du coaching.
+- [x] Supprimer la répétition de « De la réhabilitation à la performance » après l’introduction de la page L’Approche.
