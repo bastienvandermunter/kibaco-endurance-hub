@@ -153,7 +153,7 @@ function CoachingPage() {
                     fact.highlight ? "text-background" : "text-foreground"
                   }`}
                 >
-                  {fact.value}
+                  <span className="whitespace-nowrap">{fact.value}</span>
                   {fact.unit && (
                     <span
                       className={`ml-1 font-sans text-base font-medium ${
@@ -383,7 +383,7 @@ function CoachingPage() {
 
         {/* Contact */}
         <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-4 pb-24 sm:px-6">
-          <div className="rounded-md border border-border bg-foreground p-10 sm:p-12">
+          <div className="rounded-md border border-border bg-foreground p-7 sm:p-12">
             <h2 className="mb-4 font-display text-3xl font-semibold text-background">
               Parlez-moi de votre objectif
             </h2>
