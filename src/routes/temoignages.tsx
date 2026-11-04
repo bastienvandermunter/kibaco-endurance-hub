@@ -5,6 +5,7 @@ import { Star, ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter, PageHero } from "@/components/site-layout";
 import { getGoogleReviews, type ReviewResult } from "@/lib/google-reviews.functions";
 import { LINKS } from "@/lib/site";
+import { pickReviews } from "@/lib/google-reviews-snapshot";
 
 export const Route = createFileRoute("/temoignages")({
   component: TemoignagesPage,
@@ -46,6 +47,7 @@ function TemoignagesPage() {
     retry: 1,
     staleTime: 15 * 60_000,
   });
+  const { reviews, source } = pickReviews(data);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -60,9 +62,10 @@ function TemoignagesPage() {
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           {isPending ? (
             <p className="text-center text-muted-foreground">Chargement des avis…</p>
-          ) : data?.reviews.length ? (
+          ) : reviews.length ? (
+            <>
             <div className="grid gap-6 lg:grid-cols-3">
-            {data.reviews.map((review) => (
+            {reviews.map((review) => (
               <figure
                 key={review.id}
                 className="flex flex-col rounded-md border border-border bg-card p-7"
@@ -84,6 +87,20 @@ function TemoignagesPage() {
               </figure>
             ))}
             </div>
+            {source === "snapshot" && (
+              <div className="mt-8 text-center">
+                <a
+                  href={LINKS.googleReviews}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                >
+                  Voir tous les avis sur la fiche Google de Kibaco
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            )}
+            </>
           ) : (
             <div className="text-center">
               <p className="text-muted-foreground">
