@@ -9,14 +9,21 @@ type GoogleReview = {
 };
 
 type Review = { id: string; text: string; author: string; rating: number; date?: string };
-type ReviewResult = { reviews: Review[]; status: "ready" | "missing" | "error" };
+export type ReviewResult = { reviews: Review[]; status: "ready" | "missing" | "error" };
+
+// La reconnexion du compte Google a créé une seconde connexion : Lovable expose alors
+// GOOGLE_BUSINESS_PROFILE_API_KEY_1, tandis que Vercel connaît encore l'ancien nom.
+// On accepte les deux pour que le site fonctionne à l'identique dans les deux environnements.
+export function resolveGoogleBusinessApiKey(env: Record<string, string | undefined>): string | undefined {
+  return env["GOOGLE_BUSINESS_PROFILE_API_KEY_1"] ?? env["GOOGLE_BUSINESS_PROFILE_API_KEY"];
+}
 
 let cached: { value: ReviewResult; until: number } | undefined;
 
 export const getGoogleReviews = createServerFn({ method: "GET" }).handler(async (): Promise<ReviewResult> => {
   if (cached && Date.now() < cached.until) return cached.value;
 
-  const apiKey = process.env["GOOGLE_BUSINESS_PROFILE_API_KEY_1"];
+  const apiKey = resolveGoogleBusinessApiKey(process.env);
   const lovableKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey || !lovableKey) return { reviews: [], status: "missing" };
 

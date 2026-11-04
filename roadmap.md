@@ -35,5 +35,5 @@
 - [x] Supprimer la répétition de « De la réhabilitation à la performance » après l’introduction de la page L’Approche.
 - [x] Changer le titre de section de la page L’Approche en « Du cabinet au terrain ».
 - [ ] Comprendre pourquoi les avis Google ne s’affichent pas sur le site en ligne et les faire apparaître.
-- [ ] Choisir la solution d’affichage des avis sur le site hébergé chez Vercel (identifiants Google indisponibles hors Lovable).
+- [x] Diagnostiquer et corriger l'affichage des avis Google sur Vercel (brief Bastien : garder le système automatique, délai de chargement max, lien vers les vrais avis en secours).
 - [ ] Publier le site pour que les avis Google soient visibles en ligne (en attente du feu vert de Bastien ; kibaco.kine.coaching.be demande une formule payante).
