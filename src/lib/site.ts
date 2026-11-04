@@ -33,9 +33,12 @@ export const SITE = {
     commitmentMonths: 3,
     // Résumé court : le détail de chaque avantage vit dans COACHING_FEATURE_GROUPS.
     summary:
-      "Un programme 100 % individualisé, structuré en cycles de travail et construit autour de vos objectifs, de votre niveau et de votre mode de vie. Votre plan évolue chaque jour selon vos sensations, votre progression et vos imprévus, pour progresser durablement et sereinement.",
+      "Un programme 100 % individualisé, structuré en cycles de travail et construit autour de vos objectifs, de votre niveau et de votre mode de vie. Votre plan évolue chaque jour selon vos sensations, votre progression et vos imprévus, pour progresser durablement et sereinement. Mon expérience de kinésithérapeute entre dans ce plan : les signaux faibles sont repérés tôt et la blessure est prévenue avant de s’installer.",
   },
 };
+
+// Le montant affiché en grand est le prix trimestriel ; l’équivalence mensuelle est rappelée en petit.
+export const COACHING_PRICE_NOTE = `Ce qui correspond à ${SITE.coachingOffer.monthlyPrice} €/mois`;
 
 export const NAV_ITEMS = [
   { to: "/", label: "Accueil" },
@@ -91,6 +94,7 @@ export const COACHING_FEATURE_GROUPS: CoachingFeatureGroup[] = [
     title: "Au-delà de l’entraînement",
     icon: Stethoscope,
     items: [
+      { id: "injury-prevention", label: "Prévention des blessures guidée par mon expérience de kinésithérapeute" },
       { id: "clinical-alert", label: "Regard de clinicien en cas d’alerte" },
       { id: "practical-advice", label: "Conseils hydratation, nutrition, technique et matériel" },
       { id: "group-sessions", label: "Accès aux séances collectives KIBACO" },
